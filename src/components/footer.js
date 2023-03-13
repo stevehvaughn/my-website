@@ -3,12 +3,12 @@ import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 export default function Footer() {
   return (
-    <section>
+    <footer>
       <div>
-        <span>Built by me</span>
-        <FontAwesomeIcon icon={faCopyright} />
-        {new Date().getFullYear()}
+        <span>Built by me with ❤️️ and 🍺</span>
       </div>
-    </section>
+      <FontAwesomeIcon icon={faCopyright} />
+      {new Date().getFullYear()}
+    </footer>
   )
 }

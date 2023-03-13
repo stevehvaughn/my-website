@@ -1,4 +1,4 @@
-export default function Performances() {
+export default function performances() {
   return (
     <div>Performances</div>
   )
