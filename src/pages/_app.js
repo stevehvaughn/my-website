@@ -21,9 +21,7 @@ export default function MyApp({ Component, pageProps }) {
             --font-montserrat: ${montserrat.style.fontFamily};
           }
       `}</style>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </>
   )
 }

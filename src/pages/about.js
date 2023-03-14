@@ -1,5 +1,9 @@
+import Layout from "@components/components/Layout"
+
 export default function about() {
   return (
-    <div>About Me</div>
+    <Layout criteria='home'>
+      <div>About Me</div>
+    </Layout>
   )
 }

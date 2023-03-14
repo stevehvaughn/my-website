@@ -1,10 +1,12 @@
 import Image from "next/image"
+import Layout from "@components/components/Layout";
+import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait.png'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <>
+    <Layout criteria={'home'}>
       <header className={styles.header}>
         <h1>Hi, my name is Steven Vaughn</h1>
       </header>
@@ -26,9 +28,9 @@ export default function Home() {
           <p>I am a</p>
           <h2>Professional Musician</h2>
           <p>that has performed with symphony orchestras and bands across the United States and abroad.</p>
-          <button>click to see more music</button>
+          <Link href='/music'>click to see more music</Link>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
