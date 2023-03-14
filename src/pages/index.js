@@ -5,13 +5,13 @@ import styles from '../styles/Home.module.scss'
 export default function Home() {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <h1>Hi, my name is Steven Vaughn</h1>
       </header>
       <section className={styles.home}>
-        <div className={styles.details_wrapper}>
+        <div className={[styles.details_wrapper, styles.web].join(' ')}>
           <p>I am a </p>
-          <h3>Front-End Web Developer</h3>
+          <h2>Front-End Web Developer</h2>
           <p>that specializes in creating engaging and responsive websites.</p>
           <button>click to see more web development work</button>
         </div>
@@ -22,9 +22,9 @@ export default function Home() {
             priority
           />
         </div>
-        <div className={styles.details_wrapper}>
+        <div className={[styles.details_wrapper, styles.music].join(' ')}>
           <p>I am a</p>
-          <h3>Professional Musician</h3>
+          <h2>Professional Musician</h2>
           <p>that has performed with symphony orchestras and bands across the United States and Internationally</p>
           <button>click to see more music</button>
         </div>
