@@ -25,7 +25,7 @@ export default function Home() {
         <div className={[styles.details_wrapper, styles.music].join(' ')}>
           <p>I am a</p>
           <h2>Professional Musician</h2>
-          <p>that has performed with symphony orchestras and bands across the United States and Internationally</p>
+          <p>that has performed with symphony orchestras and bands across the United States and abroad.</p>
           <button>click to see more music</button>
         </div>
       </section>

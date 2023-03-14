@@ -44,7 +44,8 @@ body {
 
 body {
   font-size: $base-font-size;
-  // color: $base-font-color;
+  color: $base-font-color;
+  background-color: var(--color-bg);
   font-family: $body-font-family;
   font-weight: 400;
   line-height: $base-line-height;

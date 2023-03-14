@@ -9,19 +9,16 @@
   "web"
   "music";
 
-  @media #{$small} {
-    grid-template-areas:
-        "image image"
-        "web music";
-  }
+  // @media #{$small} {
+  //   grid-template-areas:
+  //       "image image"
+  //       "web music";
+  // }
 
   @media #{$small-ish} {
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0 100% 0;
     grid-template-areas: "web image music"
-  }
-
-  @media #{$tablet} {
-    grid-template-columns: 10% 80% 10%;
   }
 }
 
@@ -42,8 +39,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: var(--font-montserrat);
 
-  @media #{$tablet} {
+  @media #{$small-ish} {
     position: absolute;
     width: 30vw;
   }
@@ -55,16 +53,24 @@
   &.music {
     grid-area: music;
 
+    @media #{$small-ish} {
+      right: 2rem;
+    }
+
     @media #{$tablet} {
-      right: 8rem;
+      right: 3vw;
     }
   }
 
   &.web {
     grid-area: web;
 
+    @media #{$small-ish} {
+      left: 2rem;
+    }
+
     @media #{$tablet} {
-      left: 8rem;
+      left: 3vw;
     }
   }
 }
