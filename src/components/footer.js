@@ -7,8 +7,10 @@ export default function Footer() {
       <div>
         <span>Built by me with ❤️️ and 🍺</span>
       </div>
-      <FontAwesomeIcon icon={faCopyright} />
-      {new Date().getFullYear()}
+      <div>
+        <FontAwesomeIcon icon={faCopyright} />
+        {new Date().getFullYear()}
+      </div>
     </footer>
   )
 }

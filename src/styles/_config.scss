@@ -1,0 +1,87 @@
+$base-font-size: 1.8rem;
+$base-line-height: 1.55;
+
+// Utility color variables
+$heading-color: var(--color-primary);
+$base-font-color: var(--black);
+$link: var(--color-secondary);
+$link-hover: var(--color-secondary);
+$heading-font-family: var(--font-montserrat);
+$body-font-family: var(--font-open-sans);
+
+// H1
+$h1-size: 3.4rem;
+$h1-size-small: 3rem;
+$h1-line-height: 1.29;
+$h1-line-height-small: 1.2;
+$h1-color: $heading-color;
+$h1-family: $heading-font-family;
+$h1-padding: 3rem 0 2rem;
+$h1-weight: 500;
+
+// H2
+$h2-size: 2.9rem;
+$h2-size-small: 2.6rem;
+$h2-line-height: 1.21;
+$h2-line-height-small: 1.4;
+$h2-color: $heading-color;
+$h2-padding: 2rem 0 2rem;
+$h2-family: $heading-font-family;
+$h2-weight: 700;
+
+// H3
+$h3-size: 2.4rem;
+$h3-size-small: 2.2rem;
+$h3-color: $heading-color;
+$h3-family: $heading-font-family;
+$h3-line-height: 1.2;
+$h3-line-height-small: 1.41;
+$h3-padding: 3.5rem 0 1.5rem;
+$h3-weight: 700;
+
+// H4
+$h4-size: 2.2rem;
+$h4-size-small: 2rem;
+$h4-color: $heading-color;
+$h4-family: $heading-font-family;
+$h4-line-height: 1.41;
+$h4-line-height-small: 1.25;
+$h4-padding: 3rem 0 1.5rem;
+$h4-weight: 700;
+
+// H5
+$h5-size: 2.2rem;
+$h5-size-small: 2rem;
+$h5-color: $heading-color;
+$h5-family: $heading-font-family;
+$h5-line-height: 1.41;
+$h5-line-height-small: 1.25;
+$h5-padding: $h4-padding;
+$h5-weight: 600;
+
+// H6
+$h6-size: 2rem;
+$h6-size-small: 1.8rem;
+$h6-color: $heading-color;
+$h6-family: $heading-font-family;
+$h6-line-height: 1.25;
+$h6-line-height-small: 1.56;
+$h6-padding: $h4-padding;
+$h6-weight: 600;
+
+// Breakpoints 
+$tablet:     'screen and (min-width: 834px)';
+$desktop:    'screen and (min-width: 1280px)';
+$x-small:    'screen and (min-width: 375px)';
+$small:      'screen and (min-width: 576px)';
+$small-ish:  'screen and (min-width: 680px)';
+$medium:     'screen and (min-width: 768px)';
+$medium-ish: 'screen and (min-width: 960px)';
+$large:      'screen and (min-width: 1024px)';
+$larger:     'screen and (min-width: 1080px)';
+$large-ish:  'screen and (min-width: 1150px)';
+$desktop:    'screen and (min-width: 1280px)';
+$xx-large:   'screen and (min-width: 1400px)';
+$xxx-large:  'screen and (min-width: 1650px)';
+$xxx-largest:'screen and (min-width: 1920px)';
+$mobile-nav: 'screen and (max-width: 1023px)';

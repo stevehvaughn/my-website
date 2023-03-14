@@ -1,0 +1,114 @@
+@mixin center-me($max-width, $margin-top: 0, $margin-bottom: 0) {
+  max-width: $max-width;
+  margin: $margin-top auto $margin-bottom;
+}
+
+// HEADINGS
+@mixin h1 {
+  font-size: $h1-size-small;
+  line-height: $h1-line-height-small;
+  padding: $h1-padding;
+  color: $h1-color;
+  font-family: $h1-family;
+  font-weight: $h1-weight;
+  text-transform: uppercase;
+  letter-spacing: 1.65px;
+
+  @media #{$tablet} {
+    font-size: $h1-size;
+    line-height: $h1-line-height;
+    letter-spacing: 1.87px;
+  }
+}
+
+@mixin h2 {
+  font-size: $h2-size-small;
+  line-height: $h2-line-height-small;
+  padding: $h2-padding;
+  color: $h2-color;
+  font-weight: $h2-weight;
+  font-family: $h2-family;
+  text-transform: uppercase;
+  letter-spacing: 2.08px;
+
+  @media #{$tablet} {
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+    letter-spacing: 2.9px;
+  }
+}
+
+@mixin lead-in {
+  color: var(--marine);
+  font-size: 2.2rem;
+  line-height: calc(36 / 22);
+  padding: 2rem 0 1.5rem;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+
+  @media #{$tablet} {
+    font-size: 2.2rem;
+    line-height: calc(36 / 22);
+  }
+}
+
+@mixin h3 {
+  font-size: $h3-size-small;
+  line-height: $h3-line-height-small;
+  padding: $h3-padding;
+  color: $h3-color;
+  font-weight: $h3-weight;
+  font-family: $h3-family;
+  text-transform: uppercase;
+  letter-spacing: 1.76px;
+
+  @media #{$tablet} {
+    font-size: $h3-size;
+    line-height: $h3-line-height;
+    letter-spacing: 2.4px;
+  }
+}
+
+@mixin h4 {
+  font-size: $h4-size-small;
+  line-height: $h4-line-height-small;
+  padding: $h4-padding;
+  color: $h4-color;
+  font-weight: $h4-weight;
+  font-family: $h4-family;
+
+  @media #{$tablet} {
+    font-size: $h4-size;
+    line-height: $h4-line-height;
+  }
+}
+
+@mixin h5 {
+  font-size: $h5-size-small;
+  line-height: $h5-line-height-small;
+  padding: $h5-padding;
+  color: $h5-color;
+  font-weight: $h5-weight;
+  font-family: $h5-family;
+
+  @media #{$tablet} {
+    font-size: $h5-size;
+    line-height: $h5-line-height;
+  }
+}
+
+@mixin h6 {
+  font-size: $h6-size-small;
+  line-height: $h6-line-height-small;
+  padding: $h6-padding;
+  color: $h6-color;
+  font-weight: $h6-weight;
+  font-family: $h6-family;
+  text-transform: uppercase;
+
+  @media #{$tablet} {
+    font-size: $h6-size;
+    line-height: $h6-line-height;
+  }
+}

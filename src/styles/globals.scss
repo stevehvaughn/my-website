@@ -1,8 +1,9 @@
+@import 'config';
+@import 'mixins';
+
 $open-sans: var(--font-open-sans);
 $bitter: var(--font-bitter);
 $montserrat: var(--font-montserat);
-$base-font-size: 1.8rem;
-$base-line-height: 1.55;
 $body-font-family: $open-sans;
 $heading-font-family: $montserrat;
 
@@ -55,4 +56,68 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+// Headingss
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  @include h1;
+
+  sup {
+    top: -1.2em;
+  }
+}
+
+h2 {
+  @include h2;
+
+  sup {
+    top: -1.15em;
+  }
+}
+
+h3 {
+  @include h3;
+
+  sup {
+    top: -1em;
+  }
+}
+
+h4 {
+  @include h4;
+
+  sup {
+    top: -0.8em;
+  }
+}
+
+h5 {
+  @include h5;
+
+  sup {
+    top: -0.75em;
+  }
+}
+
+h6 {
+  @include h6;
+
+  sup {
+    top: -0.75em;
+  }
 }
