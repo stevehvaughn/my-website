@@ -1,11 +1,21 @@
 $open-sans: var(--font-open-sans);
 $bitter: var(--font-bitter);
+$montserrat: var(--font-montserat);
+$base-font-size: 1.8rem;
+$base-line-height: 1.55;
+$body-font-family: $open-sans;
+$heading-font-family: $montserrat;
 
 :root {
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --color-primary: #CCD5AE;
+  --color-secondary: #E9EDC9;
+  --color-bg: #FEFAE0;
+  --color-accent: #FAEDCD;
+  --color-highlight: #D4A373;
 }
 
 * {
@@ -14,11 +24,32 @@ $bitter: var(--font-bitter);
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 html,
 body {
+  min-height: 100%;
   padding: 0;
   margin: 0;
-  font-family: $open-sans;
+}
+
+body {
+  font-size: $base-font-size;
+  // color: $base-font-color;
+  font-family: $body-font-family;
+  font-weight: 400;
+  line-height: $base-line-height;
+  position: relative;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
 a {

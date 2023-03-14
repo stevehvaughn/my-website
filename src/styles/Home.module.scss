@@ -1,0 +1,17 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+
+.image_wrapper {
+  height: 100%;
+  text-align: center;
+}
+
+.details_wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
