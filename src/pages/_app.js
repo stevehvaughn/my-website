@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { open_sans, bitter } from './fonts';
+import { open_sans, bitter, montserrat } from './fonts';
 import Layout from '../components/Layout';
 import '../styles/globals.scss';
 
@@ -18,6 +18,7 @@ export default function MyApp({ Component, pageProps }) {
           :root {
             --font-open-sans: ${open_sans.style.fontFamily};
             --font-bitter: ${bitter.style.fontFamily};
+            --font-montserrat: ${montserrat.style.fontFamily};
           }
       `}</style>
       <Layout>
