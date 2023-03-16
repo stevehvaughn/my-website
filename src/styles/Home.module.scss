@@ -50,6 +50,10 @@
     top: 5%;
   }
 
+  a {
+    @include button;
+  }
+
   &.music {
     grid-area: music;
 

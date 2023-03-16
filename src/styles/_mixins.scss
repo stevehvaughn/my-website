@@ -3,6 +3,19 @@
   margin: $margin-top auto $margin-bottom;
 }
 
+@mixin button($bg-color: var(--color-primary), $color: white, $hover-bg: var(--color-secondary), $hover-color: white) {
+  background-color: $bg-color;
+  padding: 1rem;
+  color: $color;
+  border-radius: .8rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+  }
+}
+
 // HEADINGS
 @mixin h1 {
   font-size: $h1-size-small;
