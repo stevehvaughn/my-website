@@ -1,7 +1,14 @@
+@import 'config';
+@import 'mixins';
+
 .navbar {
   display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem;
 
   > li {
     list-style: none;
+    text-transform: lowercase;
   }
 }

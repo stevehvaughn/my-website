@@ -1,18 +1,67 @@
+@import 'functions';
+
 @mixin center-me($max-width, $margin-top: 0, $margin-bottom: 0) {
   max-width: $max-width;
   margin: $margin-top auto $margin-bottom;
 }
 
-@mixin button($bg-color: var(--color-primary), $color: white, $hover-bg: var(--color-secondary), $hover-color: white) {
+@mixin svg-colorized($svg, $color: $black) {
+  $svg-colorized: svg-color($svg, $color);
+
+  background-image: $svg-colorized;
+}
+
+@mixin button($bg-color: var(--color-primary), $color: white, $hover-bg: var(--color-secondary), $hover-color: white, $svg-color: white, $svg-hover: white) {
   background-color: $bg-color;
+  position: relative;
+  display: flex;
+  align-items: center;
   padding: 1rem;
   color: $color;
   border-radius: .8rem;
   margin-top: 1rem;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  transition: all 0.5s;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    opacity: 0;  
+    right: -2rem;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1.1rem;
+    aspect-ratio: 1;
+
+    @if ($svg-color) {
+      @include svg-colorized($arrow-right, $svg-color);
+    }
+
+    @else {
+      @include svg-colorized($arrow-right, $color);
+    }
+  }
 
   &:hover {
     background-color: $hover-bg;
     color: $hover-color;
+    padding-right: 2.4rem;
+    padding-left: .8rem;
+
+    &::after {
+      opacity: 1;
+      right: .75rem;
+
+      @if ($svg-hover) {
+        @include svg-colorized($arrow-right, #{$svg-hover});
+      }
+
+      @else {
+        @include svg-colorized($arrow-right, $hover);
+      }
+    }
   }
 }
 
