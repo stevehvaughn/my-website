@@ -32,25 +32,25 @@
 }
 
 .details_wrapper {
-  text-align: center;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: var(--font-montserrat);
+  text-align: center;
   z-index: 1;
+  padding: 2rem 3rem;
 
   @media #{$small-ish} {
     position: absolute;
     width: 30vw;
+    padding: 0;
   }
 
   @media #{$medium-ish} {
     width: 30rem;
-  }
-
-  @media #{$large} {
-    top: 5%;
+    top: 3%;
   }
 
   a {

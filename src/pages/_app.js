@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { config } from '@fortawesome/fontawesome-svg-core'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { open_sans, bitter, montserrat } from './fonts';
