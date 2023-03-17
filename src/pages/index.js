@@ -1,8 +1,8 @@
 import Image from "next/image"
-import Layout from "@components/components/Layout";
+import Layout from "@components/Layout";
 import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait-short.png'
-import styles from '../styles/Home.module.scss'
+import styles from '@styles/Home.module.scss'
 
 export default function Home() {
   return (
