@@ -4,6 +4,11 @@
 .home {
   @include center-me(96rem);
   position: relative;
+  padding: 0 1.5rem;
+}
+
+.home_content {
+  position: relative;
   display: grid;
   grid-template-areas:
   "web"
@@ -16,7 +21,7 @@
   }
 }
 
-.header {
+.home_header {
   text-align: center;
 }
 
@@ -40,7 +45,7 @@
   font-family: var(--font-montserrat);
   text-align: center;
   z-index: 1;
-  padding: 2rem 3rem;
+  padding: 2rem 0;
 
   @media #{$small-ish} {
     position: absolute;
