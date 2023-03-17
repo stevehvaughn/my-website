@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '@styles/Navbar.module.scss';
-import { homeNavLinks, musicNavLinks, webNavLinks } from '../utils/data.js'
+import { homeNavLinks, musicNavLinks, webNavLinks } from '@utils/data.js'
 
 export default function Navbar({ criteria }) {
   let navLinks;

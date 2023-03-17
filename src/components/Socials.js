@@ -1,23 +1,20 @@
-import { AiOutlineFacebook } from "react-icons/ai"
-import { AiOutlineInstagram } from "react-icons/ai"
-import { AiOutlineLinkedin } from "react-icons/ai"
-import { AiOutlineGithub } from "react-icons/ai"
-import { SlNotebook } from "react-icons/sl"
+import React from "react"
+import * as ReactIcons from 'react-icons/bs'
 import { socialLinks } from "../utils/data"
+import styles from "@styles/Socials.module.scss"
 
 export default function Socials() {
   return (
-    <div className="socials">
-      {socialLinks.map(link => {
-        return (
-          <a href={link.url} target="_blank" >{link.name}</a>
-        )
-      })}
-      {/* <a href="https://www.linkedin.com/in/jessicavaughn619/" target="_blank"><AiOutlineLinkedin /></a>
-      <a href="https://github.com/jessicavaughn619" target="_blank"><AiOutlineGithub /></a>
-      <a href="https://dev.to/jvaughn619" target="_blank"><SlNotebook /></a>
-      <a href="https://www.facebook.com/jessica.vaughn619/" target="_blank"><AiOutlineFacebook /></a>
-      <a href="https://www.instagram.com/jessicavaughn619/" target="_blank"><AiOutlineInstagram /></a> */}
+    <div className={styles.socials}>
+      <div className={styles.social_header}>Follow me @stevehvaughn on all socials!</div>
+      <div className={styles.social_links_wrapper}>
+        {socialLinks.map(link => {
+          let iconName = "Bs" + link.name;
+          return (
+            <a className={styles.social_link} key={link.name} href={link.url} target="_blank" >{React.createElement(ReactIcons[`${iconName}`], { size: 30 })}</a>
+          )
+        })}
+      </div>
     </div>
   )
 }

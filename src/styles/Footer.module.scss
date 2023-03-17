@@ -1,3 +1,19 @@
 @import 'config';
 @import 'mixins';
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
+  padding: 3rem 0;
+}
+
+.footer_sitemap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+  width: 100%;
+  justify-items: center;
+}

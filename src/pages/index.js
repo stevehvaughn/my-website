@@ -16,7 +16,7 @@ export default function Home() {
             <p>I am a </p>
             <h2>Front-End Web Developer</h2>
             <p>that specializes in creating engaging and responsive websites.</p>
-            <Link href='/web'>See My Portfolio</Link>
+            <Link href='/dev'>See My Portfolio</Link>
           </div>
           <div className={styles.image_wrapper}>
             <Image

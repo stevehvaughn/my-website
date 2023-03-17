@@ -12,39 +12,55 @@ export const homeNavLinks = [
 
 export const musicNavLinks = [
   {
-    name: "Home",
-    path: "/"
-  },
-  {
     name: "Music",
     path: "/music"
   },
   {
     name: "Bio",
     path: "/music/bio"
-  }
+  },
+  {
+    name: "Developer Portfolio",
+    path: "/dev"
+  },
 ]
 
 export const webNavLinks = [
   {
-    name: "Home",
-    path: "/"
-  },
-  {
-    name: "Web",
-    path: "/web"
+    name: "Portfolio",
+    path: "/dev"
   },
   {
     name: "Projects",
-    path: "/music/projects"
-  }
+    path: "/dev/projects"
+  },
+  {
+    name: "Music",
+    path: "/music"
+  },
 ]
 
 // Socials 
 export const socialLinks = [
   {
-    name: "LinkedIn",
+    name: "Github",
+    url: "https://github.com/stevehvaughn",
+  },
+  {
+    name: "Linkedin",
     url: 'https://www.linkedin.com/in/stevehvaughn/'
+  },
+  {
+    name: "Medium",
+    url: "https://medium.com/@stevehvaughn"
+  },
+  {
+    name: "Youtube",
+    url: "https://www.youtube.com/@stevehvaughn"
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/stevehvaughn/"
   },
   {
     name: "Facebook",

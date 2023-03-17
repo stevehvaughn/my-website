@@ -1,0 +1,33 @@
+@import 'config';
+@import 'mixins';
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social_header {
+  text-align: center;
+}
+
+.social_links_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: all .3s ease;
+
+  &:hover {
+    gap: 1.5rem;
+  }
+}
+
+.social_link {
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: var(--color-accent);
+    transform: scale(1.25);
+    margin: 0 1rem;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'config';
+@import 'mixins';
+
+.footer_sitemap_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_sitemap_section_header {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.links_wrapper {
+  display: flex;
+  flex-direction: row;
+}
