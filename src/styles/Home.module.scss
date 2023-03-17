@@ -2,21 +2,15 @@
 @import 'mixins';
 
 .home {
+  @include center-me(96rem);
   position: relative;
   display: grid;
   grid-template-areas:
-  "image"
   "web"
+  "image"
   "music";
 
-  // @media #{$small} {
-  //   grid-template-areas:
-  //       "image image"
-  //       "web music";
-  // }
-
   @media #{$small-ish} {
-    // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: 0 100% 0;
     grid-template-areas: "web image music"
   }
@@ -31,6 +25,10 @@
   grid-area: image;
   height: 100%;
   text-align: center;
+
+  img {
+    mask-image: linear-gradient(to top, transparent 5%, var(--color-bg) 25%);
+  }
 }
 
 .details_wrapper {
@@ -40,10 +38,15 @@
   justify-content: center;
   align-items: center;
   font-family: var(--font-montserrat);
+  z-index: 1;
 
   @media #{$small-ish} {
     position: absolute;
     width: 30vw;
+  }
+
+  @media #{$medium-ish} {
+    width: 30rem;
   }
 
   @media #{$large} {
@@ -64,6 +67,10 @@
     @media #{$tablet} {
       right: 3vw;
     }
+
+    @media #{$medium-ish} {
+      right: 0;
+    }
   }
 
   &.web {
@@ -75,6 +82,10 @@
 
     @media #{$tablet} {
       left: 3vw;
+    }
+
+    @media #{$medium-ish} {
+      left: 0;
     }
   }
 }
