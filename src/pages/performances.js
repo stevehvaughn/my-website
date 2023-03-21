@@ -1,5 +1,9 @@
+import Layout from "@components/Layout"
+
 export default function performances() {
   return (
-    <div>Performances</div>
+    <Layout criteria='music'>
+      <div>Performances</div>
+    </Layout>
   )
 }

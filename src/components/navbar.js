@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import styles from '@styles/Navbar.module.scss';
-import { homeNavLinks, musicNavLinks, webNavLinks } from '@utils/data.js'
+import { homeNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js'
 
 export default function Navbar({ criteria }) {
   let navLinks;
 
   if (criteria === 'music') {
     navLinks = musicNavLinks
-  } else if (criteria === 'web') {
-    navLinks = webNavLinks
+  } else if (criteria === 'dev') {
+    navLinks = devNavLinks
   } else {
     navLinks = homeNavLinks
   }

@@ -25,7 +25,7 @@ export const musicNavLinks = [
   },
 ]
 
-export const webNavLinks = [
+export const devNavLinks = [
   {
     name: "Portfolio",
     path: "/dev"

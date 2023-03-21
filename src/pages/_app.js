@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { open_sans, bitter, montserrat } from './fonts';
+import { open_sans, bitter, montserrat } from '@utils/fonts';
 import '../styles/globals.scss';
 
 export default function MyApp({ Component, pageProps }) {

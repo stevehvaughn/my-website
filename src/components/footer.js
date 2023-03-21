@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 import FooterSitemapSection from './FooterSitemapSection';
-import { musicNavLinks, webNavLinks, wedNavLinks } from '@utils/data.js';
+import { musicNavLinks, devNavLinks } from '@utils/data.js';
 import Socials from './Socials';
 import styles from '@styles/Footer.module.scss';
 
@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer_sitemap}>
         <FooterSitemapSection
-          links={webNavLinks}
+          links={devNavLinks}
         />
         <FooterSitemapSection
           links={musicNavLinks}
