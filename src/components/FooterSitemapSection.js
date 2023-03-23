@@ -10,7 +10,7 @@ export default function FooterSitemapSection({ links }) {
       <div className={styles.links_wrapper}>
         {linksArr.map(link => {
           return (
-            <a href={link.path}>{link.name}</a>
+            <a key={link.name} href={link.path}>{link.name}</a>
           )
         })}
       </div>

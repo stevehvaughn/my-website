@@ -20,7 +20,7 @@ export const musicNavLinks = [
     path: "/music/bio"
   },
   {
-    name: "Developer Portfolio",
+    name: "Portfolio",
     path: "/dev"
   },
 ]

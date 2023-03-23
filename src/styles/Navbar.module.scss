@@ -1,11 +1,16 @@
 @import 'config';
 @import 'mixins';
 
+.nav {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 .navbar {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  padding: 1.5rem;
 
   > li {
     list-style: none;

@@ -14,7 +14,8 @@ export default function Navbar({ criteria }) {
   }
 
   return (
-    <nav>
+    <nav className={styles.nav}>
+      <Link href="/">Home</Link>
       <ul className={styles.navbar}>
         {navLinks.map((link, index) => {
           return (

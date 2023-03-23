@@ -1,0 +1,9 @@
+@import 'config';
+@import 'mixins';
+
+.about {
+  > h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

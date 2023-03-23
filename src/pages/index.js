@@ -1,15 +1,17 @@
 import Image from "next/image"
 import Layout from "@components/Layout";
+import About from "@components/about";
 import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait-short.png'
 import styles from '@styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <Layout criteria={'home'}>
+    <Layout criteria="home">
       <div className={styles.home}>
         <header className={styles.home_header}>
-          <h1>Hi, my name is Steven Vaughn</h1>
+          <p>Hi, my name is</p>
+          <h1>Steven Vaughn</h1>
         </header>
         <section className={styles.home_content}>
           <div className={[styles.details_wrapper, styles.web].join(' ')}>
@@ -32,6 +34,7 @@ export default function Home() {
             <Link href='/music'>See My Music</Link>
           </div>
         </section>
+        <About />
       </div>
     </Layout>
   )
