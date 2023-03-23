@@ -6,7 +6,7 @@ import styles from "@styles/Socials.module.scss"
 export default function Socials() {
   return (
     <div className={styles.socials}>
-      <div className={styles.social_header}>Follow me @stevehvaughn on all socials!</div>
+      <div className={styles.social_header}>Follow me <strong>@stevehvaughn</strong> on all socials!</div>
       <div className={styles.social_links_wrapper}>
         {socialLinks.map(link => {
           let iconName = "Bs" + link.name;

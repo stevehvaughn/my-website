@@ -2,8 +2,25 @@
 @import 'mixins';
 
 .about {
-  > h2 {
+  // background-color: var(--color-accent);
+  padding: 3rem;
+
+  h2 {
+    // color: var(--color-secondary);
     text-transform: uppercase;
     text-align: center;
+  }
+}
+
+.about_content {
+
+}
+
+.image_wrapper {
+  position: relative;
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
   }
 }

@@ -9,6 +9,10 @@
 
 .social_header {
   text-align: center;
+
+  > strong {
+    color: var(--color-accent);
+  }
 }
 
 .social_links_wrapper {
