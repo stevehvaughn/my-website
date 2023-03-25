@@ -1,7 +1,7 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './navbar';
+import Footer from './footer';
 
-export default function Layout({ children, criteria }) {
+export default function layout({ children, criteria }) {
   return (
     <>
       {criteria !== "home" && <Navbar criteria={criteria} />}

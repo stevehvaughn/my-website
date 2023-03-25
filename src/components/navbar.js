@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from '@styles/Navbar.module.scss';
 import { homeNavLinks, errorNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js'
 
-export default function Navbar({ criteria }) {
+export default function navbar({ criteria }) {
   let navLinks;
 
   if (criteria === 'music') {

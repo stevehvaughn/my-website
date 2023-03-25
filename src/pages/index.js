@@ -1,9 +1,11 @@
 import Image from "next/image"
-import Layout from "@components/Layout";
+import Layout from "@components/layout";
 import About from "@components/about";
 import Link from 'next/link';
+import Date from "@components/date";
 import headshotPic from '../../public/steve-headshot-portrait-short.png'
 import styles from '@styles/Home.module.scss'
+import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {
@@ -45,17 +47,17 @@ export default function Home({ allPostsData }) {
           </div>
         </section>
         <About />
-        {/* <ul>
+        <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </Layout>
   )
