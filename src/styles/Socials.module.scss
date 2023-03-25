@@ -19,19 +19,19 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  transition: all .3s ease;
+  transition: all .2s ease;
 
   &:hover {
-    gap: 1.5rem;
+    gap: 1.15rem;
   }
 }
 
 .social_link {
-  transition: all .3s ease-in-out;
+  transition: all .2s ease;
 
   &:hover {
     color: var(--color-accent);
-    transform: scale(1.25);
-    margin: 0 1rem;
+    transform: scale(1.15);
+    margin: 0 .5rem;
   }
 }

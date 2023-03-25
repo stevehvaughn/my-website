@@ -3,11 +3,15 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   background-color: var(--color-secondary);
   color: var(--color-bg);
   padding: 3rem 0;
+
+  @media #{$small} {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .footer_sitemap {
@@ -15,10 +19,11 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   justify-items: center;
+  padding: 0 0 1rem;
 }
 
 .copyright {
   grid-column: 1 / -1;
   text-align: center;
-  margin: 3rem 0 1rem;
+  margin: 2rem 0 1rem;
 }

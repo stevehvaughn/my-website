@@ -14,4 +14,13 @@
 .links_wrapper {
   display: flex;
   flex-direction: column;
+  gap: .5rem;
+
+  > a {
+    width: fit-content;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
 }

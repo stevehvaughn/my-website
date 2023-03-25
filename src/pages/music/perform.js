@@ -1,6 +1,6 @@
 import Layout from "@components/Layout"
 
-export default function performances() {
+export default function perform() {
   return (
     <Layout criteria='music'>
       <div>Performances</div>

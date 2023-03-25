@@ -15,5 +15,15 @@
   > li {
     list-style: none;
     text-transform: lowercase;
+
+    > a {
+      opacity: .6;
+      transition: all .3s ease;
+      @include animate-link-hover;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
