@@ -4,8 +4,18 @@ import About from "@components/about";
 import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait-short.png'
 import styles from '@styles/Home.module.scss'
+import { getSortedPostsData } from '@utils/posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
   return (
     <Layout criteria="home">
       <div className={styles.home}>
@@ -35,6 +45,17 @@ export default function Home() {
           </div>
         </section>
         <About />
+        {/* <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul> */}
       </div>
     </Layout>
   )

@@ -7,7 +7,9 @@ export default function About() {
         <h2>About Me</h2>
       </header>
       <div className={styles.about_content}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>I am a classical musician turned software engineer!</p>
+        <p>I spent the first part of my life passionately pursuing a career in music, until deciding to explore another hobby of mine -- software engineering -- as my full-time career.</p>
+        <p>Though I work full-time now with a marketing company building websites for clients, I still make music a priority in my life by performing with world-class ensembles and teaching part-time at a local university.</p>
       </div>
     </section>
   )
