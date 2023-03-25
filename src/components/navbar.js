@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '@styles/Navbar.module.scss';
-import { homeNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js'
+import { homeNavLinks, errorNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js'
 
 export default function Navbar({ criteria }) {
   let navLinks;
@@ -9,13 +9,15 @@ export default function Navbar({ criteria }) {
     navLinks = musicNavLinks
   } else if (criteria === 'dev') {
     navLinks = devNavLinks
+  } else if (criteria === '404') {
+    navLinks = errorNavLinks
   } else {
     navLinks = homeNavLinks
   }
 
   return (
     <nav className={styles.nav}>
-      <Link href="/">Home</Link>
+      <Link href="/">home</Link>
       <ul className={styles.navbar}>
         {navLinks.map((link, index) => {
           return (

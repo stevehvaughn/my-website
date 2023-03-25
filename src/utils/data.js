@@ -10,6 +10,17 @@ export const homeNavLinks = [
   }
 ];
 
+export const errorNavLinks = [
+  {
+    name: "Music",
+    path: "/music",
+  },
+  {
+    name: "Portfolio",
+    path: "/dev"
+  }
+];
+
 export const musicNavLinks = [
   {
     name: "Music",
@@ -26,6 +37,10 @@ export const musicNavLinks = [
   {
     name: "Teaching",
     path: "/music/teaching"
+  },
+  {
+    name: "Gallery",
+    path: "/music/gallery"
   },
   {
     name: "Portfolio",
