@@ -35,6 +35,8 @@ const allPostsObj = [musicPostsObj, devPostsObj];
 // //   posts: ['post-1.md', 'post-2.md'] 
 // // }
 
+// When calling the fucntion - pass in a string with the category of posts you want to only show that category
+// i.e.: getSortedPostsData("music")
 export function getSortedPostsData(category) {
   let postsArr = [];
 
@@ -106,10 +108,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id, type) {
-  // const fullPath = path.join(postsDirectory, `${id}.md`);
-  // const typePath = path.join(postsDirectory, type);
-
+export async function getPostData(id) {
   const fullPath = path.join(typePath, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 

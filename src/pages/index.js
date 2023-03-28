@@ -9,6 +9,8 @@ import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {
+  // pass in a string with the category of posts you want to only show that category
+  // i.e.: getSortedPostsData("music")
   const allPostsData = getSortedPostsData();
   return {
     props: {
