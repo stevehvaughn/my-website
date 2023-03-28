@@ -58,6 +58,10 @@ export const devNavLinks = [
     path: "/dev/projects"
   },
   {
+    name: "Posts",
+    path: "/dev/posts"
+  },
+  {
     name: "Music",
     path: "/music"
   },

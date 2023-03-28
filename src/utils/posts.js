@@ -3,31 +3,76 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import dirTree from 'directory-tree';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
+const musicDirectory = path.join(postsDirectory, "music");
+const devDirectory = path.join(postsDirectory, "dev");
 
-export function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
+const musicPosts = dirTree(musicDirectory);
+const devPosts = dirTree(devDirectory);
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+function makePostsObj(dir) {
+  const name = dir.name
+  const posts = []
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+  for (const post of dir.children) {
+    posts.push(post.name);
+  }
+  return {
+    category: name,
+    posts: [...posts]
+  }
+}
 
-    // Combine the data with the id
-    return {
-      id,
-      ...matterResult.data,
-    };
+const musicPostsObj = makePostsObj(musicPosts);
+const devPostsObj = makePostsObj(devPosts);
+const allPostsObj = [musicPostsObj, devPostsObj];
+
+// // Object Structure for Posts with category
+// // { 
+// //   category: foo,
+// //   posts: ['post-1.md', 'post-2.md'] 
+// // }
+
+export function getSortedPostsData(category) {
+  let postsArr = [];
+
+  if (category) {
+    const categoryDirectory = path.join(postsDirectory, category);
+    postsArr.push(makePostsObj(dirTree(categoryDirectory)));
+  } else {
+    postsArr = allPostsObj;
+  }
+
+  // Create array of all PostsData
+  let postDataArr = [];
+  postsArr.map((item) => {
+    let category = item.category;
+    let fullPath;
+    let id;
+
+    for (const post of item.posts) {
+      // Remove ".md" from file name to get id
+      id = post.replace(/\.md$/, '');
+      fullPath = path.join(postsDirectory, category, post);
+
+      // Read markdown file as string
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+      // Use gray-matter to parse the post metadata section
+      const matterResult = matter(fileContents);
+
+      // Combine the data with the id
+      postDataArr.push({
+        id,
+        ...matterResult.data,
+      });
+    }
   });
+
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  return postDataArr.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -61,8 +106,11 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(id, type) {
+  // const fullPath = path.join(postsDirectory, `${id}.md`);
+  // const typePath = path.join(postsDirectory, type);
+
+  const fullPath = path.join(typePath, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section

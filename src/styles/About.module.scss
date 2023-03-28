@@ -11,6 +11,12 @@
 }
 
 .about_content {
+  text-align: center;
+  
+  a {
+    font-weight: 600;
+    @include animate-link-hover(var(--color-accent), left);
+  }
 }
 
 .image_wrapper {

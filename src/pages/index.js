@@ -2,9 +2,9 @@ import Image from "next/image"
 import Layout from "@components/layout";
 import About from "@components/about";
 import Link from 'next/link';
-import Date from "@components/date";
 import headshotPic from '../../public/steve-headshot-portrait-short.png'
 import styles from '@styles/Home.module.scss'
+import Date from "@components/date";
 import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
           <div className={[styles.details_wrapper, styles.web].join(' ')}>
             <p>I am a </p>
             <h2>Front-End Web Developer</h2>
-            <p>that specializes in creating engaging and responsive websites.</p>
+            <p>that specializes in creating pixel-perfect websites that are responsive, accessible, and eye-popping.</p>
             <Link href='/dev'>See My Portfolio</Link>
           </div>
           <div className={styles.image_wrapper}>
@@ -42,7 +42,7 @@ export default function Home({ allPostsData }) {
           <div className={[styles.details_wrapper, styles.music].join(' ')}>
             <p>I am a</p>
             <h2>Professional Musician</h2>
-            <p>that has performed with symphony orchestras and bands across the United States and abroad.</p>
+            <p>that performs across the United States and abroad and teaches at the University of Northern Colorado.</p>
             <Link href='/music'>See My Music</Link>
           </div>
         </section>
