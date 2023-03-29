@@ -39,6 +39,10 @@ export const musicNavLinks = [
     path: "/music/teaching"
   },
   {
+    name: "Posts",
+    path: "/music/posts"
+  },
+  {
     name: "Gallery",
     path: "/music/gallery"
   },
