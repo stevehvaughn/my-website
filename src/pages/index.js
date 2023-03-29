@@ -20,7 +20,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  console.log(allPostsData);
   return (
     <Layout criteria="home">
       <div className={styles.home}>
@@ -32,7 +31,7 @@ export default function Home({ allPostsData }) {
           <div className={[styles.details_wrapper, styles.web].join(' ')}>
             <p>I am a </p>
             <h2>Front-End Web Developer</h2>
-            <p>that specializes in creating pixel-perfect websites that are responsive, accessible, and eye-popping.</p>
+            <p>that specializes in building pixel-perfect websites that are responsive, accessible, and focused on the user experience.</p>
             <Link href='/dev'>See My Portfolio</Link>
           </div>
           <div className={styles.image_wrapper}>
@@ -45,8 +44,8 @@ export default function Home({ allPostsData }) {
           <div className={[styles.details_wrapper, styles.music].join(' ')}>
             <p>I am a</p>
             <h2>Professional Musician</h2>
-            <p>that performs across the United States and abroad and teaches at the University of Northern Colorado.</p>
-            <Link href='/music'>See My Music</Link>
+            <p>that performs across the United States and abroad, while also teaching future musicians as a university professor.</p>
+            <Link href='/music'>See my Music</Link>
           </div>
         </section>
         <About />
