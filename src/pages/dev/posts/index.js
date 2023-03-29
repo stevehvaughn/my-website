@@ -6,7 +6,6 @@ import { loadMediumPosts } from '@utils/medium-posts';
 import { getSortedPostsData } from '@utils/posts';
 
 export default function posts({ ...props }) {
-  console.log(props.mediumPosts.items);
   return (
     <Layout criteria='dev'>
       <div>All Dev Posts</div>

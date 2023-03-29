@@ -83,8 +83,16 @@ export function getSortedPostsData(category) {
   });
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getAllPostIds(category) {
+  let dir;
+  if (category) {
+    dir = path.join(postsDirectory, category);
+  } else {
+    dir = postsDirectory;
+  }
+
+  const fileNames = fs.readdirSync(dir);
+  console.log(fileNames);
 
   // Returns an array that looks like this:
   // [
@@ -108,8 +116,15 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
-  const fullPath = path.join(typePath, `${id}.md`);
+export async function getPostData(id, category) {
+  let dir;
+  if (category) {
+    dir = path.join(postsDirectory, category);
+  } else {
+    dir = postsDirectory;
+  }
+
+  const fullPath = path.join(postsDirectory, category, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
