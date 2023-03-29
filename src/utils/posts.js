@@ -35,7 +35,7 @@ const allPostsObj = [musicPostsObj, devPostsObj];
 // //   posts: ['post-1.md', 'post-2.md'] 
 // // }
 
-// When calling the fucntion - pass in a string with the category of posts you want to only show that category
+// When calling the fucntion -  pass in a string with the category to filter by that post, leave empty to get all posts
 // i.e.: getSortedPostsData("music")
 export function getSortedPostsData(category) {
   let postsArr = [];
@@ -68,6 +68,7 @@ export function getSortedPostsData(category) {
       // Combine the data with the id
       postDataArr.push({
         id,
+        category: category,
         ...matterResult.data,
       });
     }
@@ -92,8 +93,6 @@ export function getAllPostIds(category) {
   }
 
   const fileNames = fs.readdirSync(dir);
-  console.log(fileNames);
-
   // Returns an array that looks like this:
   // [
   //   {
@@ -107,7 +106,7 @@ export function getAllPostIds(category) {
   //     }
   //   }
   // ]
-  return fileNames.map((fileName) => {
+  return fileNames.map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, ''),

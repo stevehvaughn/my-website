@@ -9,7 +9,7 @@ import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {
-  // pass in a string with the category of posts you want to only show that category
+  // pass in a string with the category to filter by that post, leave empty to get all posts
   // i.e.: getSortedPostsData("music")
   const allPostsData = getSortedPostsData();
   return {
@@ -20,6 +20,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  console.log(allPostsData);
   return (
     <Layout criteria="home">
       <div className={styles.home}>
@@ -50,9 +51,9 @@ export default function Home({ allPostsData }) {
         </section>
         <About />
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, category }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link href={`/${category}/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
