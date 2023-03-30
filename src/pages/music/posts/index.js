@@ -6,7 +6,7 @@ import { getSortedPostsData } from '@utils/posts';
 
 export default function posts({ ...props }) {
   return (
-    <Layout criteria='dev'>
+    <Layout criteria='music'>
       <div>All Music Posts</div>
       <ul>
         <h3>Site Blogs</h3>
