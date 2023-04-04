@@ -12,12 +12,12 @@ export default function perform({ allPerformances }) {
           <article key={performance.title}>
             <h2>{performance.title}</h2>
             <div>
-              {/* <Image
-                src={performance.ensemble.logo}
+              <Image
+                src={`/../public/logos/${performance.ensemble.logo}`}
                 alt={`${performance.ensemble.name} logo`}
                 height={50}
                 width={50}
-              /> */}
+              />
               <p>{performance.ensemble.name}</p>
             </div>
             <div>
@@ -47,7 +47,7 @@ export const getStaticProps = async () => {
     // where: { published: true },
     include: {
       ensemble: {
-        select: { name: true, website: true, category: true },
+        select: { name: true, website: true, category: true, logo: true },
       },
       venue: {
         select: { name: true, address: true }
