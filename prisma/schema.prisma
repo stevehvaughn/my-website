@@ -12,7 +12,6 @@ generator client {
 
 model Ensemble {
   id           Int           @id @default(autoincrement())
-  ensembleId   Int           @unique
   name         String
   website      String
   category     String
@@ -23,7 +22,7 @@ model Ensemble {
 model Performance {
   id         Int          @id @default(autoincrement())
   title      String
-  dates      String[]
+  date       DateTime     @default(now()) @db.Date
   ensemble   Ensemble     @relation(fields: [ensembleId], references: [id])
   ensembleId Int
   venue      Venue        @relation(fields: [venueId], references: [id])
