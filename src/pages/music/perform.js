@@ -9,7 +9,7 @@ export default function perform({ allPerformances }) {
       <h1>Upcoming Performances</h1>
       <div>
         {allPerformances.map(performance => (
-          <article>
+          <article key={performance.title}>
             <h2>{performance.title}</h2>
             <div>
               {/* <Image
@@ -32,7 +32,7 @@ export default function perform({ allPerformances }) {
             <p>{performance.venue.address}</p>
             <div>
               {performance.repertoire.map(piece => (
-                <p>{piece.composition} by {piece.composer}</p>
+                <p key={piece.composition}>{piece.composition} by {piece.composer}</p>
               ))}
             </div>
           </article>
