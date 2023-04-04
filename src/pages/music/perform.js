@@ -1,9 +1,10 @@
 import Layout from "@components/layout"
 import Image from "next/image";
-import { getAllPerformances } from '@utils/performances';
 import Date from "@components/date";
+import prisma from '@lib/prisma';
 
 export default function perform({ allPerformances }) {
+  console.log(allPerformances);
   return (
     <Layout criteria='music'>
       <h1>Upcoming Performances</h1>
@@ -11,12 +12,12 @@ export default function perform({ allPerformances }) {
         {allPerformances.map(performance => (
           <article>
             <div>
-              <Image
+              {/* <Image
                 src={performance.ensemble.logo}
                 alt={`${performance.ensemble.name} logo`}
                 height={50}
                 width={50}
-              />
+              /> */}
               <p>{performance.ensemble.name}</p>
             </div>
             <div>
@@ -42,12 +43,23 @@ export default function perform({ allPerformances }) {
   )
 }
 
-export async function getStaticProps() {
-  const allPerformances = getAllPerformances();
-
+export const getStaticProps = async () => {
+  const allPerformances = await prisma.performance.findMany({
+    // where: { published: true },
+    include: {
+      ensemble: {
+        select: { name: true, website: true, category: true },
+      },
+      venue: {
+        select: { name: true, address: true }
+      },
+      repertoire: {
+        select: { composition: true, composer: true }
+      }
+    },
+  });
   return {
-    props: {
-      allPerformances
-    }
-  }
-}
+    props: { allPerformances },
+    revalidate: 10,
+  };
+};
