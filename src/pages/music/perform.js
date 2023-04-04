@@ -1,5 +1,4 @@
 import Layout from "@components/layout"
-import Image from "next/image";
 import Date from "@components/date";
 import prisma from '@lib/prisma';
 
