@@ -12,6 +12,8 @@ generator client {
 
 model Ensemble {
   id           Int           @id @default(autoincrement())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
   name         String
   website      String
   category     String
@@ -21,8 +23,10 @@ model Ensemble {
 
 model Performance {
   id         Int          @id @default(autoincrement())
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
   title      String
-  date       DateTime     @default(now()) @db.Date
+  dates      String[]
   ensemble   Ensemble     @relation(fields: [ensembleId], references: [id])
   ensembleId Int
   venue      Venue        @relation(fields: [venueId], references: [id])
@@ -32,6 +36,8 @@ model Performance {
 
 model Venue {
   id           Int           @id @default(autoincrement())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
   name         String
   address      String
   performances Performance[]
@@ -39,8 +45,11 @@ model Venue {
 
 model Repertoire {
   id            Int         @id @default(autoincrement())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
   composition   String
   composer      String
+  genre         String      @default("Orchestral")
   performance   Performance @relation(fields: [performanceId], references: [id])
   performanceId Int
 }

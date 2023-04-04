@@ -4,13 +4,13 @@ import Date from "@components/date";
 import prisma from '@lib/prisma';
 
 export default function perform({ allPerformances }) {
-  console.log(allPerformances);
   return (
     <Layout criteria='music'>
       <h1>Upcoming Performances</h1>
       <div>
         {allPerformances.map(performance => (
           <article>
+            <h2>{performance.title}</h2>
             <div>
               {/* <Image
                 src={performance.ensemble.logo}
@@ -30,7 +30,6 @@ export default function perform({ allPerformances }) {
             </div>
             <p>{performance.venue.name}</p>
             <p>{performance.venue.address}</p>
-            <h2>{performance.title}</h2>
             <div>
               {performance.repertoire.map(piece => (
                 <p>{piece.composition} by {piece.composer}</p>
@@ -54,12 +53,11 @@ export const getStaticProps = async () => {
         select: { name: true, address: true }
       },
       repertoire: {
-        select: { composition: true, composer: true }
+        select: { composition: true, composer: true, genre: true }
       }
     },
   });
   return {
-    props: { allPerformances },
-    revalidate: 10,
+    props: { allPerformances: JSON.parse(JSON.stringify(allPerformances)) }
   };
 };
