@@ -25,6 +25,9 @@ export const getStaticProps = async () => {
     where: {
       startDate: { gte: new Date() } // only pulls in performances in the future
     },
+    orderBy: {
+      startDate: 'asc' // sort by date
+    },
     include: {
       ensemble: {
         select: { name: true, website: true, category: true, logo: true },
