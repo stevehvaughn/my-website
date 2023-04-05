@@ -1,0 +1,70 @@
+@import 'config';
+@import 'mixins';
+
+.card {
+  padding: 2rem;
+  border-radius: 2.5rem;
+  box-shadow: 5px 5px 10px #ccc;
+  color: white;
+}
+
+$random-perc: random(150) + deg;
+
+.card:nth-child(odd) {
+  background: linear-gradient($random-perc, var(--color-primary), var(--color-secondary) 100%);
+}
+
+.card:nth-child(even) {
+  background: linear-gradient($random-perc, var(--color-secondary), var(--color-primary) 100%);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+  }
+
+  p {
+    font-weight: 600;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 1rem 0 0;
+}
+
+.dates_wrapper {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.details_wrapper {
+  opacity: 0;
+  height: 0;
+  font-size: 1.6rem;
+}
+
+.button {
+  @include simple-button;
+  font-size: 1.4rem;
+}
+
+.show {
+  opacity: 1;
+  height: auto;
+}
+
+.detail_section {
+  margin-bottom: 2rem;
+
+  > p:first-child {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-bg);
+    margin: 0 auto;
+  }
+}

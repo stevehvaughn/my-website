@@ -1,33 +1,36 @@
 import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import prisma from '@lib/prisma';
+import styles from "@styles/Perform.module.scss"
 
-export default function perform({ allPerformances }) {
+export default function perform({ upcomingPerformances }) {
   return (
     <Layout criteria='music'>
-      <h1>Upcoming Performances</h1>
-      <section>
-        {allPerformances.map(performance => (
-          <UpcomingPerformanceCard
-            performance={performance}
-          />
-        ))}
+      <section className={styles.performances}>
+        <h1>Upcoming Performances</h1>
+        <article className={styles.upcoming_grid}>
+          {upcomingPerformances.map(performance => (
+            <UpcomingPerformanceCard
+              performance={performance}
+            />
+          ))}
+        </article>
       </section>
     </Layout>
   )
 }
 
 export const getStaticProps = async () => {
-  const allPerformances = await prisma.performance.findMany({
+  const upcomingPerformances = await prisma.performance.findMany({
     where: {
-      startDate: { gte: new Date() }
+      startDate: { gte: new Date() } // only pulls in performances in the future
     },
     include: {
       ensemble: {
         select: { name: true, website: true, category: true, logo: true },
       },
       venue: {
-        select: { name: true, address: true }
+        select: { name: true, addressLine1: true, addressLine2: true }
       },
       repertoire: {
         select: { composition: true, composer: true, genre: true }
@@ -35,6 +38,6 @@ export const getStaticProps = async () => {
     },
   });
   return {
-    props: { allPerformances: JSON.parse(JSON.stringify(allPerformances)) }
+    props: { upcomingPerformances: JSON.parse(JSON.stringify(upcomingPerformances)) }
   };
 };

@@ -1,0 +1,15 @@
+@import 'config';
+@import 'mixins';
+
+.performances {
+  position: relative;
+  @include center-me(128rem);
+}
+
+.upcoming_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+  gap: 2rem;
+  margin: 2rem;
+}

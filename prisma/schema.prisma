@@ -41,7 +41,8 @@ model Venue {
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
   name         String
-  address      String
+  addressLine1 String        @default("123 Main Street")
+  addressLine2 String        @default("Denver, CO 12345")
   performances Performance[]
 }
 

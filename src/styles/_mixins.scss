@@ -65,6 +65,20 @@
   }
 }
 
+@mixin simple-button() {
+  text-transform: uppercase;
+  width: 15rem;
+  display: block;
+  color: var(--color-secondary);
+  border-radius: 5rem;
+  padding: 1em;
+  background: var(--color-bg);
+  font-family: var(--font-montserrat);
+  border: none;
+  font-weight: bold;
+  margin: 2rem auto 1rem;
+}
+
 @mixin animate-link-hover($lineColor: var(--color-secondary), $direction: center) {
   position: relative;
 
