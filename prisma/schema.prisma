@@ -22,16 +22,18 @@ model Ensemble {
 }
 
 model Performance {
-  id         Int          @id @default(autoincrement())
-  createdAt  DateTime     @default(now())
-  updatedAt  DateTime     @updatedAt
-  title      String
-  dates      String[]
-  ensemble   Ensemble     @relation(fields: [ensembleId], references: [id])
-  ensembleId Int
-  venue      Venue        @relation(fields: [venueId], references: [id])
-  venueId    Int
-  repertoire Repertoire[]
+  id          Int          @id @default(autoincrement())
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  title       String
+  startDate   DateTime     @default(now())
+  endDate     DateTime?    @default(now())
+  ensemble    Ensemble     @relation(fields: [ensembleId], references: [id])
+  ensembleId  Int
+  venue       Venue        @relation(fields: [venueId], references: [id])
+  venueId     Int
+  repertoire  Repertoire[]
+  description String?
 }
 
 model Venue {

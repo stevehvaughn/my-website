@@ -1,50 +1,27 @@
 import Layout from "@components/layout"
-import Image from "next/image";
-import Date from "@components/date";
+import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import prisma from '@lib/prisma';
 
 export default function perform({ allPerformances }) {
   return (
     <Layout criteria='music'>
       <h1>Upcoming Performances</h1>
-      <div>
+      <section>
         {allPerformances.map(performance => (
-          <article key={performance.title}>
-            <h2>{performance.title}</h2>
-            <div>
-              <Image
-                src={`/../public/logos/${performance.ensemble.logo}`}
-                alt={`${performance.ensemble.name} logo`}
-                height={50}
-                width={50}
-              />
-              <p>{performance.ensemble.name}</p>
-            </div>
-            <div>
-              {performance.dates.length > 1 ?
-                <div>
-                  <Date dateString={performance.dates[0]} /> - <Date dateString={performance.dates.at(-1)} />
-                </div> :
-                <Date dateString={performance.dates[0]} />
-              }
-            </div>
-            <p>{performance.venue.name}</p>
-            <p>{performance.venue.address}</p>
-            <div>
-              {performance.repertoire.map(piece => (
-                <p key={piece.composition}>{piece.composition} by {piece.composer}</p>
-              ))}
-            </div>
-          </article>
+          <UpcomingPerformanceCard
+            performance={performance}
+          />
         ))}
-      </div>
+      </section>
     </Layout>
   )
 }
 
 export const getStaticProps = async () => {
   const allPerformances = await prisma.performance.findMany({
-    // where: { published: true },
+    where: {
+      startDate: { gte: new Date() }
+    },
     include: {
       ensemble: {
         select: { name: true, website: true, category: true, logo: true },
