@@ -1,4 +1,4 @@
-$base-font-size: 1.8rem;
+$base-font-size: 1.6rem;
 $base-line-height: 1.55;
 
 // Utility color variables
@@ -6,28 +6,28 @@ $heading-color: var(--color-accent);
 $base-font-color: var(--color-secondary);
 $link: var(--color-secondary);
 $link-hover: var(--color-secondary);
-$heading-font-family: var(--font-montserrat);
-$body-font-family: var(--font-open-sans);
+$heading-font-family: var(--font-inter);
+$body-font-family: var(--font-inter);
 
 // H1
-$h1-size: 3.4rem;
-$h1-size-small: 3rem;
+$h1-size: 4.5rem;
+$h1-size-small: 3.5rem;
 $h1-line-height: 1.29;
 $h1-line-height-small: 1.2;
 $h1-color: $heading-color;
 $h1-family: $heading-font-family;
 $h1-padding: 3rem 0 2rem;
-$h1-weight: 500;
+$h1-weight: 600;
 
 // H2
-$h2-size: 2.9rem;
+$h2-size: 3rem;
 $h2-size-small: 2.6rem;
 $h2-line-height: 1.21;
 $h2-line-height-small: 1.4;
 $h2-color: $heading-color;
 $h2-padding: 1rem 0 1rem;
 $h2-family: $heading-font-family;
-$h2-weight: 700;
+$h2-weight: 600;
 
 // H3
 $h3-size: 2.4rem;

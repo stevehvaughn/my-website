@@ -28,7 +28,7 @@ export default function UpcomingPerformanceCard({ performance }) {
           <span><DateComponent dateString={performance.startDate} /></span>
         }
       </div>
-      <button className={styles.button} onClick={handleChange}>{showDetails ? "Show Less" : "Show More"}</button>
+      <button className={styles.button} onClick={handleChange}><span>{showDetails ? "Show Less" : "Show More"}</span></button>
       <div className={` ${showDetails && styles.show} ${styles.details_wrapper}`}>
         <div className={styles.detail_section}>
           <p>Location</p>

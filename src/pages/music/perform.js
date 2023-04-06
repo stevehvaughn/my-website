@@ -1,13 +1,25 @@
 import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
+import Image from "next/image";
 import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
 
 export default function perform({ upcomingPerformances }) {
   return (
     <Layout criteria='music'>
+      <section className={styles.hero}>
+        <h1 className={styles.landing_page_title}>Performances</h1>
+        <div className={styles.image_wrapper}>
+          <Image
+            src={`/../public/perform_hero_image.jpg`}
+            alt="UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"
+            fill
+            style={{ objectFit: "cover", objectPosition: "bottom" }}
+            priority
+          />
+        </div>
+      </section>
       <section className={styles.performances}>
-        <h1>Upcoming Performances</h1>
         <article className={styles.upcoming_grid}>
           {upcomingPerformances.map(performance => (
             <UpcomingPerformanceCard

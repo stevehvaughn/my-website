@@ -49,7 +49,7 @@ export default function Home({ allPostsData }) {
           </div>
         </section>
         <About />
-        <ul>
+        {/* <ul>
           {allPostsData.map(({ id, date, title, category }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/${category}/posts/${id}`}>{title}</Link>
@@ -59,7 +59,7 @@ export default function Home({ allPostsData }) {
               </small>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </Layout>
   )

@@ -77,6 +77,12 @@
   border: none;
   font-weight: bold;
   margin: 2rem auto 1rem;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--color-accent);
+
+  }
 }
 
 @mixin animate-link-hover($lineColor: var(--color-secondary), $direction: center) {

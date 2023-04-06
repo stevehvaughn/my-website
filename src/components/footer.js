@@ -18,7 +18,7 @@ export default function footer() {
       </div>
       <Socials />
       <div className={styles.copyright}>
-        <span>Copyright <FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()}</span>
+        <span><FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()}</span>
         <span> Built by me with ❤️️ and 🍺</span>
       </div>
     </footer>

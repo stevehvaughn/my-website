@@ -4,8 +4,9 @@
 $open-sans: var(--font-open-sans);
 $bitter: var(--font-bitter);
 $montserrat: var(--font-montserat);
-$body-font-family: $open-sans;
-$heading-font-family: $montserrat;
+$inter: var(--font-inter);
+$body-font-family: $inter;
+$heading-font-family: $inter;
 
 :root {
   --border-radius: 12px;
@@ -63,6 +64,10 @@ img,
 svg {
   max-width: 100%;
   height: auto;
+}
+
+main {
+  position: relative;
 }
 
 // Headingss
