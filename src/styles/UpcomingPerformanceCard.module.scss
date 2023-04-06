@@ -20,7 +20,7 @@ $random-perc: random(150) + deg;
 
 .header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr .5fr;
   gap: 1rem;
   align-items: center;
 
@@ -38,6 +38,14 @@ $random-perc: random(150) + deg;
   padding: 1rem 0 0;
 }
 
+.role {
+  margin-left: auto;
+  width: fit-content;
+  font-size: 1.4rem;
+  opacity: .6;
+  text-align: right;
+}
+
 .dates_wrapper {
   font-size: 1.6rem;
   text-align: center;
@@ -45,8 +53,16 @@ $random-perc: random(150) + deg;
 
 .details_wrapper {
   opacity: 0;
-  height: 0;
-  font-size: 1.6rem;
+  max-height: 0;
+  font-size: 1.4rem;
+  transition: max-height .3s ease, opacity .2s ease;
+}
+
+.button_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .button {
@@ -56,7 +72,8 @@ $random-perc: random(150) + deg;
 
 .show {
   opacity: 1;
-  height: auto;
+  max-height: 50rem;
+  transition: all .3s ease;
 }
 
 .detail_section {

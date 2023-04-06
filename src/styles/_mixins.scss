@@ -67,16 +67,17 @@
 
 @mixin simple-button() {
   text-transform: uppercase;
+  text-align: center;
+  line-height: 1.25;
   width: 15rem;
   display: block;
   color: var(--color-secondary);
   border-radius: 5rem;
-  padding: 1em;
+  padding: 1rem;
   background: var(--color-bg);
-  font-family: var(--font-montserrat);
   border: none;
   font-weight: bold;
-  margin: 2rem auto 1rem;
+  margin: 0 auto;
 
   &:hover {
     cursor: pointer;

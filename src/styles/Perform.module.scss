@@ -39,6 +39,16 @@
   object-fit: cover;
 }
 
+.text_wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
 .upcoming_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

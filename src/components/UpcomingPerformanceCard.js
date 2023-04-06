@@ -1,5 +1,6 @@
 import DateComponent from "@components/date";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "@styles/UpcomingPerformanceCard.module.scss";
 import { useState } from "react";
 
@@ -20,6 +21,7 @@ export default function UpcomingPerformanceCard({ performance }) {
           width={50}
         />
         <p>{performance.ensemble.name}</p>
+        <p className={styles.role}>{performance.role}</p>
       </div>
       <h3 className={styles.title}>{performance.title}</h3>
       <div className={styles.dates_wrapper}>
@@ -28,7 +30,12 @@ export default function UpcomingPerformanceCard({ performance }) {
           <span><DateComponent dateString={performance.startDate} /></span>
         }
       </div>
-      <button className={styles.button} onClick={handleChange}><span>{showDetails ? "Show Less" : "Show More"}</span></button>
+      <div className={styles.button_wrapper}>
+        {performance.website &&
+          <Link className={styles.button} href={performance.website} target="_blank"><span>Visit Website</span></Link>
+        }
+        <button className={styles.button} onClick={handleChange}><span>{showDetails ? "Show Less" : "Show More"}</span></button>
+      </div>
       <div className={` ${showDetails && styles.show} ${styles.details_wrapper}`}>
         <div className={styles.detail_section}>
           <p>Location</p>

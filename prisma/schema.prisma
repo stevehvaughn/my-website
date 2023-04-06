@@ -26,12 +26,14 @@ model Performance {
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
   title       String
+  role        String       @default("Principal Tuba")
   startDate   DateTime     @default(now())
   endDate     DateTime?    @default(now())
   ensemble    Ensemble     @relation(fields: [ensembleId], references: [id])
   ensembleId  Int
   venue       Venue        @relation(fields: [venueId], references: [id])
   venueId     Int
+  website     String?
   repertoire  Repertoire[]
   description String?
 }
