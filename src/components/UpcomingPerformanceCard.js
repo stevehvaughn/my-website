@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "@styles/UpcomingPerformanceCard.module.scss";
 import { useState } from "react";
 
-export default function UpcomingPerformanceCard({ performance }) {
+export default function UpcomingPerformanceCard({ performance, setGridOpen }) {
   const [showDetails, setShowDetails] = useState(false);
 
   const handleChange = (e) => {

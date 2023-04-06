@@ -52,7 +52,10 @@
 .upcoming_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
   gap: 2rem;
   margin: 2rem;
+}
+
+.grid_start {
+  align-items: start;
 }
