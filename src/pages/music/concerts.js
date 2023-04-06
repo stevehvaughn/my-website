@@ -3,12 +3,8 @@ import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import Image from "next/image";
 import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
-import { useState } from "react";
 
 export default function concerts({ upcomingPerformances }) {
-  const [gridOpen, setGridOpen] = useState(false);
-  //need to think through rest of this from line 32
-
   return (
     <Layout criteria='music'>
       <section className={styles.hero}>
@@ -29,7 +25,7 @@ export default function concerts({ upcomingPerformances }) {
       </section>
       <section className={styles.performances}>
         <h2>Upcoming Performances</h2>
-        <article className={` ${gridOpen && styles.grid_start} ${styles.upcoming_grid}`}>
+        <article className={styles.upcoming_grid}>
           {upcomingPerformances.map(performance => (
             <UpcomingPerformanceCard
               performance={performance}
