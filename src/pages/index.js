@@ -2,7 +2,7 @@ import Image from "next/image"
 import Layout from "@components/layout";
 import About from "@components/about";
 import Link from 'next/link';
-import headshotPic from '../../public/steve-headshot-portrait-short.png'
+import headshotPic from '../../public/steve-headshot-portrait-short.webp'
 import styles from '@styles/Home.module.scss'
 import Date from "@components/date";
 import utilStyles from '@styles/utils.module.scss';

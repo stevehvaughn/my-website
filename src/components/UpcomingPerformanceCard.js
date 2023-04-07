@@ -12,7 +12,7 @@ export default function UpcomingPerformanceCard({ performance, setGridOpen }) {
   }
 
   return (
-    <div key={performance.title} className={styles.card}>
+    <div key={performance.title} className={` ${showDetails && styles.card_open} ${styles.card}`}>
       <div className={styles.header}>
         <Image
           src={`/../public/logos/${performance.ensemble.logo}`}

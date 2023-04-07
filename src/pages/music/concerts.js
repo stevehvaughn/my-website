@@ -11,7 +11,7 @@ export default function concerts({ upcomingPerformances }) {
         <h1 className={styles.landing_page_title}>Concerts</h1>
         <div className={styles.image_wrapper}>
           <Image
-            src={`/../public/perform_hero_image.jpg`}
+            src={`/../public/perform_hero_image_desktop.webp`}
             alt="UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"
             fill
             style={{ objectFit: "cover", objectPosition: "bottom" }}
@@ -29,7 +29,6 @@ export default function concerts({ upcomingPerformances }) {
           {upcomingPerformances.map(performance => (
             <UpcomingPerformanceCard
               performance={performance}
-              setGridOpen={setGridOpen}
             />
           ))}
         </article>

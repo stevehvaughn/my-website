@@ -1,0 +1,12 @@
+@import 'config';
+@import 'mixins';
+
+.bio {
+  position: relative;
+  @include center-me(99rem);
+
+  > p {
+    text-align: justify;
+    margin: 1rem 0;
+  }
+}
