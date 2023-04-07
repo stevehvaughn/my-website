@@ -6,39 +6,6 @@
   @include center-me(128rem);
 }
 
-.hero {
-  position: relative;
-}
-
-.landing_page_title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  right: 0;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.image_wrapper {
-  position: relative;
-  height: 40rem;
-  mask-image: linear-gradient(to bottom, transparent 5%, black 75%);
-
-  @media #{$tablet} {
-    height: 50rem;
-  }
-
-  @media #{$desktop} {
-    height: 55rem;
-  }
-}
-
-.image {
-  position: relative;
-  object-fit: cover;
-}
-
 .text_wrapper {
   text-align: center;
   display: flex;

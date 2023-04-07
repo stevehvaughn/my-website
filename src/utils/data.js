@@ -39,13 +39,13 @@ export const musicNavLinks = [
     path: "/music/teaching"
   },
   {
-    name: "Posts",
-    path: "/music/posts"
+    name: "Blog",
+    path: "/music/blog"
   },
-  {
-    name: "Gallery",
-    path: "/music/gallery"
-  },
+  // {
+  //   name: "Gallery",
+  //   path: "/music/gallery"
+  // },
   {
     name: "Portfolio",
     path: "/dev"
@@ -74,10 +74,6 @@ export const devNavLinks = [
 // Socials 
 export const socialLinks = [
   {
-    name: "Github",
-    url: "https://github.com/stevehvaughn",
-  },
-  {
     name: "Linkedin",
     url: 'https://www.linkedin.com/in/stevehvaughn/'
   },
@@ -86,8 +82,16 @@ export const socialLinks = [
     url: "https://medium.com/@stevehvaughn"
   },
   {
+    name: "Github",
+    url: "https://github.com/stevehvaughn",
+  },
+  {
     name: "Youtube",
     url: "https://www.youtube.com/@stevehvaughn"
+  },
+  {
+    name: "Soundcloud",
+    url: "https://soundcloud.com/stevehvaughn"
   },
   {
     name: "Instagram",

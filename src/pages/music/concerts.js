@@ -1,5 +1,7 @@
 import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
+import performHeroImage from "@public/perform_hero_image_desktop.webp"
+import Hero from "@components/Hero";
 import Image from "next/image";
 import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
@@ -7,21 +9,14 @@ import styles from "@styles/Perform.module.scss"
 export default function concerts({ upcomingPerformances }) {
   return (
     <Layout criteria='music'>
-      <section className={styles.hero}>
-        <h1 className={styles.landing_page_title}>Concerts</h1>
-        <div className={styles.image_wrapper}>
-          <Image
-            src={`/../public/perform_hero_image_desktop.webp`}
-            alt="UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"
-            fill
-            style={{ objectFit: "cover", objectPosition: "bottom" }}
-            priority
-          />
-        </div>
-        <article className={styles.text_wrapper}>
-          <p>I am a regular musician with the Fort Collins Symphony and the Fountain City Brass Band. However, I also am asked to play with various other ensembles as a substitute or extra musician.</p>
-          <p>Some of the groups I have performed with include the Colorado Symphony, Colorado Springs Philharmonic, Boulder Philharmonic, Colorado Wind Ensemble, and many others!</p>
-        </article>
+      <Hero
+        src={performHeroImage}
+        alt={"UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"}
+        title="Concerts"
+      />
+      <section className={styles.text_wrapper}>
+        <p>I am a regular musician with the Fort Collins Symphony and the Fountain City Brass Band. However, I also am asked to play with various other ensembles as a substitute or extra musician.</p>
+        <p>Some of the groups I have performed with include the Colorado Symphony, Colorado Springs Philharmonic, Boulder Philharmonic, Colorado Wind Ensemble, and many others!</p>
       </section>
       <section className={styles.performances}>
         <h2>Upcoming Performances</h2>

@@ -8,8 +8,8 @@ import { getSortedPostsData } from '@utils/posts';
 export default function posts({ ...props }) {
   return (
     <Layout criteria='dev'>
-      <div>All Dev Posts</div>
-      <ul>
+      <div>Posts</div>
+      {/* <ul>
         <h3>Site Blogs</h3>
         {props.devPostsData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
@@ -20,7 +20,7 @@ export default function posts({ ...props }) {
             </small>
           </li>
         ))}
-      </ul>
+      </ul> */}
       <ul>
         <h3>Medium Blogs</h3>
         {props.mediumPosts.items.map((post) => (

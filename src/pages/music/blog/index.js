@@ -4,15 +4,15 @@ import Date from "@components/date";
 import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
-export default function posts({ ...props }) {
+export default function Blogs({ ...props }) {
   return (
     <Layout criteria='music'>
-      <div>All Music Posts</div>
+      <div>Blog</div>
       <ul>
         <h3>Site Blogs</h3>
-        {props.musicPostsData.map(({ id, date, title }) => (
+        {props.musicBlogData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
-            <Link href={`posts/${id}`}>{title}</Link>
+            <Link href={`blog/${id}`}>{title}</Link>
             <br />
             <small className={utilStyles.lightText}>
               <Date dateString={date} />
@@ -25,7 +25,7 @@ export default function posts({ ...props }) {
 }
 
 export async function getStaticProps() {
-  const musicPostsData = getSortedPostsData("music");
+  const musicBlogData = getSortedPostsData("music");
 
-  return { props: { musicPostsData } }
+  return { props: { musicBlogData } }
 }
