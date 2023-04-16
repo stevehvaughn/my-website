@@ -2,7 +2,6 @@ import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import performHeroImage from "@public/perform_hero_image_desktop.webp"
 import Hero from "@components/Hero";
-import Image from "next/image";
 import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
 
@@ -36,26 +35,31 @@ export default function concerts({ upcomingPerformances }) {
 }
 
 export const getStaticProps = async () => {
-  const upcomingPerformances = await prisma.performance.findMany({
-    where: {
-      startDate: { gte: new Date() } // only pulls in performances in the future
-    },
-    orderBy: {
-      startDate: 'asc' // sort by date
-    },
-    include: {
-      ensemble: {
-        select: { name: true, website: true, category: true, logo: true },
+  try {
+    const { data, errors } = await prisma.performance.findMany({
+      where: {
+        startDate: { gte: new Date() } // only pulls in performances in the future
       },
-      venue: {
-        select: { name: true, addressLine1: true, addressLine2: true }
+      orderBy: {
+        startDate: 'asc' // sort by date
       },
-      repertoire: {
-        select: { composition: true, composer: true, genre: true }
-      }
-    },
-  });
-  return {
-    props: { upcomingPerformances: JSON.parse(JSON.stringify(upcomingPerformances)) }
-  };
+      include: {
+        ensemble: {
+          select: { name: true, website: true, category: true, logo: true },
+        },
+        venue: {
+          select: { name: true, addressLine1: true, addressLine2: true }
+        },
+        repertoire: {
+          select: { composition: true, composer: true, genre: true }
+        }
+      },
+    });
+    if (errors || !data) {
+      return { notFound: true };
+    }
+    return { props: { upcomingPerformances: JSON.parse(JSON.stringify(data)) } }
+  } catch (e) {
+    return { notFound: true }
+  }
 };
