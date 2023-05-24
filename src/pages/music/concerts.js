@@ -1,5 +1,6 @@
 import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
+import ContactMe from "@components/ContactMe";
 import performHeroImage from "@public/perform_hero_image_desktop.webp"
 import Hero from "@components/Hero";
 import prisma from '@lib/prisma';
@@ -30,9 +31,7 @@ export default function concerts({ upcomingPerformances }) {
           </article>
         </section>
       }
-      <section>
-        <h2>Contact Me</h2>
-      </section>
+      <ContactMe />
     </Layout >
   )
 }
