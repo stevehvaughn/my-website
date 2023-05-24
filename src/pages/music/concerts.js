@@ -17,16 +17,19 @@ export default function concerts({ upcomingPerformances }) {
         <p>I am a regular musician with the Fort Collins Symphony and the Fountain City Brass Band. However, I also am asked to play with various other ensembles as a substitute or extra musician.</p>
         <p>Some of the groups I have performed with include the Colorado Symphony, Colorado Springs Philharmonic, Boulder Philharmonic, Colorado Wind Ensemble, and many others!</p>
       </section>
-      <section className={styles.performances}>
-        <h2>Upcoming Performances</h2>
-        <article className={styles.upcoming_grid}>
-          {upcomingPerformances.map(performance => (
-            <UpcomingPerformanceCard
-              performance={performance}
-            />
-          ))}
-        </article>
-      </section>
+      {upcomingPerformances !== undefined ??
+        <section className={styles.performances}>
+          <h2>Upcoming Performances</h2>
+          <article className={styles.upcoming_grid}>
+            {upcomingPerformances.map(performance => (
+              <UpcomingPerformanceCard
+                key={performance.title}
+                performance={performance}
+              />
+            ))}
+          </article>
+        </section>
+      }
       <section>
         <h2>Contact Me</h2>
       </section>
@@ -36,7 +39,7 @@ export default function concerts({ upcomingPerformances }) {
 
 export const getStaticProps = async () => {
   try {
-    const { data, errors } = await prisma.performance.findMany({
+    const data = await prisma.performance.findMany({
       where: {
         startDate: { gte: new Date() } // only pulls in performances in the future
       },
@@ -55,11 +58,24 @@ export const getStaticProps = async () => {
         }
       },
     });
-    if (errors || !data) {
-      return { notFound: true };
+    return {
+      props: {
+        upcomingPerformances: JSON.parse(JSON.stringify(data)),
+        revalidate: 10
+      }
     }
-    return { props: { upcomingPerformances: JSON.parse(JSON.stringify(data)) } }
-  } catch (e) {
-    return { notFound: true }
+  } catch (error) {
+    if (error instanceof ReferenceError) {
+      console.error('The supabase database has been paused');
+    } else {
+      console.error('Error fetching data:', error);
+    }
+    return {
+      props: {
+        error: 'Error fetching data'
+      }
+    };
+  } finally {
+    await prisma.$disconnect();
   }
 };

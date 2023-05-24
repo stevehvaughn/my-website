@@ -3,7 +3,9 @@ import Layout from "@components/layout"
 export default function dev() {
   return (
     <Layout criteria='dev'>
-      <div>dev</div>
+      <section>
+        <h2>About Me</h2>
+      </section>
     </Layout>
   )
 }

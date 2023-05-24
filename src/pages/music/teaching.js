@@ -20,6 +20,9 @@ export default function teaching() {
           <li>I teach private lessons to high school students to prepare for Regional and State Band auditions</li>
         </ul>
       </section>
+      <section>
+        <h2>Lessons</h2>
+      </section>
     </Layout>
   )
 }
