@@ -5,6 +5,7 @@ import performHeroImage from "@public/perform_hero_image_desktop.webp"
 import Hero from "@components/Hero";
 import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
+import landingPageStyles from "@styles/LandingPage.module.scss";
 
 export default function concerts({ upcomingPerformances }) {
   return (
@@ -14,9 +15,11 @@ export default function concerts({ upcomingPerformances }) {
         alt={"UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"}
         title="Concerts"
       />
-      <section className={styles.text_wrapper}>
+      <section className={landingPageStyles.text_wrapper}>
         <p>I am a regular musician with the Fort Collins Symphony and the Fountain City Brass Band. However, I also am asked to play with various other ensembles as a substitute or extra musician.</p>
         <p>Some of the groups I have performed with include the Colorado Symphony, Colorado Springs Philharmonic, Boulder Philharmonic, Colorado Wind Ensemble, and many others!</p>
+        <p>I also am available to give masterclasses and/or recitals at your high school or university!</p>
+        <p>Please do not hesitate to send me a message if you want to have me perform with your group, or come out to your school!</p>
       </section>
       {upcomingPerformances !== undefined ??
         <section className={styles.performances}>
@@ -31,7 +34,9 @@ export default function concerts({ upcomingPerformances }) {
           </article>
         </section>
       }
-      <ContactMe />
+      <ContactMe
+        heading={"Contact Me"}
+      />
     </Layout >
   )
 }

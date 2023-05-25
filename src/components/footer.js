@@ -19,7 +19,7 @@ export default function footer() {
       <Socials />
       <div className={styles.copyright}>
         <span><FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()}</span>
-        <span> Built by me with ❤️️ and 🍺</span>
+        <span> Built by me with ❤️️, 🍺, and 🎵</span>
       </div>
     </footer>
   )

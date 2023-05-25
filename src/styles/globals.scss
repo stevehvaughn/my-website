@@ -127,3 +127,8 @@ h6 {
     top: -0.75em;
   }
 }
+
+button {
+  @include unbutton;
+  @include button;
+}

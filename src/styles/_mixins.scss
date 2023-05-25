@@ -11,6 +11,14 @@
   background-image: $svg-colorized;
 }
 
+@mixin unbutton {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+}
+
 @mixin button($bg-color: var(--color-primary), $color: white, $hover-bg: var(--color-secondary), $hover-color: white, $svg-color: white, $svg-hover: white) {
   background-color: $bg-color;
   position: relative;
