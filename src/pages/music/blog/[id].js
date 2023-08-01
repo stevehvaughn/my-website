@@ -13,7 +13,7 @@ export default function Blog({ blogData }) {
       <article>
         <h1 className={utilStyles.headingXl}>{blogData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={blogData.date} />
+          <Date dates={blogData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
       </article>

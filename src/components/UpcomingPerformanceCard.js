@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "@styles/UpcomingPerformanceCard.module.scss";
 import { useState } from "react";
 
-export default function UpcomingPerformanceCard({ performance, setGridOpen }) {
+export default function UpcomingPerformanceCard({ performance }) {
   const [showDetails, setShowDetails] = useState(false);
 
   const handleChange = (e) => {
@@ -25,10 +25,7 @@ export default function UpcomingPerformanceCard({ performance, setGridOpen }) {
       </div>
       <h3 className={styles.title}>{performance.title}</h3>
       <div className={styles.dates_wrapper}>
-        {performance.endDate ?
-          <span><DateComponent dateString={performance.startDate} /> - <DateComponent dateString={performance.endDate} /></span> :
-          <span><DateComponent dateString={performance.startDate} /></span>
-        }
+        <DateComponent dates={performance.dates} />
       </div>
       <div className={styles.button_wrapper}>
         {performance.website &&

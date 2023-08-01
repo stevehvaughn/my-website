@@ -15,7 +15,7 @@ export default function Blogs({ ...props }) {
             <Link href={`blog/${id}`}>{title}</Link>
             <br />
             <small className={utilStyles.lightText}>
-              <Date dateString={date} />
+              <Date dates={date} />
             </small>
           </li>
         ))}

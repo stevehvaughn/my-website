@@ -1,13 +1,37 @@
+import { useEffect, useState } from "react";
 import Layout from "@components/layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import ContactMe from "@components/ContactMe";
 import performHeroImage from "@public/perform_hero_image_desktop.webp"
 import Hero from "@components/Hero";
-import prisma from '@lib/prisma';
 import styles from "@styles/Perform.module.scss"
 import landingPageStyles from "@styles/LandingPage.module.scss";
 
-export default function concerts({ upcomingPerformances }) {
+export default function concerts() {
+  const [upcomingPerformances, setUpcomingPerformances] = useState([]);
+
+  useEffect(() => {
+    async function fetchPerformances() {
+      try {
+        const response = await fetch("/api/performances");
+        const data = await response.json();
+
+        // Filter the upcoming performances
+        const currentDate = Date.now();
+        const upcomingPerformancesData = data.filter((performance) => {
+          const lastDate = performance.dates[performance.dates.length - 1];
+          return Date.parse(lastDate) >= currentDate;
+        });
+
+        setUpcomingPerformances(upcomingPerformancesData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchPerformances();
+  }, []);
+
   return (
     <Layout criteria='music'>
       <Hero
@@ -21,11 +45,11 @@ export default function concerts({ upcomingPerformances }) {
         <p>I also am available to give masterclasses and/or recitals at your high school or university!</p>
         <p>Please do not hesitate to send me a message if you want to have me perform with your group, or come out to your school!</p>
       </section>
-      {upcomingPerformances !== undefined ??
+      {upcomingPerformances.length > 0 && (
         <section className={styles.performances}>
           <h2>Upcoming Performances</h2>
           <article className={styles.upcoming_grid}>
-            {upcomingPerformances.map(performance => (
+            {upcomingPerformances.map((performance) => (
               <UpcomingPerformanceCard
                 key={performance.title}
                 performance={performance}
@@ -33,7 +57,7 @@ export default function concerts({ upcomingPerformances }) {
             ))}
           </article>
         </section>
-      }
+      )}
       <ContactMe
         heading={"Contact Me"}
       />
@@ -41,45 +65,45 @@ export default function concerts({ upcomingPerformances }) {
   )
 }
 
-export const getStaticProps = async () => {
-  try {
-    const data = await prisma.performance.findMany({
-      where: {
-        startDate: { gte: new Date() } // only pulls in performances in the future
-      },
-      orderBy: {
-        startDate: 'asc' // sort by date
-      },
-      include: {
-        ensemble: {
-          select: { name: true, website: true, category: true, logo: true },
-        },
-        venue: {
-          select: { name: true, addressLine1: true, addressLine2: true }
-        },
-        repertoire: {
-          select: { composition: true, composer: true, genre: true }
-        }
-      },
-    });
-    return {
-      props: {
-        upcomingPerformances: JSON.parse(JSON.stringify(data)),
-        revalidate: 10
-      }
-    }
-  } catch (error) {
-    if (error instanceof ReferenceError) {
-      console.error('The supabase database has been paused');
-    } else {
-      console.error('Error fetching data:', error);
-    }
-    return {
-      props: {
-        error: 'Error fetching data'
-      }
-    };
-  } finally {
-    await prisma.$disconnect();
-  }
-};
+// export const getStaticProps = async () => {
+//   try {
+//     const data = await prisma.performance.findMany({
+//       where: {
+//         startDate: { gte: new Date() } // only pulls in performances in the future
+//       },
+//       orderBy: {
+//         startDate: 'asc' // sort by date
+//       },
+//       include: {
+//         ensemble: {
+//           select: { name: true, website: true, category: true, logo: true },
+//         },
+//         venue: {
+//           select: { name: true, addressLine1: true, addressLine2: true }
+//         },
+//         repertoire: {
+//           select: { composition: true, composer: true, genre: true }
+//         }
+//       },
+//     });
+//     return {
+//       props: {
+//         upcomingPerformances: JSON.parse(JSON.stringify(data)),
+//         revalidate: 10
+//       }
+//     }
+//   } catch (error) {
+//     if (error instanceof ReferenceError) {
+//       console.error('The supabase database has been paused');
+//     } else {
+//       console.error('Error fetching data:', error);
+//     }
+//     return {
+//       props: {
+//         error: 'Error fetching data'
+//       }
+//     };
+//   } finally {
+//     await prisma.$disconnect();
+//   }
+// };
