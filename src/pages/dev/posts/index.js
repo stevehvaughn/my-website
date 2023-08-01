@@ -23,15 +23,20 @@ export default function posts({ ...props }) {
       </ul> */}
       <ul>
         <h3>Medium Blogs</h3>
-        {props.mediumPosts.items.map((post) => (
-          <li className={utilStyles.listItem} key={post.title}>
-            <Link href={post.link}>{post.title}</Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={post.pubDate} />
-            </small>
-          </li>
-        ))}
+        {props.mediumPosts.items.map((post) => {
+          const dateString = post.pubDate.split(" ")[0];
+          const formattedDateArray = [dateString];
+
+          return (
+            <li className={utilStyles.listItem} key={post.title}>
+              <Link href={post.link}>{post.title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dates={formattedDateArray} />
+              </small>
+            </li>
+          );
+        })}
       </ul>
     </Layout>
   )
