@@ -1,73 +1,118 @@
 $base-font-size: 1.6rem;
-$base-line-height: 1.55;
+$base-line-height: 1.4;
+$font-style: normal;
+$font-size: 1.6rem;
+$regular: 400;
+$med: 500;
+$semi-bold: 600;
+$bold: 800;
+
+$open-sans: var(--font-open-sans);
+$bitter: var(--font-bitter);
+$montserrat: var(--font-montserrat);
+$inter: var(--font-inter);
+$nunito: var(--font-nunito);
+
+$base-font-family: $nunito;
+$heading-font-family: $montserrat;
 
 // Utility color variables
 $heading-color: var(--color-accent);
-$base-font-color: var(--color-secondary);
+$base-font-color: var(--color-text-primary);
 $link: var(--color-secondary);
 $link-hover: var(--color-secondary);
-$heading-font-family: var(--font-inter);
-$body-font-family: var(--font-inter);
 
-// H1
-$h1-size: 4.5rem;
-$h1-size-small: 3.5rem;
-$h1-line-height: 1.29;
-$h1-line-height-small: 1.2;
-$h1-color: $heading-color;
-$h1-family: $heading-font-family;
-$h1-padding: 3rem 0 2rem;
-$h1-weight: 600;
+$spacing-half: 4px;
+$spacing1: 8px;
+$spacing1-half: 12px;
+$spacing2: 16px;
+$spacing3: 24px;
+$spacing4: 32px;
+$spacing5: 40px;
+$spacing6: 48px;
+$spacing7: 56px;
+$spacing8: 64px;
+$spacing9: 72px;
+$spacing10: 80px;
+$spacing11: 88px;
+$spacing12: 96px;
+$spacing13: 104px;
+$spacing14: 112px;
+$spacing15: 120px;
+$spacing16: 128px;
+$spacing17: 136px;
+$spacing18: 144px;
+$spacing19: 152px;
+$spacing20: 160px;
 
-// H2
-$h2-size: 3rem;
-$h2-size-small: 2.6rem;
-$h2-line-height: 1.21;
-$h2-line-height-small: 1.4;
-$h2-color: $heading-color;
-$h2-padding: 1rem 0 1rem;
-$h2-family: $heading-font-family;
-$h2-weight: 600;
+$layout-xs: $spacing5;
+$layout-sm: $spacing6;
+$layout-md: $spacing8;
+$layout-lg: $spacing15;
+$layout-xl: $spacing18;
+$layout-2xl: $spacing20;
 
-// H3
-$h3-size: 2.4rem;
-$h3-size-small: 2.2rem;
-$h3-color: $heading-color;
-$h3-family: $heading-font-family;
-$h3-line-height: 1.2;
-$h3-line-height-small: 1.41;
-$h3-padding: 3.5rem 0 1.5rem;
-$h3-weight: 700;
+$spacing-none: 0;
+$spacing-2xs: $spacing1; // 8px
+$spacing-xs: $spacing1-half; // 12px
+$spacing-sm: $spacing2; // 16px
+$spacing-md: $spacing3; // 64px
+$spacing-lg: $spacing4; // 32px
+$spacing-xl: $spacing5; // 40px
+$spacing-2xl: $spacing6; // 48px
 
-// H4
-$h4-size: 2.2rem;
-$h4-size-small: 2rem;
-$h4-color: $heading-color;
-$h4-family: $heading-font-family;
-$h4-line-height: 1.41;
-$h4-line-height-small: 1.25;
-$h4-padding: 3rem 0 1.5rem;
-$h4-weight: 700;
+$layouts: (
+  'xs': $layout-xs,
+  "sm": $layout-sm,
+  "md": $layout-md,
+  "lg": $layout-lg,
+  "xl": $layout-xl,
+  "2xl": $layout-2xl,
+);
 
-// H5
-$h5-size: 2.2rem;
-$h5-size-small: 2rem;
-$h5-color: $heading-color;
-$h5-family: $heading-font-family;
-$h5-line-height: 1.41;
-$h5-line-height-small: 1.25;
-$h5-padding: $h4-padding;
-$h5-weight: 600;
+$spacings: (
+  "none": 0,
+  "2xs": $spacing-2xs,
+  "xs": $spacing-xs,
+  "sm": $spacing-sm,
+  "md": $spacing-md,
+  "lg": $spacing-lg,
+  "xl": $spacing-xl,
+  "2xl": $spacing-2xl,
+);
 
-// H6
-$h6-size: 2rem;
-$h6-size-small: 1.8rem;
-$h6-color: $heading-color;
-$h6-family: $heading-font-family;
-$h6-line-height: 1.25;
-$h6-line-height-small: 1.56;
-$h6-padding: $h4-padding;
-$h6-weight: 600;
+// Clamp sizes determined from https://www.marcbacon.com/tools/clamp-calculator/ ** see note below
+// viewport range 480px ($breakpoint-sm) to 1440px ($breakpoint-lg)
+// ** base 10px due to html font-size 62.5% trick **
+
+$heading-sizes: (
+  'xl':  (font-size: clamp(3.8rem, 2.35rem + 3.021vw, 6.7rem),  margin: 0 0 $spacing-2xs),  // h1
+  'l':   (font-size: clamp(3rem, 2.6rem + 0.833vw, 3.8rem),     margin: 0 0 $spacing-sm),   // h2
+  'm':   (font-size: clamp(2.4rem, 2.1rem + 0.625vw, 3rem),     margin: 0 0 $spacing-sm),   // h3
+  's':   (font-size: clamp(2rem, 1.8rem + 0.417vw, 2.4rem),     margin: 0 0 $spacing-sm),   // h4
+  'xs':  (font-size: clamp(1.8rem, 1.7rem + 0.208vw, 2rem),     margin: 0 0 $spacing-2xs),   // h5
+  'xxs': (font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem),   margin: 0 0 $spacing-2xs),   // h6
+);
+
+$display-sizes: (
+  'l':  (font-size: clamp(8rem, 6rem + 4.167vw, 12rem),         margin: 0 0 $spacing-2xs),
+  's':  (font-size: clamp(6.7rem, 6.05rem + 1.354vw, 8rem),     margin: 0 0 $spacing-2xs),
+);
+
+$body-designs: (
+  "body-paragraph": (
+    font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem), 
+    font-family: $base-font-family, 
+    line-height: 1.6, 
+    font-weight: $regular
+    ),
+  "body-paragraph-bold": (
+    font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem), 
+    font-family: $base-font-family, 
+    line-height: 1.6, 
+    font-weight: $bold
+    )
+);
 
 // Breakpoints 
 $x-small:    'screen and (min-width: 375px)';

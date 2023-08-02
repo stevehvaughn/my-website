@@ -20,8 +20,10 @@ export default function UpcomingPerformanceCard({ performance }) {
           height={50}
           width={50}
         />
-        <p>{performance.ensemble.name}</p>
-        <p className={styles.role}>{performance.role}</p>
+        <div>
+          <p>{performance.ensemble.name}</p>
+          <p className={styles.role}>{performance.role}</p>
+        </div>
       </div>
       <h3 className={styles.title}>{performance.title}</h3>
       <div className={styles.dates_wrapper}>

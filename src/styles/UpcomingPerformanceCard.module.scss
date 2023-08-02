@@ -6,6 +6,7 @@
   border-radius: 2.5rem;
   box-shadow: 5px 5px 10px #ccc;
   color: white;
+  width: 40rem;
   // height: fit-content;
 }
 
@@ -25,7 +26,7 @@ $random-perc: random(150) + deg;
 
 .header {
   display: grid;
-  grid-template-columns: auto 1fr .5fr;
+  grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: center;
 
@@ -35,12 +36,15 @@ $random-perc: random(150) + deg;
 
   p {
     font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
   }
 }
 
 .title {
   text-align: center;
   padding: 1rem 0 0;
+  color: white;
 }
 
 .role {
@@ -72,12 +76,11 @@ $random-perc: random(150) + deg;
 
 .button {
   @include simple-button;
-  font-size: 1.4rem;
 }
 
 .show {
   opacity: 1;
-  max-height: 50rem;
+  max-height: 70rem;
   transition: all .3s ease;
 }
 

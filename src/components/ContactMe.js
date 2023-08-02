@@ -78,7 +78,7 @@ const ContactMe = ({ heading }) => {
             />
           </div>
         </div>
-        <button type="submit">{isSubmitting ? 'Sending...' : 'Send! ✉️'}</button>
+        <button type="submit">{isSubmitting ? 'Sending...' : 'Submit'}</button>
       </form>
       {successMessage && <p className={[styles.success, styles.submit_message].join(' ')}>{successMessage}</p>}
       {errorMessage && <p className={[styles.error, styles.submit_message].join(' ')}>{errorMessage}</p>}

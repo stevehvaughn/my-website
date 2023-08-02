@@ -5,7 +5,6 @@ import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait-short.webp'
 import styles from '@styles/Home.module.scss'
 import Date from "@components/date";
-import utilStyles from '@styles/utils.module.scss';
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {
@@ -24,13 +23,13 @@ export default function Home({ allPostsData }) {
     <Layout criteria="home">
       <div className={styles.home}>
         <header className={styles.home_header}>
-          <p>Hi, my name is</p>
+          <div className='heading-m-med'>Hi, my name is</div>
           <h1>Steven Vaughn</h1>
         </header>
         <section className={styles.home_content}>
           <div className={[styles.details_wrapper, styles.web].join(' ')}>
             <p>I am a </p>
-            <h2>Front-End Web Developer</h2>
+            <h2>Software Engineer</h2>
             <p>that specializes in building pixel-perfect websites that are responsive, accessible, and focused on the user experience.</p>
             <Link href='/dev'>See My Portfolio</Link>
           </div>
@@ -55,7 +54,7 @@ export default function Home({ allPostsData }) {
               <Link href={`/${category}/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dates={date} />
               </small>
             </li>
           ))}

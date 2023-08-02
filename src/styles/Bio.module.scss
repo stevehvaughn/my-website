@@ -4,6 +4,7 @@
 .bio {
   position: relative;
   @include center-me(99rem);
+  padding-inline: 1rem;
 
   > p {
     text-align: justify;

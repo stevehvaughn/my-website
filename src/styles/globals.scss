@@ -1,13 +1,6 @@
 @import 'config';
 @import 'mixins';
 
-$open-sans: var(--font-open-sans);
-$bitter: var(--font-bitter);
-$montserrat: var(--font-montserat);
-$inter: var(--font-inter);
-$body-font-family: $inter;
-$heading-font-family: $inter;
-
 :root {
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -18,6 +11,7 @@ $heading-font-family: $inter;
   --color-bg: #FEFAE0;
   --color-accent: #DDA15E;
   --color-highlight: #BC6C25;
+  --color-text-primary: #021421;
 }
 
 * {
@@ -45,9 +39,9 @@ body {
 
 body {
   font-size: $base-font-size;
+  font-family: $base-font-family;
   color: $base-font-color;
   background-color: white;
-  font-family: $body-font-family;
   font-weight: 400;
   line-height: $base-line-height;
   position: relative;
@@ -58,6 +52,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  @extend .body-paragraph;
 }
 
 img,
@@ -70,65 +65,76 @@ main {
   position: relative;
 }
 
-// Headingss
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+// Generate classes for each heading-size and also a medium-weight version of each size
+@each $size in map-keys($heading-sizes) {
+  .heading-#{$size} { // .heading-l for example
+    color: var(--color-text-primary);
+    font-weight: $regular;
+    @include heading($size: $size);
+  }
+
+  .heading-#{$size}-med { // .heading-l-med for example
+    color: var(--color-text-primary);
+    font-weight: $med;
+    @include heading($size: $size);
+  }
+}
+
+@each $size in map-keys($display-sizes) {
+  .display-#{$size} { // .display-l for example
+    color: var(--color-text-primary);
+    font-weight: $med;
+    @include display($size: $size);
+  }
+}
+
+// Generate classes for each body design
+@each $design, $styles in $body-designs {
+  .#{$design} { // .body-paragraph for example
+    @include body-styles($styles);
+  }
+}
+
+p {
+  @extend .body-paragraph;
+  margin: 0 0 $spacing-sm;
 }
 
 h1 {
-  @include h1;
-
-  sup {
-    top: -1.2em;
-  }
+  @extend .heading-xl-med;
 }
 
 h2 {
-  @include h2;
-
-  sup {
-    top: -1.15em;
-  }
+  @extend .heading-l;
 }
 
 h3 {
-  @include h3;
-
-  sup {
-    top: -1em;
-  }
+  @extend .heading-m;
 }
 
 h4 {
-  @include h4;
-
-  sup {
-    top: -0.8em;
-  }
+  @extend .heading-s;
 }
 
 h5 {
-  @include h5;
-
-  sup {
-    top: -0.75em;
-  }
+  @extend .heading-xs;
 }
 
 h6 {
-  @include h6;
-
-  sup {
-    top: -0.75em;
-  }
+  @extend .heading-xxs;
 }
 
 button {
   @include unbutton;
   @include button;
+}
+
+:root {
+  @each $layout, $size in $layouts {
+    --layout-#{$layout}: #{$size};
+  }
+
+  @each $spacing, $size in $spacings {
+    --spacing-#{$spacing}: #{$size};
+  }
 }
