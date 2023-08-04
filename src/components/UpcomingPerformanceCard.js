@@ -1,4 +1,4 @@
-import DateComponent from "@components/date";
+import DateComponent from "@components/Date";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@styles/UpcomingPerformanceCard.module.scss";
