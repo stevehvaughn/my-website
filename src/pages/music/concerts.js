@@ -6,6 +6,8 @@ import performHeroImage from "@public/perform_hero_image_desktop.webp"
 import Hero from "@components/Hero";
 import styles from "@styles/Perform.module.scss"
 import landingPageStyles from "@styles/LandingPage.module.scss";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default function concerts() {
   const [upcomingPerformances, setUpcomingPerformances] = useState([]);
@@ -32,6 +34,20 @@ export default function concerts() {
     fetchPerformances();
   }, []);
 
+  const CustomButtonGroupAsArrows = ({ next, previous }) => {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <h4>These buttons can be positioned anywhere you want on the screen</h4>
+        <button onClick={previous}>Prev</button>
+        <button onClick={next}>Next</button>
+      </div>
+    );
+  };
+
   return (
     <Layout criteria='music'>
       <Hero
@@ -48,14 +64,97 @@ export default function concerts() {
       {upcomingPerformances.length > 0 && (
         <section className={styles.performances}>
           <h2>Upcoming Performances</h2>
-          <article className={styles.upcoming_grid}>
+          <Carousel
+            additionalTransfrom={0}
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="container"
+            customButtonGroup={<CustomButtonGroupAsArrows />}
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite={false}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            partialVisible
+            pauseOnHover
+            renderButtonGroupOutside={true}
+            renderDotsOutside={true}
+            responsive={{
+              mobile: {
+                breakpoint: {
+                  max: 480,
+                  min: 0
+                },
+                items: 1,
+                partialVisibilityGutter: 50
+              },
+              mobile1: {
+                breakpoint: {
+                  max: 680,
+                  min: 481
+                },
+                items: 1,
+                partialVisibilityGutter: 150
+              },
+              mobile2: {
+                breakpoint: {
+                  max: 768,
+                  min: 681
+                },
+                items: 1,
+                partialVisibilityGutter: 250
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 767
+                },
+                items: 2,
+                partialVisibilityGutter: 50
+              },
+              tablet1: {
+                breakpoint: {
+                  max: 1280,
+                  min: 1025
+                },
+                items: 2,
+                partialVisibilityGutter: 100
+              },
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1281
+                },
+                items: 3,
+              },
+            }}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
             {upcomingPerformances.map((performance) => (
               <UpcomingPerformanceCard
                 key={performance.title}
                 performance={performance}
               />
             ))}
-          </article>
+          </Carousel>
+          {/* <article className={styles.upcoming_grid}>
+            {upcomingPerformances.map((performance) => (
+              <UpcomingPerformanceCard
+                key={performance.title}
+                performance={performance}
+              />
+            ))}
+          </article> */}
         </section>
       )}
       <ContactMe
