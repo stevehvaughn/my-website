@@ -1,4 +1,4 @@
-import Layout from "@components/layout";
+import Layout from "@components/Layout";
 import Link from "next/link";
 import Date from "@components/Date";
 import { loadMediumPosts } from '@utils/medium-posts';

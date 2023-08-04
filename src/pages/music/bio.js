@@ -1,4 +1,4 @@
-import Layout from "@components/layout"
+import Layout from "@components/Layout"
 import styles from "@styles/Bio.module.scss"
 
 export default function Bio() {

@@ -1,4 +1,4 @@
-import Layout from "@components/layout"
+import Layout from "@components/Layout"
 import Hero from "@components/Hero"
 import ContactMe from "@components/ContactMe";
 import teachingHeroImage from "@public/teaching_hero_image.webp";

@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
-import FooterSitemapSection from './footerSitemapSection';
+import FooterSitemapSection from './FooterSitemapSection';
 import { musicNavLinks, devNavLinks } from '@utils/data.js';
-import Socials from './socials';
+import Socials from './Socials';
 import styles from '@styles/Footer.module.scss';
 
 export default function Footer() {

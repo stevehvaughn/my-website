@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Layout from "@components/layout"
+import Layout from "@components/Layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import ContactMe from "@components/ContactMe";
 import performHeroImage from "@public/perform_hero_image_desktop.webp"
