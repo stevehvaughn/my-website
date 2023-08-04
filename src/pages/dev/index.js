@@ -1,6 +1,6 @@
 import Layout from "@components/layout"
 
-export default function dev() {
+export default function Dev() {
   return (
     <Layout criteria='dev'>
       <section>

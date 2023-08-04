@@ -9,7 +9,7 @@ import landingPageStyles from "@styles/LandingPage.module.scss";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function concerts() {
+export default function Concerts() {
   const [upcomingPerformances, setUpcomingPerformances] = useState([]);
 
   useEffect(() => {

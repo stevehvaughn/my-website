@@ -1,7 +1,7 @@
 import styles from "@styles/About.module.scss";
 import Link from "next/link";
 
-export default function about() {
+export default function About() {
   return (
     <section className={styles.about}>
       <header>

@@ -1,7 +1,7 @@
 import Layout from "@components/layout"
 import styles from "@styles/Bio.module.scss"
 
-export default function bio() {
+export default function Bio() {
   return (
     <Layout criteria='music'>
       <section className={styles.bio}>

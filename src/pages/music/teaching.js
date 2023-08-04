@@ -4,7 +4,7 @@ import ContactMe from "@components/ContactMe";
 import teachingHeroImage from "@public/teaching_hero_image.webp";
 import landingPageStyles from "@styles/LandingPage.module.scss";
 
-export default function teaching() {
+export default function Teaching() {
   return (
     <Layout criteria='music'>
       <Hero

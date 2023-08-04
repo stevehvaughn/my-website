@@ -4,7 +4,7 @@ import About from "@components/about";
 import Link from 'next/link';
 import headshotPic from '../../public/steve-headshot-portrait-short.webp'
 import styles from '@styles/Home.module.scss'
-import Date from "@components/date";
+import Date from "@components/Date";
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {

@@ -1,6 +1,6 @@
 import styles from "@styles/FooterSitemapSection.module.scss";
 
-export default function footerSitemapSection({ links }) {
+export default function FooterSitemapSection({ links }) {
   let headerTitle = links.at(0).name;
   let linksArr = links.slice(1, -1);
 

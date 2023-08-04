@@ -1,7 +1,7 @@
 import Navbar from './navbar';
 import Footer from './footer';
 
-export default function layout({ children, criteria }) {
+export default function Layout({ children, criteria }) {
   return (
     <>
       {criteria !== "home" && <Navbar criteria={criteria} />}

@@ -1,7 +1,6 @@
 import Layout from "@components/layout";
 import Link from "next/link";
-import Date from "@components/date";
-import utilStyles from '@styles/utils.module.scss';
+import Date from "@components/Date";
 import { loadMediumPosts } from '@utils/medium-posts';
 import { getSortedPostsData } from '@utils/posts';
 
@@ -28,10 +27,10 @@ export default function posts({ ...props }) {
           const formattedDateArray = [dateString];
 
           return (
-            <li className={utilStyles.listItem} key={post.title}>
+            <li key={post.title}>
               <Link href={post.link}>{post.title}</Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small>
                 <Date dates={formattedDateArray} />
               </small>
             </li>

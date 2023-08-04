@@ -3,7 +3,7 @@ import * as ReactIcons from 'react-icons/Gr'
 import { socialLinks } from "../utils/data"
 import styles from "@styles/Socials.module.scss"
 
-export default function socials() {
+export default function Socials() {
   return (
     <div className={styles.socials}>
       <div className={styles.social_header}>Follow me <strong>@stevehvaughn</strong> on all socials!</div>
