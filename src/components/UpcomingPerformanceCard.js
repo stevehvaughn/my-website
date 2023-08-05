@@ -11,11 +11,15 @@ export default function UpcomingPerformanceCard({ performance }) {
     setShowDetails((showDetails) => !showDetails);
   }
 
+  const imageLoader = () => {
+    return `/../public/${performance.ensemble.logo}`
+  }
+
   return (
     <div key={performance.title} className={` ${showDetails && styles.card_open} ${styles.card}`}>
       <div className={styles.header}>
         <Image
-          src={`/../public/${performance.ensemble.logo}`}
+          src={imageLoader}
           alt={`${performance.ensemble.name} logo`}
           height={50}
           width={50}
