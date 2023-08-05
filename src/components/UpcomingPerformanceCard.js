@@ -15,7 +15,7 @@ export default function UpcomingPerformanceCard({ performance }) {
     <div key={performance.title} className={` ${showDetails && styles.card_open} ${styles.card}`}>
       <div className={styles.header}>
         <Image
-          src={`/../public/logos/${performance.ensemble.logo}`}
+          src={`/../public/${performance.ensemble.logo}`}
           alt={`${performance.ensemble.name} logo`}
           height={50}
           width={50}
