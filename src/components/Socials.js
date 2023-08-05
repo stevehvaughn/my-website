@@ -1,5 +1,5 @@
 import React from "react"
-import * as ReactIcons from 'react-icons/Gr'
+import * as ReactIcons from 'react-icons/gr'
 import { socialLinks } from "../utils/data"
 import styles from "@styles/Socials.module.scss"
 
