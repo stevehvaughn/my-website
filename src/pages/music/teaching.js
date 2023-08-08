@@ -13,6 +13,7 @@ export default function Teaching() {
         title="Teaching"
       />
       <section className={landingPageStyles.text_wrapper}>
+        <h2>Teaching Experience</h2>
         <p>As a teacher I have enjoyed educating future musicians through many different scenarios</p>
         <p>I teach university Tuba and Euphonium students at the University of Northern Colorado</p>
         <p>I have taught in public schools as a Band/Orchestra director</p>
@@ -22,7 +23,8 @@ export default function Teaching() {
         <p>Please do not hesitate to send me a message if you are interested in having a lesson with me!</p>
       </section>
       <ContactMe
-        heading={"Want a lesson?"}
+        heading={"Get in touch!"}
+        subtitle={"Looking for private lessons, or want to invite me to teach a masterclass at your school?"}
       />
     </Layout>
   )

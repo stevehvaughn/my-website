@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from "@styles/ContactMe.module.scss";
 
-const ContactMe = ({ heading }) => {
+const ContactMe = ({ heading, subtitle }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -43,6 +43,7 @@ const ContactMe = ({ heading }) => {
   return (
     <section className={styles.contact_me_section}>
       <h2>{heading}</h2>
+      <p>{subtitle}</p>
       <form onSubmit={handleSubmit} className={styles.contact_me_form}>
         <div className={styles.form_group_top}>
           <div className={styles.form_item}>
@@ -82,7 +83,7 @@ const ContactMe = ({ heading }) => {
       </form>
       {successMessage && <p className={[styles.success, styles.submit_message].join(' ')}>{successMessage}</p>}
       {errorMessage && <p className={[styles.error, styles.submit_message].join(' ')}>{errorMessage}</p>}
-    </section>
+    </section >
   );
 };
 

@@ -105,15 +105,15 @@ h1 {
 }
 
 h2 {
-  @extend .heading-l;
+  @extend .heading-l-med;
 }
 
 h3 {
-  @extend .heading-m;
+  @extend .heading-m-med;
 }
 
 h4 {
-  @extend .heading-s;
+  @extend .heading-s-med;
 }
 
 h5 {
@@ -131,6 +131,10 @@ button {
 
 button.react-multiple-carousel__arrow {
   display: none;
+}
+
+.react-multi-carousel-list {
+  padding-block: 2rem;
 }
 
 :root {

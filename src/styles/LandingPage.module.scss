@@ -5,8 +5,12 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
   max-width: 90rem;
   margin: 0 auto;
+
+  > p {
+    margin: 0;
+  }
 }

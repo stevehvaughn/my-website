@@ -82,10 +82,10 @@
   font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem);
   width: 15rem;
   display: block;
-  color: var(--color-secondary);
+  color: var(--color-bg);
   border-radius: 5rem;
   padding: 1rem;
-  background: var(--color-bg);
+  background: var(--color-primary);
   border: none;
   font-weight: bold;
   margin: 0 auto;
@@ -94,6 +94,7 @@
     cursor: pointer;
     background: var(--color-accent);
     padding: 1rem;
+    color: var(--color-secondary);
   }
 
   &::after {

@@ -5,19 +5,21 @@
   padding: 2rem;
   border-radius: 2.5rem;
   box-shadow: 5px 5px 10px #ccc;
-  color: white;
   margin: 0 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
 }
 
-$random-perc: random(150) + deg;
+// $random-perc: random(150) + deg;
 
-.card:nth-child(odd) {
-  background: linear-gradient($random-perc, var(--color-primary), var(--color-secondary) 100%);
-}
+// .card:nth-child(odd) {
+//   background: linear-gradient($random-perc, var(--color-primary), var(--color-secondary) 100%);
+// }
 
-.card:nth-child(even) {
-  background: linear-gradient($random-perc, var(--color-secondary), var(--color-primary) 100%);
-}
+// .card:nth-child(even) {
+//   background: linear-gradient($random-perc, var(--color-secondary), var(--color-primary) 100%);
+// }
 
 .header {
   display: grid;
@@ -39,7 +41,7 @@ $random-perc: random(150) + deg;
 .title {
   text-align: center;
   padding: 1rem 0 0;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .role {
@@ -84,7 +86,7 @@ $random-perc: random(150) + deg;
 
   > p:first-child {
     font-size: 1.8rem;
-    border-bottom: 1px solid var(--color-bg);
+    border-bottom: 1px solid var(--color-accent);
     margin: 0 auto;
   }
 }

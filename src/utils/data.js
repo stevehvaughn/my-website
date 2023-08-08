@@ -38,10 +38,10 @@ export const musicNavLinks = [
     name: "Teaching",
     path: "/music/teaching"
   },
-  {
-    name: "Blog",
-    path: "/music/blog"
-  },
+  // {
+  //   name: "Blog",
+  //   path: "/music/blog"
+  // },
   // {
   //   name: "Gallery",
   //   path: "/music/gallery"

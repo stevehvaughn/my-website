@@ -36,12 +36,7 @@ export default function Concerts() {
 
   const CustomButtonGroupAsArrows = ({ next, previous }) => {
     return (
-      <div
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <h4>These buttons can be positioned anywhere you want on the screen</h4>
+      <div className={styles.slider_arrows}>
         <button onClick={previous}>Prev</button>
         <button onClick={next}>Next</button>
       </div>
@@ -159,6 +154,7 @@ export default function Concerts() {
       )}
       <ContactMe
         heading={"Contact Me"}
+        subtitle={"Looking to book a brass quintet, or soloist for your next concert?"}
       />
     </Layout >
   )

@@ -16,14 +16,18 @@
   margin: 0 auto;
 }
 
-.upcoming_grid {
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
-  // gap: 2rem;
-  // margin: 2rem;
-  // align-items: flex-start;
-}
-
 .grid_start {
   align-items: start;
+}
+
+.slider_arrows {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+
+  > button {
+    @include simple-button;
+    margin: 0;
+    width: fit-content;
+  }
 }

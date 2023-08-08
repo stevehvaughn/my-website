@@ -23,14 +23,14 @@ export default function Home({ allPostsData }) {
     <Layout criteria="home">
       <div className={styles.home}>
         <header className={styles.home_header}>
-          <div className='heading-m-med'>Hi, my name is</div>
-          <h1>Steven Vaughn</h1>
+          <div className='heading-l-med'>Hi, my name is</div>
+          <h1 className='display-l'>Steve Vaughn</h1>
         </header>
         <section className={styles.home_content}>
           <div className={[styles.details_wrapper, styles.web].join(' ')}>
-            <p>I am a </p>
+            <div className='heading-m'>I am a</div>
             <h2>Software Engineer</h2>
-            <p>that specializes in building pixel-perfect websites that are responsive, accessible, and focused on the user experience.</p>
+            <div className='heading-xs'>that specializes in building pixel-perfect websites that are responsive, accessible, and focused on the user experience.</div>
             <Link href='/dev'>See My Portfolio</Link>
           </div>
           <div className={styles.image_wrapper}>
@@ -41,9 +41,9 @@ export default function Home({ allPostsData }) {
             />
           </div>
           <div className={[styles.details_wrapper, styles.music].join(' ')}>
-            <p>I am a</p>
+            <div className='heading-m'>I am a</div>
             <h2>Professional Musician</h2>
-            <p>that performs across the United States and abroad, while also teaching future musicians as a university professor.</p>
+            <div className='heading-xs'>that performs across the United States and abroad, while also teaching future musicians as a university professor.</div>
             <Link href='/music'>See my Music</Link>
           </div>
         </section>
