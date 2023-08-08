@@ -8,6 +8,7 @@ export default function Music() {
       <Hero
         src={img}
         alt={"Eastman 836 Tuba closeup"}
+        priority
       // title={"Steve Vaughn - Professional Musician"}
       />
       <section style={{ textAlign: "center" }}>
