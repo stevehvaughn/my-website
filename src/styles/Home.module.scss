@@ -10,8 +10,8 @@
   position: relative;
   display: grid;
   grid-template-areas:
-  "web"
   "image"
+  "web"
   "music";
 
   @media #{$small-ish} {
