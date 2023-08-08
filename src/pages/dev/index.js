@@ -8,7 +8,6 @@ export default function Dev() {
       <Hero
         src={img}
         alt={"turned on MacBook Air beside black smartphone and black ceramic mug"}
-        priority
       />
       <section style={{ textAlign: "center" }}>
         <h1>Steve (the developer)</h1>
