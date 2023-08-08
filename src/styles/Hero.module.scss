@@ -3,21 +3,23 @@
 
 .hero {
   position: relative;
+  width: 100vw;
   top: -5.7rem;
   margin-bottom: -5.7rem;
 }
 
 .image_wrapper {
   position: relative;
-  height: 40rem;
+  z-index: -1;
+  height: 30vh;
   mask-image: linear-gradient(to bottom, transparent 5%, black 75%);
 
   @media #{$tablet} {
-    height: 50rem;
+    height: 40vh;
   }
 
   @media #{$desktop} {
-    height: 55rem;
+    height: 50vh;
   }
 }
 

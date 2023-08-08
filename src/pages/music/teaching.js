@@ -1,7 +1,7 @@
 import Layout from "@components/Layout"
 import Hero from "@components/Hero"
 import ContactMe from "@components/ContactMe";
-import teachingHeroImage from "@public/teaching_hero_image.webp";
+import teachingHeroImage from "@public/teaching_hero_image.jpg";
 import landingPageStyles from "@styles/LandingPage.module.scss";
 
 export default function Teaching() {

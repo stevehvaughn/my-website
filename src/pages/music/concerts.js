@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "@components/Layout"
 import UpcomingPerformanceCard from "@components/UpcomingPerformanceCard";
 import ContactMe from "@components/ContactMe";
-import performHeroImage from "@public/perform_hero_image_desktop.webp"
+import performHeroImage from "@public/perform_hero.jpg"
 import Hero from "@components/Hero";
 import styles from "@styles/Perform.module.scss"
 import landingPageStyles from "@styles/LandingPage.module.scss";

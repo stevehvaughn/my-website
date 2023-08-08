@@ -7,11 +7,11 @@ export default function Hero({ src, alt, title }) {
       <h1 className={styles.hero_title}>{title}</h1>
       <div className={styles.image_wrapper}>
         <Image
+          priority
           src={src}
           alt={alt}
           fill
           style={{ objectFit: "cover", objectPosition: "bottom" }}
-          priority
         />
       </div>
     </section>
