@@ -48,7 +48,7 @@ export default function Concerts() {
       <Hero
         src={performHeroImage}
         alt={"UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"}
-        title="Concerts"
+        title="Performances"
       />
       <section className={landingPageStyles.text_wrapper}>
         <p>I am a regular musician with the Fort Collins Symphony and the Fountain City Brass Band. However, I also am asked to play with various other ensembles as a substitute or extra musician.</p>

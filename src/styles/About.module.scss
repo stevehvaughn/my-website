@@ -13,11 +13,35 @@
 
 .about_content {
   text-align: center;
+  display: grid;
+  gap: 1rem 10rem;
+  grid-template-areas: 
+    "intro"
+    "dev"
+    "music";
+
+    @media #{$tablet} {
+      grid-template-areas: 
+      "intro intro"
+      "dev music";
+    }
   
   a {
     font-weight: 700;
     @include animate-link-hover(var(--color-accent), left);
   }
+}
+
+.about_intro {
+  grid-area: intro;
+}
+
+.about_dev {
+  grid-area: dev;
+}
+
+.about_music {
+  grid-area: music;
 }
 
 .image_wrapper {

@@ -3,6 +3,8 @@
 
 .hero {
   position: relative;
+  top: -5.7rem;
+  margin-bottom: -5.7rem;
 }
 
 .image_wrapper {
@@ -26,10 +28,13 @@
 
 .hero_title {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   bottom: auto;
+  max-width: 50%;
+  text-align: center;
   right: 0;
   width: fit-content;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
