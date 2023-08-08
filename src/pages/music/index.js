@@ -11,8 +11,8 @@ export default function Music() {
       // title={"Steve Vaughn - Professional Musician"}
       />
       <section style={{ textAlign: "center" }}>
-        <h1>Steve Vaughn</h1>
-        <h2>Professional Musician</h2>
+        <h1>Steve (the musician)</h1>
+        <h2>Welcome to the music side of my website!</h2>
       </section>
     </Layout>
   )
