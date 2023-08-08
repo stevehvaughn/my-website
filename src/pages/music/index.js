@@ -9,6 +9,7 @@ export default function Music() {
         src={img}
         alt={"Eastman 836 Tuba closeup"}
         priority
+        placeholder="blur"
       // title={"Steve Vaughn - Professional Musician"}
       />
       <section style={{ textAlign: "center" }}>

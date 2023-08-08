@@ -11,6 +11,7 @@ export default function Hero({ src, alt, title }) {
           src={src}
           alt={alt}
           fill
+          placeholder="blur"
           style={{ objectFit: "cover", objectPosition: "bottom" }}
         />
       </div>
