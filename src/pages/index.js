@@ -38,6 +38,7 @@ export default function Home({ allPostsData }) {
               src={headshotPic}
               alt='Steve Vaughn Headshot'
               priority
+              placeholder="blur"
             />
           </div>
           <div className={[styles.details_wrapper, styles.music].join(' ')}>
