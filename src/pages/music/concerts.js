@@ -57,14 +57,14 @@ export default function Concerts() {
       {upcomingPerformances.length > 0 && (
         <section className={styles.performances}>
           <h2>Upcoming Performances</h2>
-          <article className={styles.upcoming_grid}>
+          <swiper-container className={styles.upcoming_grid}>
             {upcomingPerformances.map((performance) => (
               <UpcomingPerformanceCard
                 key={performance.title}
                 performance={performance}
               />
             ))}
-          </article>
+          </swiper-container>
         </section>
       )}
       <ContactMe

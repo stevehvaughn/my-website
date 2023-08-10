@@ -12,7 +12,7 @@ export default function UpcomingPerformanceCard({ performance }) {
   }
 
   return (
-    <div key={performance.title} className={` ${showDetails && styles.card_open} ${styles.card}`}>
+    <swiper-slide key={performance.title} className={` ${showDetails && styles.card_open} ${styles.card}`}>
       <div className={styles.header}>
         <Image
           src={`/${performance.ensemble.logo}`}
@@ -52,6 +52,6 @@ export default function UpcomingPerformanceCard({ performance }) {
           }
         </div>
       </div>
-    </div>
+    </swiper-slide>
   )
 }

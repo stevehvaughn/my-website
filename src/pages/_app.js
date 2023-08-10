@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import { config } from '@fortawesome/fontawesome-svg-core'
+import { register } from 'swiper/element/bundle';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { open_sans, bitter, montserrat, inter, nunito } from '@utils/fonts';
 import '../styles/globals.scss';
 
 export default function MyApp({ Component, pageProps }) {
+  register();
+
   return (
     <>
       <Head>
