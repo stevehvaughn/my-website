@@ -57,7 +57,7 @@ export default function Concerts() {
       {upcomingPerformances.length > 0 && (
         <section className={styles.performances}>
           <h2>Upcoming Performances</h2>
-          <swiper-container className={styles.upcoming_grid}>
+          <swiper-container pagination="true" className={styles.swiper_container}>
             {upcomingPerformances.map((performance) => (
               <UpcomingPerformanceCard
                 key={performance.title}

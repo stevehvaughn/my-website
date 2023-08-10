@@ -11,16 +11,6 @@
   flex-direction: column;
 }
 
-// $random-perc: random(150) + deg;
-
-// .card:nth-child(odd) {
-//   background: linear-gradient($random-perc, var(--color-primary), var(--color-secondary) 100%);
-// }
-
-// .card:nth-child(even) {
-//   background: linear-gradient($random-perc, var(--color-secondary), var(--color-primary) 100%);
-// }
-
 .header {
   display: grid;
   grid-template-columns: auto 1fr;

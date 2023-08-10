@@ -20,14 +20,7 @@
   align-items: start;
 }
 
-.slider_arrows {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-
-  > button {
-    @include simple-button;
-    margin: 0;
-    width: fit-content;
-  }
+.swiper_container {
+  height: 100%;
+  width: 100%;
 }
