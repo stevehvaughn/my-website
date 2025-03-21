@@ -1,0 +1,28 @@
+@import '@styles/config';
+@import '@styles/mixins';
+
+.footer_sitemap_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_sitemap_section_header {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: .025em;
+  font-size: 1.4rem;
+}
+
+.links_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  > a {
+    width: fit-content;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}

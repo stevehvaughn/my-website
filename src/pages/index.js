@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Layout from "@components/Layout";
-import About from "@components/About";
+import About from "@components/About/About";
 import Link from 'next/link';
 import headshotPic from '@public/home_image.png'
 import styles from '@styles/Home.module.scss'
-import Date from "@components/Date";
+import Date from "@components/Date/Date";
 import { getSortedPostsData } from '@utils/posts';
 
 export async function getStaticProps() {

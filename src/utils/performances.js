@@ -1,7 +1,7 @@
 // performances.js
 import { ensembles } from "./ensembles";
 
-export const performances = [
+const performances = [
   {
     ensembleId: 'fcbb', // Reference to the ensemble by its ID
     title: "NABBA Championships",
@@ -131,3 +131,5 @@ export const performances = [
     description: `The 46th Brass in Concert Festival, presented in association with World of Brass, Banks Group and Yamaha, sees the long-anticipated return of the event’s gala concert, World of Brass in Concert, plus a revamped ‘Aspire’ education programme and pre and post-event entertainment for the Championship itself. 11 of the finest brass bands in the world will come together, each offering a uniquely crafted performance devised to entertain. They are: Grimethorpe Colliery, Brighouse and Rastrick, Friary Brass, Eikanger-Bjørsvik Musikklag, Hammonds, Foden’s, Carlton Main Frickley Colliery, Tredegar, Aldbourne, Flowers and Fountain City Brass.`
   },
 ];
+
+export default performances;

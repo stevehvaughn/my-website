@@ -1,6 +1,6 @@
 import Layout from "@components/Layout"
-import Hero from "@components/Hero"
-import ContactMe from "@components/ContactMe";
+import Hero from "@components/Hero/Hero"
+import ContactMe from "@components/ContactMe/ContactMe";
 import teachingHeroImage from "@public/teaching_hero_image.jpg";
 import landingPageStyles from "@styles/LandingPage.module.scss";
 
@@ -11,6 +11,7 @@ export default function Teaching() {
         src={teachingHeroImage}
         alt="Teaching the Phantom Regiment tuba section in front of Ralph Wilson Stadium in Buffalo, NY"
         title="Teaching"
+        objPosition="bottom center"
       />
       <section className={landingPageStyles.text_wrapper}>
         <h2>Teaching Experience</h2>

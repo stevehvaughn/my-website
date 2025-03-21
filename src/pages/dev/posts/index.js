@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import Link from "next/link";
-import Date from "@components/Date";
+import Date from "@components/Date/Date";
 import { loadMediumPosts } from '@utils/medium-posts';
 import { getSortedPostsData } from '@utils/posts';
 

@@ -1,0 +1,57 @@
+@import '@styles/config';
+@import '@styles/mixins';
+
+.simplePromo {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.imageLeft {
+  flex-direction: column;
+  align-items: flex-start;
+
+  .textContent {
+    text-align: left;
+  }
+
+  @media #{$tablet} {
+    flex-direction: row;
+  }
+}
+
+.imageRight {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+
+  .textContent {
+    text-align: right;
+  }
+
+  @media #{$tablet} {
+    flex-direction: row-reverse;
+  }
+}
+
+.imageContainer {
+  img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius:  var(--border-radius);
+
+    @media #{$tablet} {
+      aspect-ratio: 4/5;
+    }
+
+    @media #{$desktop} {
+      aspect-ratio: 3/2;
+    }
+  }
+}
+
+.textContent {
+  flex: 2;
+  min-width: 300px;
+}

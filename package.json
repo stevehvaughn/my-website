@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@prisma/client": "^4.12.0",
     "date-fns": "^2.29.3",
     "directory-tree": "^3.5.1",
@@ -20,6 +21,7 @@
     "eslint-config-next": "13.2.4",
     "gray-matter": "^4.0.3",
     "next": "13.2.4",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",

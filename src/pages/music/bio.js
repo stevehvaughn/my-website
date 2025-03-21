@@ -1,11 +1,19 @@
 import Layout from "@components/Layout"
 import styles from "@styles/Bio.module.scss"
+import Image from "next/image"
+import bioImage from "@public/steve_tuba.jpg";
+import Hero from "@components/Hero/Hero";
 
 export default function Bio() {
   return (
     <Layout criteria='music'>
+      <Hero
+        src={bioImage}
+        alt="Steve Playing the tuba"
+        title="Biography"
+        objPosition="center top"
+      />
       <section className={styles.bio}>
-        <h1>Biography</h1>
         <p>Dr. Steve Vaughn, a native of upstate New York, is a freelance musician across the front range of Colorado and is currently Instructor of Tuba & Euphonium at the University of Northern Colorado in Greeley, CO. Equally at home performing on both tuba and euphonium, Steve holds the position of Principal Tuba with the Fort Collins Symphony and plays euphonium with the internationally renowned Fountain City Brass Band.</p>
         <p>Steve received his undergraduate degree in Music Education and Euphonium Performance from Ithaca College (Ithaca, NY), where he studied with Dave Unland, Ed Diefes, and Dr. Aaron Tindall. He has earned both a Master of Music degree in Euphonium Performance and a Doctor of Musical Arts degree in Tuba Performance and Pedagogy from the University of Colorado Boulder (Boulder, CO) studying with Michael Dunn. Steve has also taken additional studies with Warren Deck and John Rojak.</p>
         <p>As a tubist, Steve has been an active performer in Colorado and many neighboring states. In addition to his position with the Fort Collins Symphony he has performed with numerous other orchestras including the Colorado Symphony, Colorado Springs Philharmonic, Boulder Philharmonic, Greeley Philharmonic, National Repertory Orchestra, Wyoming Symphony, Cheyenne Symphony, San Juan Symphony, and others. While studying at CU-Boulder he played in the graduate brass quintet which was one of 4 international ensembles accepted into the inaugural American Brass Quintet Seminar at the Aspen Music Festival in 2018.</p>

@@ -1,0 +1,53 @@
+@import '@styles/config';
+@import '@styles/mixins';
+
+.intro {
+  background: linear-gradient(to bottom, var(--color-navy-muted), #283618);
+  color: var(--color-bone);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 4rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  margin-block: 2rem;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: $med;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  background-color: var(--color-charcoal);
+  color: var(--color-teal);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px var(--color-teal);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.body p {
+  color: var(--color-bone);
+}
+
+.body a {
+  font-weight: 600;
+  @include animate-link-hover($lineColor: var(--color-accent));
+}

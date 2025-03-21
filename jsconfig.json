@@ -1,21 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "paths": {
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@styles/*": [
-        "./src/styles/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@public/*": [
-        "./public/*"
-      ],
-      "@lib/*": [
-        "./lib/*"
-      ]
-    }
-  }
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@public/*": ["../public/*"],
+      "@lib/*": ["lib/*"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src", "scripts"]
 }

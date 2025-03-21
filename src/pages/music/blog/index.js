@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import Link from "next/link";
-import Date from "@components/Date";
+import Date from "@components/Date/Date";
 import { getSortedPostsData } from '@utils/posts';
 
 export default function Blogs({ ...props }) {
