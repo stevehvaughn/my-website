@@ -1,7 +1,7 @@
 import styles from "./About.module.scss";
 import Link from "next/link";
 import SimplePromo from "@components/SimplePromo/SimplePromo";
-import musicImg from "@public/steve_white_jacket.jpg"
+import musicImg from "@public/steve_ben_folds_concert.jpg"
 import devImg from "@public/steve_dev.jpg";
 import Intro from "@components/Intro/Intro";
 
