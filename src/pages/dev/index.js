@@ -1,6 +1,7 @@
 import Layout from "@components/Layout";
 import Hero from "@components/Hero/Hero";
 import Link from "next/link";
+import Image from "next/image";
 import img from "@public/dev_landing.jpg";
 import styles from "@styles/DevLanding.module.scss";
 import projects from "@utils/projects"; // 🔥 pull in all projects
@@ -59,8 +60,9 @@ export default function Dev() {
           <div className={styles.featuredGrid}>
             {featuredProjects.map((proj) => (
               <div key={proj.name} className={styles.card}>
+                <span className={styles.badge}>{proj.role}</span>
                 <div className={styles.screenshotPlaceholder}>
-                  <img
+                  <Image
                     src={proj.image}
                     alt={`Screenshot of ${proj.name}`}
                     className={styles.projectImage}
