@@ -12,6 +12,9 @@ const nextConfig = {
 
   //   return config;
   // },
+  images: {
+    domains: ["www.milespartnership.com", "exploreasheville-5w80r7hif-asheville.vercel.app", "michigan.org", "gohawaii.com", "cdn.visitmusiccity.com", "milespartnership.com", "theoceanac.com", "gulfshores.com"],
+  }
 };
 
 module.exports = nextConfig;

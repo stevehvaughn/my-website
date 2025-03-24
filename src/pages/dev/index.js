@@ -66,6 +66,7 @@ export default function Dev() {
                     src={proj.image}
                     alt={`Screenshot of ${proj.name}`}
                     className={styles.projectImage}
+                    fill={true}
                   />
                 </div>
                 <h3>{proj.name}</h3>

@@ -1,6 +1,5 @@
-// const fetch = require("node-fetch");
 const fs = require("fs");
-
+const { URL } = require("url");
 const microlinkBase = "https://api.microlink.io/?url=";
 
 const projects = [
@@ -33,6 +32,50 @@ async function enrich() {
       year: 2024,
       featured: project.featured || false,
     });
+  }
+
+  const imageDomains = enriched
+  .map((proj) => {
+    if (!proj.image) return null;
+    try {
+      const { hostname } = new URL(proj.image);
+      return hostname.replace(/^www\./, "");
+    } catch {
+      return null;
+    }
+  })
+  .filter(Boolean);
+  const uniqueDomains = [...new Set(imageDomains)];
+
+  const path = "./next.config.js";
+  let nextConfigContent = fs.readFileSync(path, "utf-8");
+
+  // Match existing image domains in the config (assuming a basic structure)
+  const domainsMatch = nextConfigContent.match(/domains:\s*\[(.*?)\]/s);
+
+  if (domainsMatch) {
+    const existingDomains = domainsMatch[1]
+      .split(",")
+      .map((d) => d.trim().replace(/['"`]/g, ""))
+      .filter(Boolean);
+
+    const mergedDomains = [...new Set([...existingDomains, ...uniqueDomains])];
+
+    // Replace the domains array in the original config content
+    const updatedDomainsString =
+      "domains: [" +
+      mergedDomains.map((d) => `"${d}"`).join(", ") +
+      "]";
+
+    nextConfigContent = nextConfigContent.replace(
+      /domains:\s*\[(.*?)\]/s,
+      updatedDomainsString
+    );
+
+    fs.writeFileSync(path, nextConfigContent);
+    console.log("✅ next.config.js updated with image domains!");
+  } else {
+    console.warn("⚠️ Could not find images.domains in next.config.js");
   }
 
   fs.writeFileSync(

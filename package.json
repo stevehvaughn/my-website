@@ -6,7 +6,8 @@
     "dev": "next dev -p 8000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "enrich": "node scripts/enrich-projects.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
