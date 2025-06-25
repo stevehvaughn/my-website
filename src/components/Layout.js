@@ -1,5 +1,5 @@
-import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
+import Navbar from './Organisims/Navbar/Navbar';
+import Footer from './Organisims/Footer/Footer';
 
 export default function Layout({ children, criteria }) {
   return (

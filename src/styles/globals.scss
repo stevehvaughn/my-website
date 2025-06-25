@@ -154,11 +154,6 @@ h6 {
   @extend .heading-xxs;
 }
 
-button {
-  @include unbutton;
-  @include button;
-}
-
 button.react-multiple-carousel__arrow {
   display: none;
 }

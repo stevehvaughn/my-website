@@ -1,4 +1,4 @@
-// Nav Links for NavBar Criteria 
+// Nav Links for NavBar Criteria
 export const homeNavLinks = [
   {
     name: "Home",
@@ -71,7 +71,7 @@ export const devNavLinks = [
   },
 ]
 
-// Socials 
+// Socials
 export const socialLinks = [
   {
     name: "Linkedin",

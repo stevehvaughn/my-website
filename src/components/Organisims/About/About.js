@@ -1,13 +1,14 @@
 import styles from "./About.module.scss";
+import landingPageStyles from "@styles/LandingPage.module.scss";
 import Link from "next/link";
-import SimplePromo from "@components/SimplePromo/SimplePromo";
+import SimplePromo from "@components/Organisims/SimplePromo/SimplePromo";
 import musicImg from "@public/steve_ben_folds_concert.jpg"
 import devImg from "@public/steve_dev.jpg";
-import Intro from "@components/Intro/Intro";
+import Intro from "@components/Molecules/Intro/Intro";
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section className={`${styles.about} ${landingPageStyles.wrapper}`}>
       <div className={styles.about_content}>
         <Intro
           eyebrow="From Music to Engineering"

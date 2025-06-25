@@ -1,15 +1,6 @@
 @import 'config';
 @import 'mixins';
 
-.text_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-  max-width: 90rem;
-  margin: 0 auto;
-
-  > p {
-    margin: 0;
-  }
+.components {
+  @include center-me(144rem);
 }

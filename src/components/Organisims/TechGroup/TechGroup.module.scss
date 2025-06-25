@@ -1,0 +1,40 @@
+.techGroupWrapper {
+  margin: 2rem 0;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-bottom: 2px solid var(--color-highlight);
+    color: var(--color-highlight);
+  }
+
+  &[aria-selected="true"] {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+.panel {
+  margin-top: 1rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}

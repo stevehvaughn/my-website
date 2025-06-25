@@ -1,10 +1,9 @@
 import Layout from "@components/Layout";
 import UpcomingPerformanceCard from "@components/PerformanceCard/PerformanceCard";
-import ContactMe from "@components/ContactMe/ContactMe";
+import ContactMe from "@components/Organisims/ContactMe/ContactMe";
 import performHeroImage from "@public/perform_hero.jpg";
-import Hero from "@components/Hero/Hero";
-import styles from "@styles/Perform.module.scss";
-import landingPageStyles from "@styles/LandingPage.module.scss";
+import Hero from "@components/Organisims/Hero/Hero";
+import styles from "@styles/LandingPage.module.scss";
 
 import performances from "@utils/performances";
 
@@ -41,7 +40,7 @@ export default function Concerts({ upcomingPerformances }) {
         title="Performances"
         objPosition="bottom center"
       />
-      <section className={landingPageStyles.text_wrapper}>
+      <section className={styles.components}>
         <p>
           I am a regular musician with the Fort Collins Symphony and the
           Fountain City Brass Band. However, I also am asked to play with

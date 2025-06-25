@@ -28,7 +28,6 @@ async function enrich() {
       description: description || null,
       image: image?.url || null,
       client: publisher || null,
-      role: "Front-End Developer",
       year: 2024,
       featured: project.featured || false,
     });

@@ -1,13 +1,13 @@
 import Layout from "@components/Layout";
-import Hero from "@components/Hero/Hero";
+import Hero from "@components/Organisims/Hero/Hero";
 import Link from "next/link";
-import Image from "next/image";
 import img from "@public/dev_landing.jpg";
-import styles from "@styles/DevLanding.module.scss";
-import projects from "@utils/projects"; // 🔥 pull in all projects
-import { TechItem } from "@components/TechItem/TechItem";
+import styles from "@styles/LandingPage.module.scss";
+import projects from "@utils/projects";
 import technologies from "@utils/technologies";
-import Intro from "@components/Intro/Intro";
+import Intro from "@components/Molecules/Intro/Intro";
+import FeaturedProject from "@components/Molecules/FeaturedProject/FeaturedProject";
+import { TechGroup } from "@components/Organisims/TechGroup/TechGroup";
 
 export default function Dev() {
   const featuredProjects = projects.filter((proj) => proj.featured);
@@ -19,8 +19,7 @@ export default function Dev() {
         alt="Turned on MacBook Air beside black smartphone and black ceramic mug"
         title="Steve Vaughn - Developer"
       />
-
-      <section className={styles.wrapper}>
+      <section className={styles.components}>
         <Intro
           eyebrow="Dev"
           heading="Welcome to My Portfolio"
@@ -38,46 +37,17 @@ export default function Dev() {
             </>
           }
         />
-      </section>
-
-      <section className={styles.wrapper}>
         <h2>⚙️ Technologies I Use</h2>
-        {Object.entries(technologies).map(([category, items]) => (
-          <div key={category} className={styles.techGroup}>
-            <h3>{category}</h3>
-            <div className={styles.techGrid}>
-              {items.map((tech) => (
-                <TechItem key={tech.name} {...tech} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <section className={styles.wrapper}>
+        <TechGroup items={technologies} />
         <h2>🧩 Featured Projects</h2>
         {featuredProjects.length > 0 ? (
           <div className={styles.featuredGrid}>
-            {featuredProjects.map((proj) => (
-              <div key={proj.name} className={styles.card}>
-                <span className={styles.badge}>{proj.role}</span>
-                <div className={styles.screenshotPlaceholder}>
-                  <Image
-                    src={proj.image}
-                    alt={`Screenshot of ${proj.name}`}
-                    className={styles.projectImage}
-                    fill={true}
-                  />
-                </div>
-                <h3>{proj.name}</h3>
-                <p>{proj.description}</p>
-                <p>
-                  <strong>Role:</strong> {proj.role}
-                </p>
-                <Link href={proj.url} className={styles.link} target="_blank">
-                  View Site →
-                </Link>
-              </div>
+            {featuredProjects.map((proj, index) => (
+              <FeaturedProject
+                key={proj.name}
+                proj={proj}
+                reversed={index % 2 === 1}
+              />
             ))}
           </div>
         ) : (

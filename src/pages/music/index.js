@@ -1,8 +1,8 @@
 import Layout from "@components/Layout"
-import Hero from "@components/Hero/Hero"
+import Hero from "@components/Organisims/Hero/Hero"
 import img from "@public/eastman_tuba.jpeg"
-import Intro from "@components/Intro/Intro"
-import landingPageStyles from "@styles/LandingPage.module.scss";
+import Intro from "@components/Molecules/Intro/Intro"
+import styles from "@styles/LandingPage.module.scss";
 
 export default function Music() {
   return (
@@ -12,7 +12,7 @@ export default function Music() {
         alt={"Eastman 836 Tuba closeup"}
         title={"Steve Vaughn - Musician"}
       />
-      <section className={landingPageStyles.text_wrapper}>
+      <section className={styles.components}>
         <Intro
           eyebrow="Music"
           heading="Welcome to my Musician Page"

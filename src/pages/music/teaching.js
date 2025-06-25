@@ -1,8 +1,8 @@
 import Layout from "@components/Layout"
-import Hero from "@components/Hero/Hero"
-import ContactMe from "@components/ContactMe/ContactMe";
+import Hero from "@components/Organisims/Hero/Hero"
+import ContactMe from "@components/Organisims/ContactMe/ContactMe";
 import teachingHeroImage from "@public/teaching_hero_image.jpg";
-import landingPageStyles from "@styles/LandingPage.module.scss";
+import styles from "@styles/LandingPage.module.scss";
 
 export default function Teaching() {
   return (
@@ -13,7 +13,7 @@ export default function Teaching() {
         title="Teaching"
         objPosition="bottom center"
       />
-      <section className={landingPageStyles.text_wrapper}>
+      <section className={styles.components}>
         <h2>Teaching Experience</h2>
         <p>As a teacher I have enjoyed educating future musicians through many different scenarios</p>
         <p>I teach university Tuba and Euphonium students at the University of Northern Colorado</p>

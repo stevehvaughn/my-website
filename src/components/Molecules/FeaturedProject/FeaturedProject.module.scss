@@ -1,0 +1,65 @@
+@import '@styles/config';
+@import '@styles/mixins';
+
+.featuredProject {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &.reversed {
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  .featuredProject:hover & {
+    transform: scale(1.03);
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 0.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--color-highlight);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin: 1rem 0;
+  color: var(--color-text-primary);
+}
+
+.link {
+  @include button();
+  width: fit-content;
+}

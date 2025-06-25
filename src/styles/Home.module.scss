@@ -6,7 +6,7 @@
 }
 
 .home_content {
-  @include center-me(96rem);
+  @include center-me(120rem);
   position: relative;
   display: grid;
   grid-template-areas:
