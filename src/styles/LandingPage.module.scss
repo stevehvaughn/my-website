@@ -3,4 +3,14 @@
 
 .components {
   @include center-me(144rem);
+  padding-inline: 1rem;
+}
+
+.featuredGrid {
+  position: relative;
+}
+
+.link {
+  @include simple-button;
+  width: fit-content;
 }

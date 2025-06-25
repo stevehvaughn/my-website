@@ -13,7 +13,7 @@ const nextConfig = {
   //   return config;
   // },
   images: {
-    domains: ["www.milespartnership.com", "exploreasheville-5w80r7hif-asheville.vercel.app", "michigan.org", "gohawaii.com", "cdn.visitmusiccity.com", "milespartnership.com", "theoceanac.com", "gulfshores.com"],
+    domains: ["www.milespartnership.com", "exploreasheville-5w80r7hif-asheville.vercel.app", "michigan.org", "gohawaii.com", "cdn.visitmusiccity.com", "milespartnership.com", "theoceanac.com", "gulfshores.com", "exploreasheville-89fekrup4-asheville.vercel.app", "visitmusiccity.com", "www.visitmusiccity.com", "exploreminnesota.com", "visitmyrtlebeach.com", "birdinglouisiana.com", "destinationsinternational.org", "flysrq.com", "miamibeachconvention.com", "arkansas.com"],
   }
 };
 

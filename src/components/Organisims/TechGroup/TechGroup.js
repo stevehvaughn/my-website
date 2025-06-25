@@ -7,7 +7,8 @@ export const TechGroup = ({ items }) => {
   const [activeTab, setActiveTab] = useState(categories[0]);
 
   return (
-    <div className={styles.techGroupWrapper}>
+    <section className={`add-top add-bottom ${styles.techGroupWrapper}`}>
+      <h2>Technologies I Use</h2>
       <div role="tablist" aria-label="Technology categories" className={styles.tabList}>
         {categories.map((category) => (
           <button
@@ -40,6 +41,6 @@ export const TechGroup = ({ items }) => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };

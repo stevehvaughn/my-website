@@ -36,7 +36,7 @@
     content: '';
     display: inline-block;
     position: absolute;
-    opacity: 0;  
+    opacity: 0;
     right: -2rem;
     background-repeat: no-repeat;
     background-position: center center;
@@ -76,7 +76,6 @@
 }
 
 @mixin simple-button() {
-  text-transform: uppercase;
   text-align: center;
   line-height: 1.25;
   font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem);
@@ -84,17 +83,16 @@
   display: block;
   color: var(--color-bg);
   border-radius: 5rem;
-  padding: 1rem;
-  background: var(--color-primary);
+  padding: 1rem 1.6rem;
+  background: var(--color-highlight);
   border: none;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 auto;
 
   &:hover {
     cursor: pointer;
     background: var(--color-accent);
-    padding: 1rem;
-    color: var(--color-secondary);
+    color: var(--color-text-primary);
   }
 
   &::after {
@@ -123,7 +121,7 @@
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: top $direction;
-  } 
+  }
 }
 
 @mixin heading($size: 'm') {

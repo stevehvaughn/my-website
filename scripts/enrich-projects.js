@@ -3,14 +3,89 @@ const { URL } = require("url");
 const microlinkBase = "https://api.microlink.io/?url=";
 
 const projects = [
-  { name: "Explore Asheville", url: "https://www.exploreasheville.com", featured: true },
-  { name: "Pure Michigan", url: "https://www.michigan.org" },
-  { name: "Go Hawaii", url: "https://www.gohawaii.com" },
-  { name: "Visit Music City", url: "https://www.visitmusiccity.com", featured: true },
-  { name: "Miles Partnership", url: "https://www.milespartnership.com", featured: true },
-  { name: "Ocean Casino Resort", url: "https://www.theoceanac.com" },
-  { name: "Gulf Shores", url: "https://www.gulfshores.com" },
-  { name: "Visit Winston Salem", url: "https://www.visitwinstonsalem.com"}
+  {
+    name: "Explore Asheville | Asheville, NC",
+    url: "https://www.exploreasheville.com",
+    featured: true,
+    year: 2024
+  },
+  {
+    name: "Pure Michigan | Michigan, MI",
+    url: "https://www.michigan.org",
+    year: 2021
+  },
+  {
+    name: "Go Hawaii",
+    url: "https://www.gohawaii.com",
+    year: 2024
+  },
+  {
+    name: "Visit Music City | Nashville, TN",
+    url: "https://www.visitmusiccity.com",
+    featured: true,
+    year: 2025
+  },
+  {
+    name: "Miles Partnership",
+    url: "https://www.milespartnership.com",
+    featured: true,
+    year: 2023
+  },
+  {
+    name: "Ocean Casino Resort",
+    url: "https://www.theoceanac.com",
+    year: 2023-2025
+  },
+  {
+    name: "Gulf Shores | Alabama",
+    url: "https://www.gulfshores.com",
+    year: 2021-2022
+  },
+  {
+    name: "Visit Winston Salem | Winston-Salem, NC",
+    url: "https://www.visitwinstonsalem.com",
+    year: 2023
+  },
+  {
+    name: "Explore Minnesota",
+    url: "https://www.exploreminnesota.com",
+    year: 2025
+  },
+  {
+    name: "Capitol Region USA",
+    url: "https://www.capitalregionusa.org",
+    year: 2021
+  },
+  {
+    name: "Visit Myrtle Beach | Myrtle Beach, SC",
+    url: "https://www.visitmyrtlebeach.com",
+    year: 2023
+  },
+  {
+    name: "Louisiana Birding",
+    url: "https://www.birdinglouisiana.com",
+    year: 2023
+  },
+  {
+    name: "Destinations International",
+    url: "https://destinationsinternational.org",
+    year: 2022,
+  },
+  {
+    name: "Sarasota-Bradenton International Airport",
+    url: "https://flysrq.com/",
+    year: 2022,
+  },
+  {
+    name: "Miami Beach Convention Center",
+    url: "https://www.miamibeachconvention.com",
+    year: 2023,
+  },
+  {
+    name: "Visit Arkansas",
+    url: "https://www.arkansas.com",
+    year: 2023,
+  }
 ];
 
 async function enrich() {
@@ -28,7 +103,7 @@ async function enrich() {
       description: description || null,
       image: image?.url || null,
       client: publisher || null,
-      year: 2024,
+      year: project.year,
       featured: project.featured || false,
     });
   }

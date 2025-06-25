@@ -2,7 +2,7 @@ import styles from "./About.module.scss";
 import landingPageStyles from "@styles/LandingPage.module.scss";
 import Link from "next/link";
 import SimplePromo from "@components/Organisims/SimplePromo/SimplePromo";
-import musicImg from "@public/steve_ben_folds_concert.jpg"
+import musicImg from "@public/IMG_0825.jpg"
 import devImg from "@public/steve_dev.jpg";
 import Intro from "@components/Molecules/Intro/Intro";
 

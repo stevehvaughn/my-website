@@ -37,11 +37,10 @@ export default function Dev() {
             </>
           }
         />
-        <h2>⚙️ Technologies I Use</h2>
         <TechGroup items={technologies} />
-        <h2>🧩 Featured Projects</h2>
         {featuredProjects.length > 0 ? (
-          <div className={styles.featuredGrid}>
+          <section className={`add-top add-bottom ${styles.featuredGrid}`}>
+            <h2>Featured Projects</h2>
             {featuredProjects.map((proj, index) => (
               <FeaturedProject
                 key={proj.name}
@@ -49,15 +48,15 @@ export default function Dev() {
                 reversed={index % 2 === 1}
               />
             ))}
-          </div>
+            <div className={styles.viewAllLink}>
+              <Link href="/dev/projects" className={styles.link}>
+                View All Projects
+              </Link>
+            </div>
+          </section>
         ) : (
           <p>No featured projects available at the moment. Check back soon!</p>
         )}
-        <div className={styles.viewAllLink}>
-          <Link href="/dev/projects" className={styles.link}>
-            View All Projects
-          </Link>
-        </div>
       </section>
     </Layout>
   );

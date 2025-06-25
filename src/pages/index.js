@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
           <div className={[styles.details_wrapper, styles.music].join(' ')}>
             <div className='heading-m'>I am a</div>
             <h2>Professional Musician</h2>
-            <div className='heading-xs'>that performs across the United States and abroad, while also teaching future musicians as a university professor.</div>
+            <div className='heading-xs'>that performs across the United States and abroad, and teaches aspiring young musicians.</div>
             <Link href='/music'>See my Music</Link>
           </div>
         </section>

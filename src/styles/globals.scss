@@ -162,6 +162,48 @@ button.react-multiple-carousel__arrow {
   padding-block: 2rem;
 }
 
+.add-top {
+  margin-top: 60px;
+
+  @media #{$tablet} {
+    margin-top: 100px;
+  }
+}
+
+.add-top-padding {
+  padding-top: 60px;
+
+  @media #{$tablet} {
+    padding-top: 100px;
+  }
+}
+
+.add-bottom {
+  margin-bottom: 60px;
+
+  @media #{$tablet} {
+    margin-bottom: 100px;
+  }
+}
+
+.add-bottom-padding {
+  padding-bottom: 60px;
+
+  @media #{$tablet} {
+    padding-bottom: 100px;
+  }
+}
+
+.add-bottom + .add-top,
+.add-bottom-padding + .add-top {
+  margin-top: 0 !important;
+}
+
+.add-bottom + .add-top-padding,
+.add-bottom-padding + .add-top-padding {
+  padding-top: 0 !important;
+}
+
 :root {
   @each $layout, $size in $layouts {
     --layout-#{$layout}: #{$size};
