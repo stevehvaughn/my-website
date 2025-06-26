@@ -1,7 +1,6 @@
 import Layout from "@components/Layout";
 import Hero from "@components/Organisims/Hero/Hero";
 import Link from "next/link";
-import img from "@public/dev_landing.jpg";
 import styles from "@styles/LandingPage.module.scss";
 import projects from "@utils/projects";
 import technologies from "@utils/technologies";
@@ -15,7 +14,7 @@ export default function Dev() {
   return (
     <Layout criteria="dev">
       <Hero
-        src={img}
+        src="/dev_landing.jpg"
         alt="Turned on MacBook Air beside black smartphone and black ceramic mug"
         title="Steve Vaughn - Developer"
       />

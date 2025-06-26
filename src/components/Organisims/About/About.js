@@ -2,8 +2,8 @@ import styles from "./About.module.scss";
 import landingPageStyles from "@styles/LandingPage.module.scss";
 import Link from "next/link";
 import SimplePromo from "@components/Organisims/SimplePromo/SimplePromo";
-import musicImg from "@public/IMG_0825.jpg";
-import devImg from "@public/steve_dev.jpg";
+// import musicImg from "@public/IMG_0825.jpg";
+// import devImg from "@public/steve_dev.jpg";
 import Intro from "@components/Molecules/Intro/Intro";
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
           ]}
         />
         <SimplePromo
-        imageSrc={devImg}
+        imageSrc="/steve_dev.jpg"
         imageAlt="A laptop open with code on the screen, with a cup of coffee next to the laptop"
         imageOnLeft={true}
         >
@@ -30,7 +30,7 @@ export default function About() {
           <p>You can see examples of my work on the <Link href="/dev">Portfolio</Link> side of my website.</p>
         </SimplePromo>
         <SimplePromo
-        imageSrc={musicImg}
+        imageSrc="/IMG_0825.jpg"
         imageAlt="Steve playing the tuba"
         imageOnLeft={false}
         >

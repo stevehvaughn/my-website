@@ -1,7 +1,6 @@
 import Layout from "@components/Layout";
 import UpcomingPerformanceCard from "@components/PerformanceCard/PerformanceCard";
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
-import performHeroImage from "@public/perform_hero.jpg";
 import Hero from "@components/Organisims/Hero/Hero";
 import styles from "@styles/LandingPage.module.scss";
 
@@ -35,7 +34,7 @@ export default function Concerts({ upcomingPerformances }) {
   return (
     <Layout criteria="music">
       <Hero
-        src={performHeroImage}
+        src="/perform_hero.jpg"
         alt="UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"
         title="Performances"
         objPosition="bottom center"

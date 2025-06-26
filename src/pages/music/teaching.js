@@ -1,14 +1,13 @@
 import Layout from "@components/Layout"
 import Hero from "@components/Organisims/Hero/Hero"
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
-import teachingHeroImage from "@public/teaching_hero_image.jpg";
 import styles from "@styles/LandingPage.module.scss";
 
 export default function Teaching() {
   return (
     <Layout criteria='music'>
       <Hero
-        src={teachingHeroImage}
+        src="/teaching_hero_image.jpg"
         alt="Teaching the Phantom Regiment tuba section in front of Ralph Wilson Stadium in Buffalo, NY"
         title="Teaching"
         objPosition="bottom center"

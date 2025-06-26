@@ -34,10 +34,11 @@
 }
 
 .image_wrapper {
+  position: relative;
   display: grid;
   grid-area: image;
-  height: 100%;
   text-align: center;
+  aspect-ratio: 3/4;
 
   img {
     mask-image: linear-gradient(to top, transparent 5%, var(--color-bg) 25%);

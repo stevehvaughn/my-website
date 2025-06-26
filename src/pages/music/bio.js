@@ -1,14 +1,12 @@
 import Layout from "@components/Layout"
 import styles from "@styles/LandingPage.module.scss";
-import Image from "next/image"
-import bioImage from "@public/steve_tuba.jpg";
 import Hero from "@components/Organisims/Hero/Hero";
 
 export default function Bio() {
   return (
     <Layout criteria='music'>
       <Hero
-        src={bioImage}
+        src="/steve_tuba.jpg"
         alt="Steve Playing the tuba"
         title="Biography"
         objPosition="center top"

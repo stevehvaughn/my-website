@@ -1,6 +1,5 @@
 import Layout from "@components/Layout"
 import Hero from "@components/Organisims/Hero/Hero"
-import img from "@public/eastman_tuba.jpeg"
 import Intro from "@components/Molecules/Intro/Intro"
 import styles from "@styles/LandingPage.module.scss";
 
@@ -8,7 +7,7 @@ export default function Music() {
   return (
     <Layout criteria={'music'}>
       <Hero
-        src={img}
+        src="/eastman_tuba.jpeg"
         alt={"Eastman 836 Tuba closeup"}
         title={"Steve Vaughn - Musician"}
       />

@@ -2,7 +2,6 @@ import Image from "next/image"
 import Layout from "@components/Layout";
 import About from "@components/Organisims/About/About";
 import Link from 'next/link';
-import headshotPic from '@public/home_image.png'
 import styles from '@styles/Home.module.scss'
 import Date from "@components/Date/Date";
 import { getSortedPostsData } from '@utils/posts';
@@ -35,8 +34,9 @@ export default function Home({ allPostsData }) {
           </div>
           <div className={styles.image_wrapper}>
             <Image
-              src={headshotPic}
+              src="/home_image.png"
               alt='Steve Vaughn Headshot'
+              fill
               priority
             />
           </div>
