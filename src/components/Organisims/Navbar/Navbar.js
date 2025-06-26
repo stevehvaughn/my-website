@@ -1,22 +1,13 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.scss';
+import { useScroll } from '@context/ScrollContext';
 import { homeNavLinks, errorNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js';
 
 export default function Navbar({ criteria }) {
-  const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   const currentPath = router.pathname;
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scrolled = useScroll();
 
   let navLinks;
   if (criteria === 'music') {

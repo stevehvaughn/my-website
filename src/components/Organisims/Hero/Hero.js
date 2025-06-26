@@ -1,11 +1,15 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
+import { useScroll } from '@context/ScrollContext';
 
-export default function Hero({ src, alt, title, objPosition="center", objFit="cover" }) {
+export default function Hero({ src, alt, title, objPosition = "center", objFit = "cover" }) {
   const imageWrapperRef = useRef(null);
+  const scrolled = useScroll();
 
   useEffect(() => {
+    if (!src) return; // Skip parallax logic if there's no image
+
     let scrollTarget = 0;
     let current = 0;
     let rafId = null;
@@ -29,21 +33,32 @@ export default function Hero({ src, alt, title, objPosition="center", objFit="co
       window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(rafId);
     };
-  }, []);
+  }, [src]);
 
   return (
-    <div className={styles.hero}>
-       <div ref={imageWrapperRef} className={styles.image_wrapper}>
-        <Image
-          className={styles.image}
-          src={src}
-          alt={alt}
-          fill
-          priority
-          style={{ objectFit: objFit, objectPosition: objPosition}}
-        />
-      </div>
-      {title && <h1 className={styles.hero_title}>{title}</h1>}
+    <div className={`${styles.hero} ${!src ? styles.noImage : styles.withImage} ${scrolled ? styles.scrolled : ''}`}>
+      {src && (
+        <div ref={imageWrapperRef} className={styles.image_wrapper}>
+          <Image
+            className={styles.image}
+            src={src}
+            alt={alt}
+            fill
+            priority
+            placeholder="blur"
+            blurDataURL="/blur-placeholder.jpg"
+            style={{ objectFit: objFit, objectPosition: objPosition }}
+          />
+        </div>
+      )}
+
+      {!src ? (
+        <div className={styles.hero_background}>
+          <h1 className={styles.hero_title}>{title}</h1>
+        </div>
+      ) : (
+        title && <h1 className={styles.hero_title}>{title}</h1>
+      )}
     </div>
   );
 }

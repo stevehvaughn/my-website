@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { open_sans, bitter, montserrat, inter, nunito } from '@utils/fonts';
 import '../styles/globals.scss';
+import { ScrollProvider } from '@context/ScrollContext';
 
 export default function MyApp({ Component, pageProps }) {
   register();
@@ -59,7 +60,9 @@ export default function MyApp({ Component, pageProps }) {
             --font-nunito: ${nunito.style.fontFamily};
           }
       `}</style>
-      <Component {...pageProps} />
+      <ScrollProvider>
+        <Component {...pageProps} />
+      </ScrollProvider>
     </>
   )
 }

@@ -6,6 +6,86 @@
   width: 100%;
   height: 50vh;
   overflow: hidden;
+
+  &.withImage {
+    height: 50vh;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(15, 23, 42, 0.7) 60%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero_title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--color-bg);
+      font-weight: 600;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+  }
+
+  &.noImage {
+    background: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    padding-bottom: 3rem;
+
+    .hero_background {
+      position: relative;
+      width: 100vw;
+      padding: 4rem 1rem 3rem;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 0;
+    }
+
+    &.scrolled {
+      .hero_background {
+        // background-color: var(--color-secondary);
+      }
+      .hero_title {
+        color: var(--color-bg);
+      }
+    }
+
+    .hero_title {
+      margin: 0;
+      padding: 0;
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+    }
+  }
 }
 
 .image_wrapper {
@@ -24,36 +104,4 @@
     width: 100%;
     height: 100%;
   }
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(15, 23, 42, 0.7) 60%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero_title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--color-bg);
-  font-weight: 600;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
