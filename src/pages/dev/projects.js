@@ -25,14 +25,14 @@ export default function Projects({ projects }) {
                 <a href={proj.url} target="_blank" rel="noopener noreferrer">
                   {proj.name}
                 </a>{" "}
-                – {proj.client}
+                - {proj.client}
               </li>
             ))}
           </ul>
           <section className={styles.ctaDev}>
-            <h2>Let’s Collaborate</h2>
+            <h2>{`Let's Collaborate`}</h2>
             <p>
-              I'm always open to new front-end projects, creative tech collaborations, and conversations with fellow developers. If you're building something and need thoughtful UI development — let’s chat.
+              {`I'm always open to new front-end projects, creative tech collaborations, and conversations with fellow developers. If you're building something and need thoughtful UI development — let's chat.`}
             </p>
           </section>
 
