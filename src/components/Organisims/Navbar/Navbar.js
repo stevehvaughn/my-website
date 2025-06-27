@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.scss';
 import { useScroll } from '@context/ScrollContext';
@@ -8,6 +9,24 @@ export default function Navbar({ criteria }) {
   const router = useRouter();
   const currentPath = router.pathname;
   const scrolled = useScroll();
+
+  const [pastHero, setPastHero] = useState(false);
+
+  useEffect(() => {
+    const sentinel = document.getElementById('hero-sentinel');
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setPastHero(!entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: "-120px", }
+    );
+
+    observer.observe(sentinel);
+
+    return () => observer.disconnect();
+  }, []);
 
   let navLinks;
   if (criteria === 'music') {
@@ -21,7 +40,7 @@ export default function Navbar({ criteria }) {
   }
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${pastHero ? styles.pastHero : ''}`}>
       <Link href="/">home</Link>
       <ul className={styles.navbar}>
         {navLinks.map((link, index) => {

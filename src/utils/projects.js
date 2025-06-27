@@ -6,7 +6,9 @@ const projects = [
     "year": 2024,
     "title": "Home | Explore Asheville",
     "description": "Find things to do, events, hotels, trip ideas and outdoor activities in Asheville, NC",
-    "image": "https://exploreasheville-89fekrup4-asheville.vercel.app/sites/default/files/2024-09/untitled-0943-custom.jpg",
+    "contributions": null,
+    "image": "https://exploreasheville-pfxfxnl6t-asheville.vercel.app/sites/default/files/2024-09/untitled-0943-custom.jpg",
+    "logo": "https://logo.clearbit.com/www.exploreasheville.com",
     "client": "Explore Asheville"
   },
   {
@@ -15,7 +17,9 @@ const projects = [
     "year": 2021,
     "title": "Pure Michigan",
     "description": "Whether you are traveling with your family or making memories with friends – you are on the brink of planning a vacation so unique, it can only be classified as Pure Michigan.",
+    "contributions": null,
     "image": "https://www.michigan.org/sites/default/files/2022-09/PM_Fall_Landing_Page%201920x1080.jpg",
+    "logo": "https://logo.clearbit.com/www.michigan.org",
     "client": "Michigan",
     "featured": false
   },
@@ -25,7 +29,9 @@ const projects = [
     "year": 2024,
     "title": "Hawaii Travel Information | Official Hawaiian Islands Vacation Guide | Go Hawaii",
     "description": "Discover the beauty, culture and adventures waiting for you on the Hawaiian Islands. Find Hawaii travel information and plan your perfect vacation.",
+    "contributions": null,
     "image": "https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/Homepage_Hero_042019v1_0.jpg.webp?itok=8OohEKA2",
+    "logo": "https://logo.clearbit.com/www.gohawaii.com",
     "client": "gohawaii.com",
     "featured": false
   },
@@ -33,10 +39,12 @@ const projects = [
     "name": "Visit Music City | Nashville, TN",
     "url": "https://www.visitmusiccity.com",
     "featured": true,
+    "contributions": "Built responsive front-end templates using SCSS and JavaScript, optimized for accessibility and performance. Integrated Drupal SDC components for dynamic rendering.",
     "year": 2025,
     "title": "Music is the Universal Language | Visit Nashville TN",
     "description": "We Are Music City",
     "image": "https://www.visitmusiccity.com/sites/default/files/styles/listing_slide/public/2025-04/summer-girl-pooldeck-skyline.jpg.webp?itok=9Q0m5W2O",
+    "logo": "https://logo.clearbit.com/www.visitmusiccity.com",
     "client": "visitmusiccity.com"
   },
   {
@@ -46,7 +54,9 @@ const projects = [
     "year": 2023,
     "title": "Miles Partnership | We Inspire Travel",
     "description": "Miles Partnership is a strategic marketing consultancy focused exclusively on travel and tourism. We are champions and purveyors of positive change, igniting the belief that travel improves lives and strengthens communities.",
+    "contributions": null,
     "image": "https://www.milespartnership.com/sites/default/files/styles/menu_promo/public/2025-01/staff-enriquetabalandra-nealalfano-kimpalmer-library.jpeg?itok=3Ta7Ag1m",
+    "logo": "https://logo.clearbit.com/www.milespartnership.com",
     "client": "Miles Partnership"
   },
   {
@@ -55,7 +65,9 @@ const projects = [
     "year": -2,
     "title": "Ocean Casino Resort Atlantic City",
     "description": "2023 was an extraordinary year! Let’s reminisce about some of the loftiest milestones Ocean Casino Resort achieved in 2023. Learn more",
+    "contributions": null,
     "image": "https://www.theoceanac.com/sites/default/files/2022-03/OCR_Exterior_Sunrise_840x745-min-scaled.jpg",
+    "logo": "https://logo.clearbit.com/www.theoceanac.com",
     "client": "Ocean Casino Resort",
     "featured": false
   },
@@ -65,7 +77,9 @@ const projects = [
     "year": -1,
     "title": "Discover Alabama’s Gulf Coast",
     "description": "Learn all about the areas of Gulf Shores & Orange Beach, AL before planning your next trip. Find rentals, things to do and more along Alabama’s Gulf Coast!",
+    "contributions": null,
     "image": "https://www.gulfshores.com/sites/default/files/2020-11/alabamapoint.png",
+    "logo": "https://www.gulfshores.com/sites/default/files/2024-gs-favicon_5.png",
     "client": "Gulf Shores & Orange Beach",
     "featured": false
   },
@@ -75,7 +89,9 @@ const projects = [
     "year": 2023,
     "title": "Winston+Salem",
     "description": "From our vibrant downtown to our centuries-old historic sites, Winston-Salem enchants all who visit with big-city ammenities and small-town charm. Grab a creative craft brew, meander around a magical garden, dine in a [...]",
+    "contributions": null,
     "image": null,
+    "logo": "https://www.visitwinstonsalem.com/sites/default/files/cropped-favicon-192x192.png",
     "client": "Visit Winston Salem",
     "featured": false
   },
@@ -85,7 +101,9 @@ const projects = [
     "year": 2025,
     "title": "Minnesota Vacations & Travel Guide: Explore Minnesota",
     "description": "Whether you’re planning a visit or pondering a move, Minnesota — a state of seemingly endless possibilities — is ready to welcome you. Need a little more encouragement? Here are some trip-planning tools and our latest inspo-oriented travel guides, listicles, and itineraries.",
+    "contributions": null,
     "image": "https://www.exploreminnesota.com/sites/default/files/styles/share_image/public/2024-02/EMT_Makers_LakeSuperior_NorthShore_01.jpg?h=41f55a5b&itok=drcieOT0",
+    "logo": "https://logo.clearbit.com/www.exploreminnesota.com",
     "client": "Explore Minnesota",
     "featured": false
   },
@@ -95,7 +113,9 @@ const projects = [
     "year": 2021,
     "title": "American Holidays in Washington, DC and Capital Region USA",
     "description": "On your next American holiday, go beyond the capital of the USA and discover breathtaking beaches, mountains, and culture-rich cities across Maryland and Virginia.",
-    "image": null,
+    "contributions": null,
+    "image": "https://www.capitalregionusa.org/sites/default/files/legacy_images/Hiking_McAfee%20Knob_Roanoke_CREDIT%20VTC.JPG",
+    "logo": "https://logo.clearbit.com/www.capitalregionusa.org",
     "client": "Capital Region USA",
     "featured": false
   },
@@ -105,7 +125,9 @@ const projects = [
     "year": 2023,
     "title": "Welcome To Myrtle Beach, South Carolina",
     "description": "The Official Myrtle Beach, South Carolina Vacation Planning Website - your guide to the best Myrtle Beach hotels, resorts, attractions, events, shopping, dining and more along 60 miles of beaches. Start planning your Myrtle Beach vacation today!",
+    "contributions": null,
     "image": "https://www.visitmyrtlebeach.com/sites/default/files/styles/single_image_component/public/2023-06/ybatb-badge-new2.png.webp",
+    "logo": "https://logo.clearbit.com/www.visitmyrtlebeach.com",
     "client": "Visit Myrtle Beach",
     "featured": false
   },
@@ -115,7 +137,9 @@ const projects = [
     "year": 2023,
     "title": "Homepage | Louisiana Birding",
     "description": "Explore Louisiana’s diverse birding paradise, from coastal wetlands to pine forests, where vibrant species like Bald Eagles and Painted Buntings await.",
+    "contributions": null,
     "image": "https://www.birdinglouisiana.com/sites/default/files/2023-07/painted_bunting_tom_finnie.jpg",
+    "logo": "https://www.birdinglouisiana.com/sites/default/files/Louisiana%20Birding%20Favicon_0.png",
     "client": "birdinglouisiana.com",
     "featured": false
   },
@@ -125,7 +149,9 @@ const projects = [
     "year": 2022,
     "title": "Destinations International Home",
     "description": "Destinations International strives to make our members and their destinations successful. As the world’s largest and most reliable resource for destination organizations, we inform, connect, inspire and educate our [...]",
+    "contributions": null,
     "image": "https://destinationsinternational.org/sites/default/files/styles/hero_xxs/public/2025-02/riverwalk_184_copy.jpg?itok=UDM_Xti8",
+    "logo": "https://logo.clearbit.com/destinationsinternational.org",
     "client": "Destinations International",
     "featured": false
   },
@@ -135,7 +161,9 @@ const projects = [
     "year": 2022,
     "title": "SRQ Sarasota Bradenton International Airport | Fly SRQ",
     "description": "Everything about Sarasota Bradenton International Airport is designed for your convenience. Our spacious terminal allows you to move about smoothly and easily, without stress or hurry. Airline ticketing, baggage claim, [...]",
+    "contributions": null,
     "image": "https://flysrq.com/sites/default/files/2022-05/AdobeStock_166492909%20(1).jpeg",
+    "logo": "https://logo.clearbit.com/flysrq.com",
     "client": "Sarasota Bradenton International Airport",
     "featured": false
   },
@@ -145,7 +173,9 @@ const projects = [
     "year": 2023,
     "title": "Miami Beach Convention Center",
     "description": "The award-winning Miami Beach Convention Center (MBCC) welcomes meeting and event planners, exhibitors and attendees to Miami Beach and Miami.",
+    "contributions": null,
     "image": "https://www.miamibeachconvention.com/sites/default/files/styles/mega_menu_featured/public/2023-03/Floorplans-SHOT%2310_LOBBY_0096.jpg.webp?itok=vitYNP3w",
+    "logo": "https://www.miamibeachconvention.com/sites/default/files/apple-icon-180x180.png",
     "client": "Miami Beach Convention Center",
     "featured": false
   },
@@ -155,7 +185,9 @@ const projects = [
     "year": 2023,
     "title": "Arkansas Tourism Official Site | Arkansas.com",
     "description": "No Ordinary",
+    "contributions": null,
     "image": "https://www.arkansas.com/sites/default/files/2024-01/ARKANSAS-2023%20LOGO-BLACK.no%20website.png",
+    "logo": "https://logo.clearbit.com/www.arkansas.com",
     "client": "arkansas.com",
     "featured": false
   }

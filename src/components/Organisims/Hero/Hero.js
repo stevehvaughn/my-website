@@ -36,7 +36,11 @@ export default function Hero({ src, alt, title, objPosition = "center", objFit =
   }, [src]);
 
   return (
-    <div className={`${styles.hero} ${!src ? styles.noImage : styles.withImage} ${scrolled ? styles.scrolled : ''}`}>
+    <div
+      className={`${styles.hero} ${!src ? styles.noImage : styles.withImage} ${
+        scrolled ? styles.scrolled : ''
+      }`}
+    >
       {src && (
         <div ref={imageWrapperRef} className={styles.image_wrapper}>
           <Image
@@ -59,6 +63,18 @@ export default function Hero({ src, alt, title, objPosition = "center", objFit =
       ) : (
         title && <h1 className={styles.hero_title}>{title}</h1>
       )}
+
+      {/* Sentinel for Navbar intersection detection */}
+      <div
+        id="hero-sentinel"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          height: '1px',
+          width: '100%',
+          pointerEvents: 'none',
+        }}
+      />
     </div>
   );
 }

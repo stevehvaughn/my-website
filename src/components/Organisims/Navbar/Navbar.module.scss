@@ -20,7 +20,11 @@
 }
 
 .nav.scrolled {
-  background-color: var(--color-secondary);
+  &:not(:has(+ main [class*="Hero_noImage"])),
+  &.pastHero {
+    background-color: var(--color-secondary);
+  }
+
   color: var(--color-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 

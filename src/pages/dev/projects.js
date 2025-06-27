@@ -3,6 +3,7 @@ import projects from "@utils/projects";
 import styles from "@styles/LandingPage.module.scss";
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
 import Hero from "@components/Organisims/Hero/Hero";
+import ProjectList from "@components/Organisims/ProjectList/ProjectList";
 
 export async function getStaticProps() {
   return {
@@ -19,16 +20,7 @@ export default function Projects({ projects }) {
           objPosition="bottom center"
         />
         <div className={styles.components}>
-          <ul>
-            {projects.map((proj) => (
-              <li key={proj.name}>
-                <a href={proj.url} target="_blank" rel="noopener noreferrer">
-                  {proj.name}
-                </a>{" "}
-                - {proj.client}
-              </li>
-            ))}
-          </ul>
+          <ProjectList projects={projects} />
           <section className={styles.ctaDev}>
             <h2>{`Let's Collaborate`}</h2>
             <p>

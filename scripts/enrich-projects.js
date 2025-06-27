@@ -23,6 +23,7 @@ const projects = [
     name: "Visit Music City | Nashville, TN",
     url: "https://www.visitmusiccity.com",
     featured: true,
+    contributions: "Built responsive front-end templates using SCSS and JavaScript, optimized for accessibility and performance. Integrated Drupal SDC components for dynamic rendering.",
     year: 2025
   },
   {
@@ -88,6 +89,19 @@ const projects = [
   }
 ];
 
+function getHighResLogo(project, microlinkLogoUrl) {
+  try {
+    const domain = new URL(project.url).hostname;
+    const isLowResFavicon = microlinkLogoUrl?.endsWith('.ico') || !microlinkLogoUrl;
+    if (isLowResFavicon) {
+      return `https://logo.clearbit.com/${domain}`;
+    }
+    return microlinkLogoUrl;
+  } catch {
+    return microlinkLogoUrl || null;
+  }
+}
+
 async function enrich() {
   const enriched = [];
 
@@ -95,13 +109,15 @@ async function enrich() {
     const res = await fetch(`${microlinkBase}${project.url}`);
     const json = await res.json();
 
-    const { title, description, image, publisher } = json.data;
+    const { title, description, image, publisher, logo } = json.data;
 
     enriched.push({
       ...project,
       title: title || project.name,
       description: description || null,
+      contributions: project.contributions || null,
       image: image?.url || null,
+      logo: getHighResLogo(project, logo?.url),
       client: publisher || null,
       year: project.year,
       featured: project.featured || false,

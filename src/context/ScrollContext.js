@@ -7,7 +7,7 @@ export const ScrollProvider = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 58);
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);

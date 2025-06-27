@@ -53,10 +53,10 @@
     .hero_background {
       position: relative;
       width: 100vw;
-      padding: 4rem 1rem 3rem;
+      padding: 10rem 2rem;
       border-bottom-left-radius: 80px;
       border-bottom-right-radius: 80px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,7 +68,7 @@
 
     &.scrolled {
       .hero_background {
-        // background-color: var(--color-secondary);
+        background-color: var(--color-secondary);
       }
       .hero_title {
         color: var(--color-bg);
@@ -78,12 +78,8 @@
     .hero_title {
       margin: 0;
       padding: 0;
-      font-size: 2.75rem;
       font-weight: 700;
-      line-height: 1.2;
       text-transform: uppercase;
-      letter-spacing: -0.02em;
-      max-width: 900px;
     }
   }
 }

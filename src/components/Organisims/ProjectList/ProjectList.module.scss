@@ -1,0 +1,128 @@
+@import '@styles/config';
+@import '@styles/mixins';
+
+.projectGrid {
+  padding: 0;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.email {
+  font-weight: 700;
+  @include animate-link-hover(var(--color-accent), left);
+}
+
+.column {
+  padding: 1rem;
+  flex: 1 0 100%;
+
+  &.tablet {
+    @media #{$tablet} {
+      flex: 0 0 50%;
+    }
+  }
+
+  &.desktop {
+    @media #{$desktop} {
+      flex: 0 0 33.3333%;
+    }
+  }
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+  > img {
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover {
+    > img {
+      transform: scale(1.1);
+    }
+    .caption {
+      opacity: 1;
+    }
+  }
+}
+
+.projectThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.logoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.logoCentered {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.6rem;
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  z-index: 3;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.title {
+  color: var(--color-bg);
+}
+
+.desc {
+  font-size: 1.4rem;
+}
+
+.button {
+  @include simple-button;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
