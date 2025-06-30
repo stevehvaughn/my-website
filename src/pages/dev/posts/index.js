@@ -1,13 +1,15 @@
 import Layout from "@components/Layout";
 import Link from "next/link";
 import Date from "@components/Date/Date";
+import Hero from "@components/Organisims/Hero/Hero";
+import styles from "../../../styles/LandingPage.module.scss";
 import { loadMediumPosts } from '@utils/medium-posts';
 import { getSortedPostsData } from '@utils/posts';
 
 export default function posts({ ...props }) {
   return (
     <Layout criteria='dev'>
-      <div>Posts</div>
+      <Hero title="posts" />
       {/* <ul>
         <h3>Site Blogs</h3>
         {props.devPostsData.map(({ id, date, title }) => (
@@ -20,23 +22,25 @@ export default function posts({ ...props }) {
           </li>
         ))}
       </ul> */}
-      <ul>
-        <h3>Medium Blogs</h3>
-        {props.mediumPosts.items.map((post) => {
-          const dateString = post.pubDate.split(" ")[0];
-          const formattedDateArray = [dateString];
+      <div className={styles.components}>
+        <ul>
+          <h3>Medium Blogs</h3>
+          {props.mediumPosts.items.map((post) => {
+            const dateString = post.pubDate.split(" ")[0];
+            const formattedDateArray = [dateString];
 
-          return (
-            <li key={post.title}>
-              <Link href={post.link}>{post.title}</Link>
-              <br />
-              <small>
-                <Date dates={formattedDateArray} />
-              </small>
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li key={post.title}>
+                <Link href={post.link}>{post.title}</Link>
+                <br />
+                <small>
+                  <Date dates={formattedDateArray} />
+                </small>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </Layout>
   )
 }

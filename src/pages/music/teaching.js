@@ -13,19 +13,21 @@ export default function Teaching() {
         objPosition="bottom center"
       />
       <section className={styles.components}>
-        <h2>Teaching Experience</h2>
-        <p>As a teacher I have enjoyed educating future musicians through many different scenarios</p>
-        <p>I teach university Tuba and Euphonium students at the University of Northern Colorado</p>
-        <p>I have taught in public schools as a Band/Orchestra director</p>
-        <p>I have been on staff with multiple DCI and DCA drum corps, and taught numerous high school marching bands across Colorado</p>
-        <p>I have been a sectional coach for various summer music academys and high schools during the academic year</p>
-        <p>I teach private lessons to high school students to prepare for Regional and State Band auditions</p>
-        <p>Please do not hesitate to send me a message if you are interested in having a lesson with me!</p>
+        <div className="add-top add-bottom">
+          <h2>Teaching Experience</h2>
+          <p>As a teacher I have enjoyed educating future musicians through many different scenarios</p>
+          <p>I teach university Tuba and Euphonium students at the University of Northern Colorado</p>
+          <p>I have taught in public schools as a Band/Orchestra director</p>
+          <p>I have been on staff with multiple DCI and DCA drum corps, and taught numerous high school marching bands across Colorado</p>
+          <p>I have been a sectional coach for various summer music academys and high schools during the academic year</p>
+          <p>I teach private lessons to high school students to prepare for Regional and State Band auditions</p>
+          <p>Please do not hesitate to send me a message if you are interested in having a lesson with me!</p>
+        </div>
+        <ContactMe
+          heading={"Get in touch!"}
+          subtitle={"Looking for private lessons, or want to invite me to teach a masterclass at your school?"}
+        />
       </section>
-      <ContactMe
-        heading={"Get in touch!"}
-        subtitle={"Looking for private lessons, or want to invite me to teach a masterclass at your school?"}
-      />
     </Layout>
   )
 }

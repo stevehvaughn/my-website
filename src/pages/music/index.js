@@ -16,8 +16,8 @@ export default function Music() {
           eyebrow="Music"
           heading="Welcome to my Musician Page"
           body={[
-            "I’m a professional tubist and euphoniumist performing across the Mountain States region and abroad.",
-            "My work spans orchestral, chamber, and brass band settings — blending precision, adaptability, and a love of musical collaboration."
+            "I’m a professional tubist and euphoniumist performing across the United States and abroad.",
+            "My work spans orchestral, chamber, and brass band settings — as well as being committed to music education"
           ]}
         />
       </section>

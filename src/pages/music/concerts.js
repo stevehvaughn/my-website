@@ -40,45 +40,47 @@ export default function Concerts({ upcomingPerformances }) {
         objPosition="bottom center"
       />
       <section className={styles.components}>
-        <p>
-          I am a regular musician with the Fort Collins Symphony and the
-          Fountain City Brass Band. However, I also am asked to play with
-          various other ensembles as a substitute or extra musician.
-        </p>
-        <p>
-          Some of the groups I have performed with include the Colorado
-          Symphony, Colorado Springs Philharmonic, Boulder Philharmonic,
-          Colorado Wind Ensemble, and many others!
-        </p>
-        <p>
-          I also am available to give masterclasses and/or recitals at your
-          high school or university!
-        </p>
-        <p>
-          Please do not hesitate to send me a message if you want to have me
-          perform with your group, or come out to your school!
-        </p>
+        <div className="add-top add-bottom">
+          <p>
+            I am a regular musician with the Fort Collins Symphony and the
+            Fountain City Brass Band. However, I also am asked to play with
+            various other ensembles as a substitute or extra musician.
+          </p>
+          <p>
+            Some of the groups I have performed with include the Colorado
+            Symphony, Colorado Springs Philharmonic, Boulder Philharmonic,
+            Colorado Wind Ensemble, and many others!
+          </p>
+          <p>
+            I also am available to give masterclasses and/or recitals at your
+            high school or university!
+          </p>
+          <p>
+            Please do not hesitate to send me a message if you want to have me
+            perform with your group, or come out to your school!
+          </p>
+        </div>
+        {upcomingPerformances.length > 0 && (
+          <section className={`add-top add-bottom ${styles.performances}`}>
+            <h2>Upcoming Performances</h2>
+            <swiper-container
+              pagination="true"
+              className={styles.swiper_container}
+            >
+              {upcomingPerformances.map((performance) => (
+                <UpcomingPerformanceCard
+                  key={performance.title}
+                  performance={performance}
+                />
+              ))}
+            </swiper-container>
+          </section>
+        )}
+        <ContactMe
+          heading="Contact Me"
+          subtitle="Looking to book a brass quintet, or soloist for your next concert?"
+        />
       </section>
-      {upcomingPerformances.length > 0 && (
-        <section className={styles.performances}>
-          <h2>Upcoming Performances</h2>
-          <swiper-container
-            pagination="true"
-            className={styles.swiper_container}
-          >
-            {upcomingPerformances.map((performance) => (
-              <UpcomingPerformanceCard
-                key={performance.title}
-                performance={performance}
-              />
-            ))}
-          </swiper-container>
-        </section>
-      )}
-      <ContactMe
-        heading="Contact Me"
-        subtitle="Looking to book a brass quintet, or soloist for your next concert?"
-      />
     </Layout>
   );
 }

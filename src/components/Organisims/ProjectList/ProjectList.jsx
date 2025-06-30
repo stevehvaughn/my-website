@@ -10,7 +10,7 @@ const ProjectList = ({ projects }) => {
         {projects.map((proj) => (
           <div
             key={proj.name}
-            className={`${styles.column} ${styles.mobile} ${styles.tablet} ${styles.desktop}`}
+            className={`${styles.projectItem}`}
           >
             <figure className={styles.image}>
               {proj.image && (
@@ -42,8 +42,6 @@ const ProjectList = ({ projects }) => {
                   <span>Visit Website</span>
                 </a>
               </figcaption>
-
-              <div className={styles.overlay}></div>
             </figure>
           </div>
         ))}
