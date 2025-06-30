@@ -99,12 +99,12 @@ const projects = [
     "name": "Explore Minnesota",
     "url": "https://www.exploreminnesota.com",
     "year": 2025,
-    "title": "Minnesota Vacations & Travel Guide: Explore Minnesota",
-    "description": "Whether you’re planning a visit or pondering a move, Minnesota — a state of seemingly endless possibilities — is ready to welcome you. Need a little more encouragement? Here are some trip-planning tools and our latest inspo-oriented travel guides, listicles, and itineraries.",
+    "title": "www.exploreminnesota.com",
+    "description": null,
     "contributions": null,
-    "image": "https://www.exploreminnesota.com/sites/default/files/styles/share_image/public/2024-02/EMT_Makers_LakeSuperior_NorthShore_01.jpg?h=41f55a5b&itok=drcieOT0",
-    "logo": "https://logo.clearbit.com/www.exploreminnesota.com",
-    "client": "Explore Minnesota",
+    "image": null,
+    "logo": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.exploreminnesota.com/&size=128",
+    "client": "exploreminnesota.com",
     "featured": false
   },
   {
@@ -114,7 +114,7 @@ const projects = [
     "title": "American Holidays in Washington, DC and Capital Region USA",
     "description": "On your next American holiday, go beyond the capital of the USA and discover breathtaking beaches, mountains, and culture-rich cities across Maryland and Virginia.",
     "contributions": null,
-    "image": "https://www.capitalregionusa.org/sites/default/files/legacy_images/Hiking_McAfee%20Knob_Roanoke_CREDIT%20VTC.JPG",
+    "image": null,
     "logo": "https://logo.clearbit.com/www.capitalregionusa.org",
     "client": "Capital Region USA",
     "featured": false

@@ -1,4 +1,5 @@
 import styles from './ProjectList.module.scss';
+import Image from 'next/image';
 
 const ProjectList = ({ projects }) => {
   return (
@@ -13,16 +14,19 @@ const ProjectList = ({ projects }) => {
           >
             <figure className={styles.image}>
               {proj.image && (
-                <img src={proj.image} alt={proj.name} className={styles.projectThumb} />
+                <Image fill src={proj.image} alt={proj.name} className={styles.projectThumb} />
               )}
 
               <div className={styles.logoOverlay}>
                 {proj.logo && (
-                  <img
-                    src={proj.logo}
-                    alt={`${proj.client} logo`}
-                    className={styles.logoCentered}
-                  />
+                  <div className={styles.logoWrapper}>
+                    <Image
+                      fill
+                      src={proj.logo}
+                      alt={`${proj.client} logo`}
+                      className={styles.logoCentered}
+                    />
+                  </div>
                 )}
               </div>
 

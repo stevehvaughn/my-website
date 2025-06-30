@@ -32,7 +32,7 @@ export default function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', updateBodyClass);
     };
-  }, [router.pathname]);
+  }, [router.pathname, router.events]);
 
   return (
     <>

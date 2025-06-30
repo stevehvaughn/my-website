@@ -12,27 +12,27 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@prisma/client": "^4.12.0",
-    "date-fns": "^2.29.3",
-    "directory-tree": "^3.5.1",
+    "@prisma/client": "^4.16.2",
+    "date-fns": "^2.30.0",
+    "directory-tree": "^3.5.2",
     "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
     "gray-matter": "^4.0.3",
-    "next": "13.2.4",
+    "next": "^14.2.30",
     "node-fetch": "^3.3.2",
-    "nodemailer": "^6.9.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.10.1",
-    "remark": "^14.0.2",
+    "nodemailer": "^6.10.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "remark": "^14.0.3",
     "remark-html": "^15.0.2",
-    "swiper": "^10.1.0"
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
-    "prisma": "^4.12.0",
-    "sass": "^1.59.2"
+    "eslint-config-next": "^14.2.30",
+    "prisma": "^4.16.2",
+    "sass": "^1.89.2"
   }
 }

@@ -72,9 +72,13 @@
   z-index: 2;
 }
 
+.logoWrapper {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
 .logoCentered {
-  max-width: 70%;
-  max-height: 70%;
   object-fit: contain;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
 }
