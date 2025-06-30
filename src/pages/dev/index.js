@@ -32,7 +32,7 @@ export default function Dev() {
               >
                 Miles Partnership
               </a>
-              , I specialize in crafting elegant, accessible, and scalable component-based user interfaces. Explore my work, the technologies I use, and the projects that define my passion for creating intuitive digital experiences.
+              , I specialize in crafting elegant, accessible, and scalable component-based user interfaces. Explore my work, the technologies I use, and recent projects I have been involved in.
             </>
           }
         />

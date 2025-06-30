@@ -54,24 +54,31 @@
     }
   }
 
-  &:hover {
-    background-color: $hover-bg;
-    color: $hover-color;
-    padding-right: 3rem;
-    padding-left: 1rem;
+  &:not(:disabled) {
+    &:hover {
+      background-color: $hover-bg;
+      color: $hover-color;
+      padding-right: 3rem;
+      padding-left: 1rem;
 
-    &::after {
-      opacity: 1;
-      right: 1rem;
+      &::after {
+        opacity: 1;
+        right: 1rem;
 
-      @if ($svg-hover) {
-        @include svg-colorized($arrow-right, #{$svg-hover});
-      }
+        @if ($svg-hover) {
+          @include svg-colorized($arrow-right, #{$svg-hover});
+        }
 
-      @else {
-        @include svg-colorized($arrow-right, $hover);
+        @else {
+          @include svg-colorized($arrow-right, $hover);
+        }
       }
     }
+  }
+
+
+  &:disabled {
+    opacity: .5;
   }
 }
 

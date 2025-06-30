@@ -3,7 +3,16 @@
 
 .components {
   @include center-me(144rem);
-  padding-inline: 1rem;
+  padding-inline: 1.6rem;
+  margin-top: 2.4rem;
+
+  @media #{$tablet} {
+    padding-inline: 2.4rem;
+  }
+
+  @media #{$desktop} {
+    padding-inline: 3.2rem;
+  }
 }
 
 .featuredGrid {

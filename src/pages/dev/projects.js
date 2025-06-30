@@ -21,13 +21,6 @@ export default function Projects({ projects }) {
         />
         <div className={styles.components}>
           <ProjectList projects={projects} />
-          <section className={styles.ctaDev}>
-            <h2>{`Let's Collaborate`}</h2>
-            <p>
-              {`I'm always open to new front-end projects, creative tech collaborations, and conversations with fellow developers. If you're building something and need thoughtful UI development — let's chat.`}
-            </p>
-          </section>
-
           <ContactMe
             heading="Contact Me"
             subtitle="Reach out about tech projects, contract work, or to say hello."

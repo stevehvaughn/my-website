@@ -20,7 +20,7 @@ export default function FeaturedProject({ proj, reversed = false }) {
         />
       </div>
       <div className={styles.content}>
-        <span className={styles.tag}>Featured Project</span>
+        <span className={styles.tag}>Featured</span>
         <h3>{proj.name}</h3>
         <p className={styles.description}>{proj.description}</p>
         <Link href={proj.url} className={styles.link} target="_blank">
