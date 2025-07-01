@@ -30,7 +30,7 @@ const ContactMe = ({ heading, subtitle }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ form }),
+        body: JSON.stringify({ formData }),
       });
 
       if (response.ok) {
