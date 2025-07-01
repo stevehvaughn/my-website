@@ -97,6 +97,7 @@ const ContactMe = ({ heading, subtitle }) => {
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           onChange={onCaptchaChange}
           ref={recaptcha}
+          className={styles.recaptcha_wrapper}
         />
         <button type="submit" disabled={!isFormFilledOut}>{isSubmitting ? 'Sending...' : 'Submit'}</button>
         <div className={styles.form_status_wrapper}>
