@@ -14,7 +14,7 @@ const ContactMe = ({ heading, subtitle }) => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const isFormFilledOut = formData.name && formData.email && formData.message && !isSubmitting;
+  const isFormFilledOut = formData.name && formData.email && formData.message && formData.captchaToken && !isSubmitting;
 
   // Create a ref for the reCAPTCHA widget
   const recaptcha = useRef(null);
@@ -30,7 +30,7 @@ const ContactMe = ({ heading, subtitle }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ formData }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {

@@ -1,4 +1,3 @@
-// /pages/api/contact.js or /app/api/contact/route.js (adjust path accordingly)
 import nodemailer from 'nodemailer';
 import axios from 'axios';
 
