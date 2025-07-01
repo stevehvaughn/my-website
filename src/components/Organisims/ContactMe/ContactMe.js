@@ -94,7 +94,7 @@ const ContactMe = ({ heading, subtitle }) => {
         </div>
         <ReCAPTCHA
           size="normal"
-          sitekey={process.env.RECAPTCHA_PUBLIC_KEY}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           onChange={onCaptchaChange}
           ref={recaptcha}
         />
