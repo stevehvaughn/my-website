@@ -1,10 +1,15 @@
 import Layout from "@components/Layout"
+import Head from "next/head";
 import styles from "@styles/LandingPage.module.scss";
 import Hero from "@components/Organisims/Hero/Hero";
 
 export default function Bio() {
   return (
     <Layout criteria='music'>
+      <Head>
+        <title>Bio | Steve Vaughn</title>
+        <meta name="description" content="Read Steve Vaughn’s biography as a professional tuba and euphonium performer, educator, and collaborator in the world of classical and contemporary music." />
+      </Head>
       <Hero
         src="/steve_tuba.jpg"
         alt="Steve Playing the tuba"

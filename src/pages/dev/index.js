@@ -1,4 +1,5 @@
 import Layout from "@components/Layout";
+import Head from "next/head";
 import Hero from "@components/Organisims/Hero/Hero";
 import Link from "next/link";
 import styles from "@styles/LandingPage.module.scss";
@@ -13,6 +14,10 @@ export default function Dev() {
 
   return (
     <Layout criteria="dev">
+      <Head>
+        <title>Developer Portfolio | Steve Vaughn</title>
+        <meta name="description" content="Explore the work of Steve Vaughn, a front-end developer building accessible, performant digital experiences using modern web technologies." />
+      </Head>
       <Hero
         src="/dev_landing.jpg"
         alt="Turned on MacBook Air beside black smartphone and black ceramic mug"

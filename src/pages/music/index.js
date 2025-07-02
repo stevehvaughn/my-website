@@ -1,4 +1,5 @@
 import Layout from "@components/Layout"
+import Head from "next/head";
 import Hero from "@components/Organisims/Hero/Hero"
 import Intro from "@components/Molecules/Intro/Intro"
 import styles from "@styles/LandingPage.module.scss";
@@ -6,6 +7,10 @@ import styles from "@styles/LandingPage.module.scss";
 export default function Music() {
   return (
     <Layout criteria={'music'}>
+      <Head>
+        <title>Music | Steve Vaughn</title>
+        <meta name="description" content="Steve Vaughn is an accomplished musician and educator. Explore his performance background, concerts, and teaching philosophy." />
+      </Head>
       <Hero
         src="/eastman_tuba.jpeg"
         alt={"Eastman 836 Tuba closeup"}

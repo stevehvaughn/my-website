@@ -1,4 +1,5 @@
 import Layout from "@components/Layout";
+import Head from "next/head";
 import UpcomingPerformanceCard from "@components/PerformanceCard/PerformanceCard";
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
 import Hero from "@components/Organisims/Hero/Hero";
@@ -33,6 +34,10 @@ export default function Concerts({ upcomingPerformances }) {
 
   return (
     <Layout criteria="music">
+      <Head>
+        <title>Concerts | Steve Vaughn</title>
+        <meta name="description" content="A calendar and archive of past and upcoming concerts featuring Steve Vaughn in solo and ensemble performances." />
+      </Head>
       <Hero
         src="/perform_hero.jpg"
         alt="UNC Brass Quintet Performing in Campus Commons Performance Hall in Greeley, Colorado"

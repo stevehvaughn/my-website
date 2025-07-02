@@ -1,4 +1,5 @@
 import Layout from "@components/Layout"
+import Head from "next/head";
 import Hero from "@components/Organisims/Hero/Hero"
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
 import styles from "@styles/LandingPage.module.scss";
@@ -6,6 +7,10 @@ import styles from "@styles/LandingPage.module.scss";
 export default function Teaching() {
   return (
     <Layout criteria='music'>
+      <Head>
+        <title>Teaching | Steve Vaughn</title>
+        <meta name="description" content="Discover Steve Vaughn’s approach to teaching brass performance and pedagogy, including his experience in private instruction and university-level education." />
+      </Head>
       <Hero
         src="/teaching_hero_image.jpg"
         alt="Teaching the Phantom Regiment tuba section in front of Ralph Wilson Stadium in Buffalo, NY"
