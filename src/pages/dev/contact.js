@@ -1,7 +1,7 @@
 import Layout from "@components/Layout";
+import Head from "next/head";
 import Hero from "@components/Organisims/Hero/Hero";
 import ContactMe from "@components/Organisims/ContactMe/ContactMe";
-import Head from "next/head";
 import styles from "@styles/LandingPage.module.scss";
 
 export default function Contact() {
