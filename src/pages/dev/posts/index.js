@@ -23,23 +23,25 @@ export default function posts({ ...props }) {
         ))}
       </ul> */}
       <div className={styles.components}>
-        <ul>
+        <div className={`add-top add-bottom`}>
           <h3>Medium Blogs</h3>
-          {props.mediumPosts.items.map((post) => {
-            const dateString = post.pubDate.split(" ")[0];
-            const formattedDateArray = [dateString];
+          <ul>
+            {props.mediumPosts.items.map((post) => {
+              const dateString = post.pubDate.split(" ")[0];
+              const formattedDateArray = [dateString];
 
-            return (
-              <li key={post.title}>
-                <Link href={post.link}>{post.title}</Link>
-                <br />
-                <small>
-                  <Date dates={formattedDateArray} />
-                </small>
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li key={post.title}>
+                  <Link href={post.link}>{post.title}</Link>
+                  <br />
+                  <small>
+                    <Date dates={formattedDateArray} />
+                  </small>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </Layout>
   )

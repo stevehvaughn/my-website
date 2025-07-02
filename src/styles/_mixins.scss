@@ -24,6 +24,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: fit-content;
   font-size: clamp(1.6rem, 1.5rem + 0.208vw, 1.8rem);
   padding: 1rem;
   color: $color;
