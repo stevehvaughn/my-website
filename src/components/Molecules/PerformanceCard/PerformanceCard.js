@@ -11,18 +11,20 @@ export default function UpcomingPerformanceCard({ performance }) {
     setShowDetails((showDetails) => !showDetails);
   }
 
+  console.log(performance);
+
   return (
     <swiper-slide key={performance.title} className={styles.swiper_slide}>
       <article className={`${styles.card} ${showDetails && styles.card_open}`}>
         <div className={styles.header}>
-          <Image
+          {/* <Image
             src={`/${performance.ensemble.logo}`}
             alt={`${performance.ensemble.name} logo`}
             height={50}
             width={50}
-          />
+          /> */}
           <div>
-            <p>{performance.ensemble.name}</p>
+            {/* <p>{performance.ensemble.name}</p> */}
             <p className={styles.role}>{performance.role}</p>
           </div>
         </div>
