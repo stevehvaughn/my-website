@@ -1,13 +1,13 @@
-import Layout from "@components/Layout";
+import Layout from "@/components/Layout";
 import Head from "next/head";
-import Hero from "@components/Organisims/Hero/Hero";
+import Hero from "@/components/Organisims/Hero/Hero";
 import Link from "next/link";
-import styles from "@styles/LandingPage.module.scss";
-import projects from "@utils/projects";
-import technologies from "@utils/technologies";
-import Intro from "@components/Molecules/Intro/Intro";
-import FeaturedProject from "@components/Molecules/FeaturedProject/FeaturedProject";
-import { TechGroup } from "@components/Organisims/TechGroup/TechGroup";
+import styles from "@/styles/LandingPage.module.scss";
+import projects from "@/utils/projects";
+import technologies from "@/utils/technologies";
+import Intro from "@/components/Molecules/Intro/Intro";
+import FeaturedProject from "@/components/Molecules/FeaturedProject/FeaturedProject";
+import { TechGroup } from "@/components/Organisims/TechGroup/TechGroup";
 
 export default function Dev() {
   const featuredProjects = projects.filter((proj) => proj.featured);

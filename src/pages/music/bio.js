@@ -1,7 +1,7 @@
-import Layout from "@components/Layout"
+import Layout from "@/components/Layout"
 import Head from "next/head";
-import styles from "@styles/LandingPage.module.scss";
-import Hero from "@components/Organisims/Hero/Hero";
+import styles from "@/styles/LandingPage.module.scss";
+import Hero from "@/components/Organisims/Hero/Hero";
 
 export default function Bio() {
   return (

@@ -1,10 +1,10 @@
-import Layout from "@components/Layout";
+import Layout from "@/components/Layout";
 import Head from "next/head";
-import projects from "@utils/projects";
-import styles from "@styles/LandingPage.module.scss";
-import ContactMe from "@components/Organisims/ContactMe/ContactMe";
-import Hero from "@components/Organisims/Hero/Hero";
-import ProjectList from "@components/Organisims/ProjectList/ProjectList";
+import projects from "@/utils/projects";
+import styles from "@/styles/LandingPage.module.scss";
+import ContactMe from "@/components/Organisims/ContactMe/ContactMe";
+import Hero from "@/components/Organisims/Hero/Hero";
+import ProjectList from "@/components/Organisims/ProjectList/ProjectList";
 
 export async function getStaticProps() {
   return {

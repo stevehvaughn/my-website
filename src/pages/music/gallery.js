@@ -1,6 +1,6 @@
-import Layout from "@components/Layout";
+import Layout from "@/components/Layout";
 import styles from "../../styles/LandingPage.module.scss";
-import Hero from "@components/Organisims/Hero/Hero";
+import Hero from "@/components/Organisims/Hero/Hero";
 
 export default function Gallery() {
   return (

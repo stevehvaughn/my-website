@@ -1,4 +1,6 @@
-const projects = [
+import { Project } from "../types";
+
+const projects: Project[] = [
   {
     "name": "Explore Asheville | Asheville, NC",
     "url": "https://www.exploreasheville.com",

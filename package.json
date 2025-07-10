@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "next dev -p 8000",
     "build": "next build",
+    "build:data": "node -r esm src/utils/buildTime.js",
     "start": "next start",
     "lint": "next lint",
+    "type-check": "npx tsc --noEmit",
+    "validate": "npm run type-check && npm run lint",
     "enrich": "node scripts/enrich-projects.js"
   },
   "dependencies": {
@@ -21,7 +24,7 @@
     "directory-tree": "^3.5.2",
     "eslint": "8.36.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.30",
+    "next": "^15.3.5",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.10.1",
     "react": "^18.3.1",
@@ -33,8 +36,13 @@
     "swiper": "^10.3.1"
   },
   "devDependencies": {
+    "@types/node": "22.16.2",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "^18.3.1",
     "eslint-config-next": "^14.2.30",
+    "esm": "^3.2.25",
     "prisma": "^4.16.2",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "typescript": "^5.7.2"
   }
 }

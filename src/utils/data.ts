@@ -1,5 +1,7 @@
+import { NavLink, SocialLink } from "../types";
+
 // Nav Links for NavBar Criteria
-export const homeNavLinks = [
+export const homeNavLinks: NavLink[] = [
   {
     name: "Home",
     path: "/"
@@ -10,7 +12,7 @@ export const homeNavLinks = [
   }
 ];
 
-export const errorNavLinks = [
+export const errorNavLinks: NavLink[] = [
   {
     name: "Music",
     path: "/music",
@@ -21,7 +23,7 @@ export const errorNavLinks = [
   }
 ];
 
-export const musicNavLinks = [
+export const musicNavLinks: NavLink[] = [
   {
     name: "Music",
     path: "/music"
@@ -52,7 +54,7 @@ export const musicNavLinks = [
   },
 ]
 
-export const devNavLinks = [
+export const devNavLinks: NavLink[] = [
   {
     name: "Portfolio",
     path: "/dev"
@@ -80,7 +82,7 @@ export const devNavLinks = [
 ]
 
 // Socials
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     name: "Linkedin",
     url: 'https://www.linkedin.com/in/stevehvaughn/'

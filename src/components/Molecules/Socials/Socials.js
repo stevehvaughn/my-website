@@ -1,6 +1,6 @@
 import React from "react"
 import * as ReactIcons from 'react-icons/bi'
-import { socialLinks } from "@utils/data"
+import { socialLinks } from "@/utils/data"
 import styles from "./Socials.module.scss"
 
 export default function Socials() {

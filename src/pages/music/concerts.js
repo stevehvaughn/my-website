@@ -1,4 +1,4 @@
-import Layout from "@components/Layout";
+import Layout from "@/components/Layout";
 import Head from "next/head";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,12 +8,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import UpcomingPerformanceCard from "@components/Molecules/PerformanceCard/PerformanceCard";
-import ContactMe from "@components/Organisims/ContactMe/ContactMe";
-import Hero from "@components/Organisims/Hero/Hero";
-import styles from "@styles/LandingPage.module.scss";
+import UpcomingPerformanceCard from "@/components/Molecules/PerformanceCard/PerformanceCard";
+import ContactMe from "@/components/Organisims/ContactMe/ContactMe";
+import Hero from "@/components/Organisims/Hero/Hero";
+import styles from "@/styles/LandingPage.module.scss";
 
-import performances from "@utils/performances";
+import performances from "@/utils/performances";
 
 export async function getStaticProps() {
   const currentDate = Date.now();

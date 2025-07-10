@@ -1,7 +1,7 @@
-// performances.js
 import { ensembles } from "./ensembles";
+import { Performance } from "../types";
 
-const performances = [
+const performances: Performance[] = [
   {
     ensembleId: 'fcbb', // Reference to the ensemble by its ID
     title: "NABBA Championships",

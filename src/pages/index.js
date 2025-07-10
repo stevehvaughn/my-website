@@ -1,10 +1,10 @@
 import Image from "next/image"
-import Layout from "@components/Layout";
-import About from "@components/Organisims/About/About";
+import Layout from "@/components/Layout";
+import About from "@/components/Organisims/About/About";
 import Link from 'next/link';
-import styles from '@styles/Home.module.scss'
-import Date from "@components/Date/Date";
-import { getSortedPostsData } from '@utils/posts';
+import styles from '@/styles/Home.module.scss'
+import Date from "@/components/Date/Date";
+import { getSortedPostsData } from '@/utils/posts';
 
 export async function getStaticProps() {
   // pass in a string with the category to filter by that post, leave empty to get all posts

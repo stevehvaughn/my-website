@@ -1,10 +1,10 @@
-import Layout from "@components/Layout";
+import Layout from "@/components/Layout";
 import Link from "next/link";
-import Date from "@components/Date/Date";
-import Hero from "@components/Organisims/Hero/Hero";
+import Date from "@/components/Date/Date";
+import Hero from "@/components/Organisims/Hero/Hero";
 import styles from "../../../styles/LandingPage.module.scss";
-import { loadMediumPosts } from '@utils/medium-posts';
-import { getSortedPostsData } from '@utils/posts';
+import { loadMediumPosts } from '@/utils/medium-posts';
+import { getSortedPostsData } from '@/utils/posts';
 
 export default function posts({ ...props }) {
   return (

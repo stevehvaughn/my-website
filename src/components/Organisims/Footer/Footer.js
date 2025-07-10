@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 import FooterSitemapSection from './FooterSitemapSection';
-import { musicNavLinks, devNavLinks } from '@utils/data.js';
+import { musicNavLinks, devNavLinks } from '@/utils/data';
 import Socials from '../../Molecules/Socials/Socials';
 import styles from './Footer.module.scss';
 

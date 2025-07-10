@@ -1,4 +1,6 @@
-@import 'functions';
+@use 'sass:map';
+@use 'functions' as *;
+@use 'config' as *;
 
 @mixin center-me($max-width, $margin-top: 0, $margin-bottom: 0) {
   max-width: $max-width;
@@ -136,15 +138,15 @@
   font-family: $heading-font-family;
   line-height: 1.3;
 
-  @if map-has-key($heading-sizes, $size) {
-    $size-style: map-get($heading-sizes, $size);
-    font-size: map-get($size-style, font-size);
-    margin: map-get($size-style, margin);
+  @if map.has-key($heading-sizes, $size) {
+    $size-style: map.get($heading-sizes, $size);
+    font-size: map.get($size-style, font-size);
+    margin: map.get($size-style, margin);
   } @else {
     @warn "Heading size '#{$size}' not found. Using the default 'm' size.";
-    $size-style: map-get($heading-sizes, 'm');
-    font-size: map-get($size-style, font-size);
-    margin: map-get($size-style, margin);
+    $size-style: map.get($heading-sizes, 'm');
+    font-size: map.get($size-style, font-size);
+    margin: map.get($size-style, margin);
   }
 }
 
@@ -152,15 +154,15 @@
   font-family: $heading-font-family;
   line-height: 1.3;
 
-  @if map-has-key($display-sizes, $size) {
-    $size-style: map-get($display-sizes, $size);
-    font-size: map-get($size-style, font-size);
-    margin: map-get($size-style, margin);
+  @if map.has-key($display-sizes, $size) {
+    $size-style: map.get($display-sizes, $size);
+    font-size: map.get($size-style, font-size);
+    margin: map.get($size-style, margin);
   } @else {
     @warn "Heading size '#{$size}' not found. Using the default 'm' size.";
-    $size-style: map-get($display-sizes, 'm');
-    font-size: map-get($size-style, font-size);
-    margin: map-get($size-style, margin);
+    $size-style: map.get($display-sizes, 'm');
+    font-size: map.get($size-style, font-size);
+    margin: map.get($size-style, margin);
   }
 }
 

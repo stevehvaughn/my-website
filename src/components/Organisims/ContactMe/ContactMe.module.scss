@@ -1,5 +1,5 @@
-@import '@styles/config';
-@import '@styles/mixins';
+@use '../../../styles/config' as *;
+@use '../../../styles/mixins' as *;
 
 .contact_me_section {
   position: relative;

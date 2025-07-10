@@ -1,4 +1,6 @@
-const technologies = {
+import { TechnologyGroup } from "../types";
+
+const technologies: TechnologyGroup = {
   "Languages": [
     { name: "JavaScript", icon: "SiJavascript" },
     { name: "TypeScript", icon: "SiTypescript" },

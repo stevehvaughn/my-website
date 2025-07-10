@@ -1,8 +1,8 @@
 import styles from "./About.module.scss";
-import landingPageStyles from "@styles/LandingPage.module.scss";
+import landingPageStyles from "@/styles/LandingPage.module.scss";
 import Link from "next/link";
-import SimplePromo from "@components/Organisims/SimplePromo/SimplePromo";
-import Intro from "@components/Molecules/Intro/Intro";
+import SimplePromo from "@/components/Organisims/SimplePromo/SimplePromo";
+import Intro from "@/components/Molecules/Intro/Intro";
 
 export default function About() {
   return (

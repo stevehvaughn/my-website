@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./TechGroup.module.scss";
-import { TechItem } from "@components/Molecules/TechItem/TechItem";
+import { TechItem } from "@/components/Molecules/TechItem/TechItem";
 
 export const TechGroup = ({ items }) => {
   const categories = Object.keys(items);

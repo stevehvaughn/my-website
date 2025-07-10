@@ -1,4 +1,6 @@
-export const ensembles = {
+import { Ensemble } from "../types";
+
+export const ensembles: Record<string, Ensemble> = {
   fcbb: {
     id: 'fcbb', // Unique ID for the ensemble
     name: "Fountain City Brass Band",

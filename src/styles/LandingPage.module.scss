@@ -1,5 +1,5 @@
-@import 'config';
-@import 'mixins';
+@use 'config' as *;
+@use 'mixins' as *;
 
 .components {
   @include center-me(144rem);

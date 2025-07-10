@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.scss';
-import { useScroll } from '@context/ScrollContext';
-import { homeNavLinks, errorNavLinks, musicNavLinks, devNavLinks } from '@utils/data.js';
+import { useScroll } from '@/context/ScrollContext';
+import { homeNavLinks, errorNavLinks, musicNavLinks, devNavLinks } from '@/utils/data';
 
 export default function Navbar({ criteria }) {
   const router = useRouter();

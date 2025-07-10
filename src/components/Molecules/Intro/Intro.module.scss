@@ -1,5 +1,5 @@
-@import '@styles/config';
-@import '@styles/mixins';
+@use '../../../styles/config' as *;
+@use '../../../styles/mixins' as *;
 
 .intro {
   background: linear-gradient(to bottom, var(--color-navy-muted), #283618);

@@ -1,5 +1,6 @@
-@import 'config';
-@import 'mixins';
+@use 'sass:map';
+@use 'config' as *;
+@use 'mixins' as *;
 
 :root {
   --border-radius: 12px;
@@ -96,7 +97,7 @@ main {
 }
 
 // Generate classes for each heading-size and also a medium-weight version of each size
-@each $size in map-keys($heading-sizes) {
+@each $size in map.keys($heading-sizes) {
   .heading-#{$size} { // .heading-l for example
     color: var(--color-text-primary);
     font-weight: $regular;
@@ -110,7 +111,7 @@ main {
   }
 }
 
-@each $size in map-keys($display-sizes) {
+@each $size in map.keys($display-sizes) {
   .display-#{$size} { // .display-l for example
     color: var(--color-text-primary);
     font-weight: $med;

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
-import { useScroll } from '@context/ScrollContext';
+import { useScroll } from '@/context/ScrollContext';
 
 export default function Hero({ src, alt, title, objPosition = "center", objFit = "cover" }) {
   const imageWrapperRef = useRef(null);
